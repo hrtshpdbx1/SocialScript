@@ -86,4 +86,27 @@ SocialScript/
 * Chaque scénario contient : contexte, interlocuteur, options de réponses et analyses pédagogiques.
 * Les requêtes vers `json-server` permettent de récupérer dynamiquement les scénarios dans l’application.
 
-**Rappel po
+**Rappel pour lancer JSON et le projet :**
+
+```bash
+# Dans le dossier racine
+json-server --watch data/db.json --port 3000
+
+# Vérifier
+http://localhost:3000/scenarios
+
+# Ouvrir index.html avec Live Server
+```
+
+## 9. Contribution
+
+Les contributions et améliorations sont les bienvenues :
+
+* Ajouter de nouveaux scénarios et niveaux.
+* Améliorer le style et l’expérience utilisateur.
+* Ajouter des statistiques ou un suivi des réponses pour un feedback plus personnalisé.
+
+## 10. Licence
+
+* Projet pédagogique, libre à usage personnel et éducatif.
+* Les avatars utilisent l’API DiceBear (licence MIT et CC BY 4.0 pour le design).
