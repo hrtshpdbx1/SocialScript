@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  },
+  "name": "socialscript",
+  "version": "1.0.0",
+  "description": "SocialScript est un simulateur interactif d'entraînement aux situations sociales, développé dans le cadre d'un workshop HTML/CSS/JavaScript.\r Le projet répond à un besoin d'apprentissage des codes sociaux dans un environnement sécurisé, particulièrement utile pour les personnes neurodivergentes.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "back": "npx json-server data/db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrtshpdbx1/SocialScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrtshpdbx1/SocialScript/issues"
+  },
+  "homepage": "https://github.com/hrtshpdbx1/SocialScript#readme"
+}
