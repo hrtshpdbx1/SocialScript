@@ -54,8 +54,13 @@ Le projet répond à un besoin d'apprentissage des codes sociaux dans un environ
 
    ```
    http://localhost:3000/scenarios
+
    ```
-5. Ouvrir `index.html` via **Live Server** (ou un autre serveur HTTP) pour que les requêtes Axios fonctionnent correctement.
+5. Dans VSCode, dans NPM scripts, appuyer sur Play à coté de "back"
+
+6. Ouvrir `index.html` via **Live Server** (ou un autre serveur HTTP) pour que les requêtes Axios fonctionnent correctement.
+
+
 
 ## 6. Technologies utilisées
 
