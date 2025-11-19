@@ -3,15 +3,21 @@
  }
 
  :root {
+
+     /** Colors **/
      --primary: #9D71E8;
      /* Medium purple */
      --primary700: #66479C;
-     /* 700
-    --secondary: #B2C9FF; /* Night Snow */
+     /* 700*/
+
+
+     --secondary: #B2C9FF;
+     /* Night Snow */
      --error: #FF5E73;
      --success: #71e89d;
      /* Enchanted Emerald */
-     --white: #ffffff;
+     --white: #f5f1fd;
+     /* primary 50*/
      --accent: #FFD35E;
      /* Chickadee */
      --accent700: #AE8E38;
@@ -20,6 +26,65 @@
      --gray300: #767676;
      --gray800: #181818;
      --black: #000000;
+
+     /* Padding */
+     --base-padding: 8px;
+
+     /* * Fonts * */
+
+     /* --- Famille de police Nunito --- */
+     --font-principale: "Nunito", sans-serif;
+     --font-code: 'Courier New', monospace;
+
+     /* --- Tailles de police --- */
+     --taille-petite: 0.875rem;
+     /* 14px */
+     --taille-normale: 1rem;
+     /* 16px */
+     --taille-moyenne: 1.125rem;
+     /* 18px */
+     --taille-grande: 1.5rem;
+     /* 24px */
+     --taille-titre: 2rem;
+     /* 32px */
+     --taille-hero: 3rem;
+     /* 48px */
+
+     /* --- Épaisseurs disponibles pour Nunito (200 à 1000) --- */
+     --poids-extra-leger: 200;
+     --poids-leger: 300;
+     --poids-normal: 400;
+     --poids-moyen: 500;
+     --poids-semi-gras: 600;
+     --poids-gras: 700;
+     --poids-extra-gras: 800;
+     --poids-black: 900;
+
+     /* --- Hauteurs de ligne --- */
+     --hauteur-ligne-serree: 1.2;
+     --hauteur-ligne-normale: 1.5;
+     --hauteur-ligne-espacee: 1.8;
+
+     /* --- Espacement des lettres --- */
+     --espacement-serre: -0.02em;
+     --espacement-normal: 0;
+     --espacement-large: 0.05em;
+
+
+     /* --container-width: 960px; */
+     /* Fixed width of the child container */
+
+
+ }
+
+
+ body {
+     font-family: var(--font-principale);
+     font-optical-sizing: auto;
+     font-size: var(--taille-normale);
+     font-weight: var(--poids-normal);
+     font-style: normal;
+     line-height: var(--hauteur-ligne-normale);
  }
 
  /* ---------------------------- */
@@ -30,9 +95,12 @@
  .btn {
      padding: 1rem 1.5rem;
      background: transparent;
-     font-weight: 16px;
      border-radius: 0.75rem;
      cursor: pointer;
+     font-family: var(--font-principale);
+     font-size: var(--taille-normale);
+     font-weight: var(--poids-moyen);
+     letter-spacing: var(--espacement-large);
  }
 
  /* variations */
@@ -92,24 +160,82 @@
  /* ----------- TEXT ---------- */
  /* --------------------------- */
 
- h1 {}
 
- h2 {}
+ /*<weight>: Use a value from 200 to 1000
+/* <uniquifier>: Use a unique and descriptive class name */
+
+ /* Tous les titres utilisent Nunito en gras */
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-family: var(--font-principale);
+     font-optical-sizing: auto;
+     font-weight: var(--poids-gras);
+     font-style: normal;
+     line-height: var(--hauteur-ligne-serree);
+ }
+
+ /* Tailles spécifiques pour chaque niveau de titre */
+ h1 {
+     font-size: var(--taille-hero);
+     letter-spacing: var(--espacement-serre);
+     /* font-weight: var(--poids-black); */
+ }
+
+ h2 {
+     font-size: var(--taille-titre);
+ }
 
  h3 {
      /* sectionTilte */
-
+     font-size: var(--taille-grande);
  }
+
 
  h4 {
      /* !tagline only?*/
-
+     text-transform: uppercase;
+     color: var(--gray);
  }
 
  h5 {}
 
- .tagline {}
 
+ /* Paragraphes */
+ p {
+     font-size: var(--taille-normale);
+     line-height: var(--hauteur-ligne-espacee);
+ }
+
+ /* Texte petit (mentions légales, notes, etc.) */
+ .texte-petit {
+     font-size: var(--taille-petite);
+ }
+
+ /* Texte en gras */
+ strong,
+ b {
+     font-weight: var(--poids-gras);
+ }
+
+ /* Citation */
+ blockquote {
+     font-family: var(--font-titres);
+     font-size: var(--taille-moyenne);
+     font-style: italic;
+     font-weight: var(--poids-leger);
+ }
+
+
+ /* Texte de code */
+ /* ??? */
+ /* code, pre {
+  font-family: var(--font-code);
+  font-size: var(--taille-petite);
+} */
 
 
  /* --------------------------- */
@@ -118,21 +244,77 @@
 
  header {
      nav {
+         background-color: var(--gray800);
 
-         /* style de la balise nav présente dans le header */
-         ul {
-            li {
+         .containerNav {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             padding: var(--base-padding);
 
-            }
+             .navLeft {
+
+                 display: flex;
+                 justify-content: space-evenly;
+                 text-wrap: nowrap;
+                 align-items: center;
+
+                 img {
+                     max-width: 150px;
+                 }
+
+                 ul {
+                     display: flex;
+                     justify-content: space-evenly;
+                     text-wrap: nowrap;
+                     align-items: center;
+                     gap: 8%;
+                     list-style-type: none;
+
+                     color: var(--white);
+
+
+                     li {
+
+                         a {
+                             color: var(--white);
+                             text-decoration: none;
+                         }
+
+                     }
+                 }
+             }
+
+             .navRight {
+                 display: flex;
+                 justify-content: space-evenly;
+                 align-items: center;
+                 align-items: center;
+                 gap: 8%;
+                 text-wrap: nowrap;
+
+                 a {}
+             }
          }
      }
  }
+
 
  /* --------------------------- */
  /* ----------- MAIN ---------- */
  /* --------------------------- */
 
  /* Generic */
+
+ .mainContainer {
+
+     display: flex;
+     flex-direction: column;
+     /* justify-content: center; */
+     gap: var(--base-padding);
+ }
+
+
  .containerRight {}
 
 
@@ -146,17 +328,13 @@
 
  /* Specific */
 
- .Sec1_Why {
 
- }
 
- .Sec2_How {
+ .Sec1_Why {}
 
- }
+ .Sec2_How {}
 
- .Sec3_About{
-    
- }
+ .Sec3_About {}
 
  .Sec4_Feature {}
 
@@ -180,10 +358,99 @@
  /* --------------------------- */
 
  footer {
-     &.footerContainer {
-         &.footerContainerLeft {}
+     display: flex;
+     width: 100vw;
+     flex-direction: column;
+     /* align-items: center; */
+     justify-content: space-between;
+     background-color: var(--gray800);
+     padding: var(--base-padding);
+     color: var(--white);
 
-         &.footerContainerRight {}
+
+     .footerContainer {
+
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: var(--base-padding);
+         font-size: var(--taille-petite);
+
+         .footerContainerLeft {
+             /*Logo*/
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             text-wrap: nowrap;
+             align-items: start;
+
+
+             img {
+                 max-width: 120px;
+             }
+         }
+
+
+
+         .navListFooter_middle {
+             /*Navigation*/
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             text-wrap: nowrap;
+             align-items: center;
+
+
+             ul {
+                 gap: 8%;
+                 list-style-type: none;
+                 color: var(--white);
+
+                 .titre-liste {
+                     color: var(--success);
+                 }
+
+                 li {
+
+
+                     a {
+                         color: var(--white);
+                         text-decoration: none;
+                     }
+                 }
+             }
+         }
+
+         .navListFooter_right {
+             /*Legal*/
+             display: flex;
+             flex-direction: column;
+             justify-content: space-evenly;
+             text-wrap: nowrap;
+             align-items: center;
+
+             ul {
+                 gap: 8%;
+                 list-style-type: none;
+
+                 .titre-liste {
+                     color: var(--success);
+                 }
+
+                 li {
+                     a {
+                         color: var(--white);
+                         text-decoration: none;
+                     }
+                 }
+             }
+         }
+     }
+
+     .bottomFooterContainer {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
 
      }
 

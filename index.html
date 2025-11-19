@@ -5,194 +5,304 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SocialScript</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="global.css">
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/global.css">
         <!-- <script defer src="./scripts/app.js"></script> -->
         <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </head>
 
 <body>
 
-        <!-- -------------------- Nav Bar --------------------  -->
-        <nav>
-                <ul>
-                        <li><a href="index.html">Accueil</a></li>
-                        <li><a href="scenarios.html">Scenarios</a></li>
-                        <li><a href="#aboutAnchor">À propos</a></li> <!-- todo : vérifier anchor  -->
-                        <li><a href="ressources.html">Ressources</a></li>
-                        <li><a href="scenarios.html" class="btn-cta">Commencez l'entraînement</a></li>
-                </ul>
-        </nav>
 
         <!-- ** -------------------- Header -------------------- -->
 
         <header>
-                <h1>SocialScript</h1>
-                <h2>Pratiquez des situations sociales courantes, analysez ce qui se passe vraiment, et développez votre propre approche.</h2>
-                <a href="scenarios.html" class="btn-primary">Démarrer</a>
+                <!-- -------------------- Nav Bar --------------------  -->
+                <nav>
+                        <div class="containerNav">
+                                <div class="navLeft">
+                                        <img src="img/logo.png" alt="logo-socialscript">
+                                        <ul>
+                                                <li><a href="index.html">Accueil</a></li>
+                                                <li><a href="scenarios.html">Scenarios</a></li>
+                                                <li><a href="#aboutAnchor">À propos</a></li>
+                                                <li><a href="ressources.html">Ressources</a></li>
+                                        </ul>
+                                </div>
+
+
+                                <div class="navRight"> <a href="#aboutAnchor" class="btn-primary">En savoir plus</a>
+                                        <!-- todo : anchor  -->
+                                        <a href="scenarios.html" class="btn-cta">Commencez l'entraînement</a>
+                                </div>
+                                </containerNav>
+
+
+
+
+
+                </nav>
+
+
         </header>
 
 
         <!-- ! -------------- MAIN ----------------------->
         <main>
-
-                <!-- <h4 class="tagline"></h4>
+                <!-- ** Hero  ---->
+                <div class="mainContainer">
+                        <!-- <h4 class="tagline"></h4>
                 <h3 class="sectionTilte"></h3>
                 <p></p> -->
 
-                <!-- ** Sec 1 -  Why  ---->
 
-                <div class="Sec1_Why">
-                        <h4 class="tagline">Comprendre. Expérimenter. Choisir votre voie.</h4>
-                        <h3>Développer ses habiletés sociales par la pratique</h3>
-                        <p>Pour les personnes neurodivergentes en particulier, mais aussi pour les personnes timides ou qui découvrent un nouvel environnement, décoder les codes sociaux implicites peut être un véritable casse-tête. SocialScript est un simulateur qui rend ces règles explicites.
-                        </p>
-
-                        <h5>Décoder l'implicite</h5>
-                        <p>Les neurotypiques apprennent les conventions sociales par osmose. Vous devez les décortiquer consciemment. Ce n'est pas un défaut, c'est une différence de traitement de l'information. Les codes sociaux ne devraient pas être gardés secrets.</p>
-
-                        <h5>Pratiquer sans conséquences</h5>
-                        <p>Dans la vie réelle, une "erreur" sociale peut avoir des conséquences : rejet, malentendu, isolement. Ici, vous testez différentes approches dans un environnement prévisible. L'erreur devient une donnée, pas un malaise.</p>
-
-                        <h5>Comprendre l'impact de vos choix</h5>
-                        <p>Plusieurs formulations peuvent fonctionner selon le contexte et vos objectifs. L'important est de saisir comment vos mots sont perçus et quelles dynamiques ils créent.</p>
-
-                        <h5>Développer votre assertivité</h5>
-                        <p>Dire non, poser des limites ou exprimer un désaccord n'est ni méchant ni malpoli. L'assertivité, c'est communiquer clairement vos besoins tout en respectant l'autre. Vous avez le droit d'occuper de l'espace dans une conversation.</p>
-
-                        <a href="codessociaux.html" class="btn-secondary">En savoir plus sur les codes sociaux</a>
-                </div>
+                        <h1>SocialScript</h1>
+                        <h2>Pratiquez des situations sociales courantes, analysez ce qui se passe vraiment, et
+                                développez votre
+                                propre approche.</h2>
+                        <a href="scenarios.html" class="btn-primary">Démarrer</a>
 
 
+                        <!-- ** Sec 1 -  Why  ---->
 
-                <!-- ** Sec 2 -  Cmt ça marche ? ---->
+                        <div class="Sec1_Why ">
+                                <h4 class="tagline">Comprendre. Expérimenter. Choisir votre voie.</h4>
+                                <h3>Développer ses habiletés sociales par la pratique</h3>
+                                <p>Pour les personnes neurodivergentes en particulier, mais aussi pour les personnes
+                                        timides ou qui découvrent un nouvel environnement, décoder les codes sociaux
+                                        implicites peut être un véritable casse-tête. SocialScript est un simulateur qui
+                                        rend ces règles explicites.
+                                </p>
 
-                <div class="Sec2_How">
-                        <div class="containerLeft">
-                                <h4 class="tagline">Comment ça fonctionne ?</h4>
-                                <h3>Un processus simple en 4 étapes pour pratiquer et progresser à
-                                        votre rythme</h3>
-                                <a href="scenarios.html" class="btn-primary">Essayer un scénario</a>
-                        </div>
-                </div>
-                <div class="containerRight">
-                        <h5>Choisissez votre niveau</h5>
-                        <p>Facile, moyen ou difficile selon votre confort. Commencez par des situations simples ou défiez-vous avec des interactions plus complexes.</p>
-                        <h5>Découvrez la situation</h5>
-                        <p>Un contexte social courant s'affiche : invitation à décliner, limite à poser, désaccord à exprimer. Un·e interlocuteur·ice virtuel·le vous adresse la parole.</p>
-                        <h5>Sélectionnez votre réponse</h5>
-                        <p>Trois options s'offrent à vous, chacune reflétant un style de communication différent. Pas de piège : l'objectif est de comprendre, pas de "réussir."</p>
-                        <h5>Analysez le feedback</h5>
-                        <p>Découvrez la réaction de votre interlocuteur·ice et un feedback pédagogique détaillé qui explique pourquoi cette formulation fonctionne ou crée un malentendu. Rejouez le scénario pour explorer d'autres approches.</p>
-                </div>
+                                <h5>Décoder l'implicite</h5>
+                                <p>Les neurotypiques apprennent les conventions sociales par osmose. Vous devez les
+                                        décortiquer consciemment. Ce n'est pas un défaut, c'est une différence de
+                                        traitement de l'information. Les codes sociaux ne devraient pas être gardés
+                                        secrets.</p>
 
+                                <h5>Pratiquer sans conséquences</h5>
+                                <p>Dans la vie réelle, une "erreur" sociale peut avoir des conséquences : rejet,
+                                        malentendu, isolement. Ici, vous testez différentes approches dans un
+                                        environnement prévisible. L'erreur devient une donnée, pas un malaise.</p>
 
+                                <h5>Comprendre l'impact de vos choix</h5>
+                                <p>Plusieurs formulations peuvent fonctionner selon le contexte et vos objectifs.
+                                        L'important est de saisir comment vos mots sont perçus et quelles dynamiques ils
+                                        créent.</p>
 
-                <!-- ** Sec 3 - A propos  ---->
-                <div id="aboutAnchor" class="Sec3_About">
-                        <div class="containerLeft">
-                                <img src="" alt="" srcset=""> <!-- todo: ajouter img -->
+                                <h5>Développer votre assertivité</h5>
+                                <p>Dire non, poser des limites ou exprimer un désaccord n'est ni méchant ni malpoli.
+                                        L'assertivité, c'est communiquer clairement vos besoins tout en respectant
+                                        l'autre. Vous avez le droit d'occuper de l'espace dans une conversation.</p>
+
+                                <a href="codessociaux.html" class="btn-secondary">En savoir plus sur les codes
+                                        sociaux</a>
                         </div>
 
+
+
+                        <!-- ** Sec 2 -  Cmt ça marche ? ---->
+
+                        <div class="Sec2_How">
+                                <div class="containerLeft">
+                                        <h4 class="tagline">Comment ça fonctionne ?</h4>
+                                        <h3>Un processus simple en 4 étapes pour pratiquer et progresser à
+                                                votre rythme</h3>
+                                        <a href="scenarios.html" class="btn-primary">Essayer un scénario</a>
+                                </div>
+                        </div>
                         <div class="containerRight">
-                                <h4 class="tagline">À propos</h4>
-                                <h3>Issu d'une expérience vécue</h3>
-                                <p>SocialScript a été créé par Louise Moraldy, développeuse full-stack, elle-même autiste et TDAH. </p> <!-- todo: ajouter lien Linkedin -->
-                                <q>C'est par la répétition et l'analyse consciente des interactions que j'ai acquis des compétences sociales qui ne me venaient pas naturellement. J'ai toujours rêvé d'un environnement où m'entraîner sans la pression du temps réel, sans craindre les malentendus ou les faux pas. Ce projet est cette réalisation : un simulateur où les personnes neurodivergentes peuvent expérimenter, analyser et progresser dans un cadre structuré et bienveillant.</q>
+                                <h5>Choisissez votre niveau</h5>
+                                <p>Facile, moyen ou difficile selon votre confort. Commencez par des situations simples
+                                        ou défiez-vous avec des interactions plus complexes.</p>
+                                <h5>Découvrez la situation</h5>
+                                <p>Un contexte social courant s'affiche : invitation à décliner, limite à poser,
+                                        désaccord à exprimer. Un·e interlocuteur·ice virtuel·le vous adresse la parole.
+                                </p>
+                                <h5>Sélectionnez votre réponse</h5>
+                                <p>Trois options s'offrent à vous, chacune reflétant un style de communication
+                                        différent. Pas de piège : l'objectif est de comprendre, pas de "réussir."</p>
+                                <h5>Analysez le feedback</h5>
+                                <p>Découvrez la réaction de votre interlocuteur·ice et un feedback pédagogique détaillé
+                                        qui explique pourquoi cette formulation fonctionne ou crée un malentendu.
+                                        Rejouez le scénario pour explorer d'autres approches.</p>
                         </div>
-                </div> <!-- fin Sec3_About -->
 
 
-                <!-- ** Sec 4 -  Explorer les features du site  ---->
-                <div class="Sec4_Features">
-                        <h4 class="tagline">Découvrez toutes les ressources </h4> <!-- todo: trouver une autre tagline -->
-                        <h3>Explorer SocialScript</h3>
-                        <p>SocialScript vous accompagne dans votre apprentissage des habiletés sociales avec des outils
-                                pratiques et théoriques.</p>
-                        <div class="containerCards">
-                                <div class="card">
-                                        <img src="" alt="" srcset="">
-                                        <h5>Pratiquer avec des scénarios</h5>
-                                        <p>Explorez des situations sociales courantes : refuser une invitation, demander de l'aide, poser une limite, gérer un désaccord. Choisissez parmi plusieurs réponses et recevez des feedbacks détaillés pour comprendre les dynamiques en jeu.</p>
-                                </div>
-                                <div class="card">
-                                        <img src="" alt="" srcset="">
-                                        <h5>Comprendre les codes sociaux</h5>
-                                        <p>Communication passive, agressive, passive-agressive, assertive : apprenez à les reconnaître, à comprendre leurs impacts, et à développer une approche qui vous ressemble. Découvrez aussi pourquoi l'assertivité est une compétence précieuse.</p>
-                                </div>
-                                <div class="card">
-                                        <img src="" alt="" srcset="">
-                                        <h5>Explorer les ressources</h5>
-                                        <p>Associations spécialisées dans l'accompagnement des personnes neurodivergentes, livres recommandés, annuaire de professionnel·les, podcasts et outils complémentaires pour approfondir vos connaissances sur la neurodivergence et les habiletés sociales.</p>
-                                </div>
-                        </div> <!-- fin containerCard -->
-                </div> <!-- fin Sec4_Features-->
 
-                <!-- ** Sec 5 - FAQ ---->
-                <div class="Sec5_FAQ">
-                        <div class="containerLeft">
-                                <h4 class="tagline">Foire aux Questions</h4>
-                                <h3>FAQ</h3>
-                                <p>Nous avons rassemblé ici les questions que se posent le plus souvent les personnes qui découvrent SocialScript. Si votre question n'apparaît pas, n'hésitez pas à nous contacter.</p>
-                                <a href="mailto:mail@example.com">Nous écrire</a>
-                        </div> <!-- fin containerLeft -->
-                        <div class="containerRight">
-                                <button class="accordion">À qui s'adresse SocialScript ?</button> <!-- todo : ajouter icone -->
-                                <div class="panel">
-                                        <p>SocialScript a été imaginé pour les personnes neurodivergentes (autistes, TDAH, dyspraxiques, etc.) ainsi que toute personne qui souhaite développer son habileté sociale et mieux comprendre les codes implicites de la communication. Si vous avez déjà eu l'impression de "ne pas comprendre les règles" ou de devoir constamment deviner ce que les autres attendent, cet outil est pour vous.</p>
+                        <!-- ** Sec 3 - A propos  ---->
+                        <div id="aboutAnchor" class="Sec3_About">
+                                <div class="containerLeft">
+                                        <img src="" alt="" srcset=""> <!-- todo: ajouter img -->
                                 </div>
-                                <button class="accordion">Comment utiliser efficacement les scénarios ?</button>
-                                <div class="panel">
-                                        <p>Prenez le temps d'explorer toutes les options de réponse, même après avoir fait votre choix initial. Lisez attentivement les feedbacks qui expliquent pourquoi chaque réponse produit un effet différent. N'hésitez pas à rejouer plusieurs fois un même scénario pour bien intégrer les nuances. L'apprentissage se fait par la répétition et l'analyse consciente.</p>
-                                </div>
-                                <button class="accordion">Les scénarios sont-ils réalistes ?</button>
-                                <div class="panel">
-                                        <p>Oui. Les situations proposées sont inspirées d'interactions courantes de la vie quotidienne : conversations professionnelles, échanges amicaux, services (magasins, administrations), situations familiales. Il reflètent les défis sociaux fréquemment rencontrés par les personne neurodivergentes.</p>
-                                <button class="accordion">Y a t'il des bonnes ou des mauvaises réponses ?</button>
-                                <div class="panel">
-                                        <p>Absolument pas. Les interactions sociales ne sont pas des équations mathématiques et plusieurs approches peuvent fonctionner selon le contexte, vos valeurs et ce que vous cherchez à accomplir. L'objectif de l'outil n'est pas de vous formater, mais de vous donner les outils pour prendre des décisions éclairées et trouver le style qui vous sert le plus.</p>
-                                </div>
-                                <button class="accordion">Est-ce que SocialScript remplace un accompagnement
-                                        thérapeutique ?</button>
-                                <div class="panel">
-                                        <p>Non. C'est un outil complémentaire d'apprentissage. Il ne remplace pas un suivi par un·e professionnel·le spécialisé·e (psychologue, ergothérapeute, etc.). Consultez la page Ressources pour trouver de l'aide adaptée si vous en avez besoin.</p>
-                                </div>
-                                <button class="accordion">Le site est-il accessible ?</button>
-                                <div class="panel">
-                                        <p>Nous avons fait de notre mieux pour rendre SocialScript accessible aux ersonnes en situation de handicap en apportant une attention toute articulière aux contrastes et à la navigation, mais nous ne prétendons as être parfait·es. Si vous rencontrez des difficultés ou avez des uggestions, contactez-nous via la page Contact ou à nfo@socialscript.be. Vos retours nous aident à nous améliorer.</p>
-                                </div>
-                        </div> <!-- fin containerRight -->
 
-                </div> <!-- fin Sec5 - FAQ -->
+                                <div class="containerRight">
+                                        <h4 class="tagline">À propos</h4>
+                                        <h3>Issu d'une expérience vécue</h3>
+                                        <p>SocialScript a été créé par Louise Moraldy, développeuse full-stack,
+                                                elle-même autiste et TDAH. </p> <!-- todo: ajouter lien Linkedin -->
+                                        <blockquote>C'est par la répétition et l'analyse consciente des interactions que
+                                                j'ai
+                                                acquis des compétences sociales qui ne me venaient pas naturellement.
+                                                J'ai toujours rêvé d'un environnement où m'entraîner sans la pression du
+                                                temps réel, sans craindre les malentendus ou les faux pas. Ce projet est
+                                                cette réalisation : un simulateur où les personnes neurodivergentes
+                                                peuvent expérimenter, analyser et progresser dans un cadre structuré et
+                                                bienveillant.</blockquote>
+                                </div>
+                        </div> <!-- fin Sec3_About -->
+
+
+                        <!-- ** Sec 4 -  Explorer les features du site  ---->
+                        <div class="Sec4_Features">
+                                <h4 class="tagline">Découvrez toutes les ressources </h4>
+                                <!-- todo: trouver une autre tagline -->
+                                <h3>Explorer SocialScript</h3>
+                                <p>SocialScript vous accompagne dans votre apprentissage des habiletés sociales avec des
+                                        outils
+                                        pratiques et théoriques.</p>
+                                <div class="containerCards">
+                                        <div class="card">
+                                                <img src="" alt="" srcset="">
+                                                <h5>Pratiquer avec des scénarios</h5>
+                                                <p>Explorez des situations sociales courantes : refuser une invitation,
+                                                        demander de l'aide, poser une limite, gérer un désaccord.
+                                                        Choisissez parmi plusieurs réponses et recevez des feedbacks
+                                                        détaillés pour comprendre les dynamiques en jeu.</p>
+                                        </div>
+                                        <div class="card">
+                                                <img src="" alt="" srcset="">
+                                                <h5>Comprendre les codes sociaux</h5>
+                                                <p>Communication passive, agressive, passive-agressive, assertive :
+                                                        apprenez à les reconnaître, à comprendre leurs impacts, et à
+                                                        développer une approche qui vous ressemble. Découvrez aussi
+                                                        pourquoi l'assertivité est une compétence précieuse.</p>
+                                        </div>
+                                        <div class="card">
+                                                <img src="" alt="" srcset="">
+                                                <h5>Explorer les ressources</h5>
+                                                <p>Associations spécialisées dans l'accompagnement des personnes
+                                                        neurodivergentes, livres recommandés, annuaire de
+                                                        professionnel·les, podcasts et outils complémentaires pour
+                                                        approfondir vos connaissances sur la neurodivergence et les
+                                                        habiletés sociales.</p>
+                                        </div>
+                                </div> <!-- fin containerCard -->
+                        </div> <!-- fin Sec4_Features-->
+
+                        <!-- ** Sec 5 - FAQ ---->
+                        <div class="Sec5_FAQ ">
+                                <div class="containerLeft">
+                                        <h4 class="tagline">Foire aux Questions</h4>
+                                        <h3>FAQ</h3>
+                                        <p>Nous avons rassemblé ici les questions que se posent le plus souvent les
+                                                personnes qui découvrent SocialScript. Si votre question n'apparaît pas,
+                                                n'hésitez pas à nous contacter.</p>
+                                        <a href="mailto:mail@example.com">Nous écrire</a>
+                                </div> <!-- fin containerLeft -->
+                                <div class="containerRight">
+                                        <button class="accordion">À qui s'adresse SocialScript ?</button>
+                                        <!-- todo : ajouter icone -->
+                                        <div class="panel">
+                                                <p>SocialScript a été imaginé pour les personnes neurodivergentes
+                                                        (autistes, TDAH, dyspraxiques, etc.) ainsi que toute personne
+                                                        qui souhaite développer son habileté sociale et mieux comprendre
+                                                        les codes implicites de la communication. Si vous avez déjà eu
+                                                        l'impression de "ne pas comprendre les règles" ou de devoir
+                                                        constamment deviner ce que les autres attendent, cet outil est
+                                                        pour vous.</p>
+                                        </div>
+                                        <button class="accordion">Comment utiliser efficacement les scénarios ?</button>
+                                        <div class="panel">
+                                                <p>Prenez le temps d'explorer toutes les options de réponse, même après
+                                                        avoir fait votre choix initial. Lisez attentivement les
+                                                        feedbacks qui expliquent pourquoi chaque réponse produit un
+                                                        effet différent. N'hésitez pas à rejouer plusieurs fois un même
+                                                        scénario pour bien intégrer les nuances. L'apprentissage se fait
+                                                        par la répétition et l'analyse consciente.</p>
+                                        </div>
+                                        <button class="accordion">Les scénarios sont-ils réalistes ?</button>
+                                        <div class="panel">
+                                                <p>Oui. Les situations proposées sont inspirées d'interactions courantes
+                                                        de la vie quotidienne : conversations professionnelles, échanges
+                                                        amicaux, services (magasins, administrations), situations
+                                                        familiales. Il reflètent les défis sociaux fréquemment
+                                                        rencontrés par les personne neurodivergentes.</p>
+                                                <button class="accordion">Y a t'il des bonnes ou des mauvaises réponses
+                                                        ?</button>
+                                                <div class="panel">
+                                                        <p>Absolument pas. Les interactions sociales ne sont pas des
+                                                                équations mathématiques et plusieurs approches peuvent
+                                                                fonctionner selon le contexte, vos valeurs et ce que
+                                                                vous cherchez à accomplir. L'objectif de l'outil n'est
+                                                                pas de vous formater, mais de vous donner les outils
+                                                                pour prendre des décisions éclairées et trouver le style
+                                                                qui vous sert le plus.</p>
+                                                </div>
+                                                <button class="accordion">Est-ce que SocialScript remplace un
+                                                        accompagnement
+                                                        thérapeutique ?</button>
+                                                <div class="panel">
+                                                        <p>Non. C'est un outil complémentaire d'apprentissage. Il ne
+                                                                remplace pas un suivi par un·e professionnel·le
+                                                                spécialisé·e (psychologue, ergothérapeute, etc.).
+                                                                Consultez la page Ressources pour trouver de l'aide
+                                                                adaptée si vous en avez besoin.</p>
+                                                </div>
+                                                <button class="accordion">Le site est-il accessible ?</button>
+                                                <div class="panel">
+                                                        <p>Nous avons fait de notre mieux pour rendre SocialScript
+                                                                accessible aux ersonnes en situation de handicap en
+                                                                apportant une attention toute articulière aux contrastes
+                                                                et à la navigation, mais nous ne prétendons as être
+                                                                parfait·es. Si vous rencontrez des difficultés ou avez
+                                                                des uggestions, contactez-nous via la page Contact ou à
+                                                                nfo@socialscript.be. Vos retours nous aident à nous
+                                                                améliorer.</p>
+                                                </div>
+                                        </div> <!-- fin containerRight -->
+
+                                </div>
+
+                        </div> <!-- fin Sec5 - FAQ -->
+
+                </div> <!-- fin MainContainer-->
         </main>
 
         <!-- ! -------------- FOOTER----------------------->
         <footer>
                 <div class="footerContainer">
-                        <div clas="footerContainerLeft">
-                                <img src="" alt="">
+                        <div class="footerContainerLeft">
+                                <img src="img/logo.png" alt="logo">
+                                <p>SocialScript — Simulateur d’interactions sociales </p>
                                 <!-- todo: add a logo -->
                         </div> <!-- fin footerContainerLeft -->
-                        <div clas="footerContainerRight">
-                                <div class="navListFooter">
-                                        <ul>Navigation</ul>
-                                        <li><a href="index.html">Accueil</a></li>
-                                        <li><a href="scenarios.html">Scénarios interactifs</a></li>
-                                        <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
-                                        <li><a href="ressources.html">Ressources</a></li>
-                                        <li><a href="">À propos</a></li>
-                                </div>
-                                <div class="navListFooter">
-                                        <ul><a href="">Legal</a></ul>
-                                        <li><a href="">Mentions légales</a></li>
-                                        <li><a href="">Politique de confidentialité</a></li>
-                                        <li><a href="">Accessibilité</a></li>
-                                        <li><a href="">Contact/a></li>
-                                </div>
-                        </div> <!-- fin footerContainerRight -->
+
+                        <div class="navListFooter_middle">
+                                <ul>
+                                <li class="titre-liste">Navigation</li>
+                                <li><a href="index.html">Accueil</a></li>
+                                <li><a href="scenarios.html">Scénarios interactifs</a></li>
+                                <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
+                                <li><a href="ressources.html">Ressources</a></li>
+                                <li><a href="">À propos</a></li>
+                                </ul>
+                        </div>
+                        <div class="navListFooter_right">
+                                <ul>
+                                <li class="titre-liste">Legal</li>
+                                <li><a href="">Mentions légales</a></li>
+                                <li><a href="">Politique de confidentialité</a></li>
+                                <li><a href="">Accessibilité</a></li>
+                                <li><a href="">Contact</a></li>
+                                </ul>
+                        </div>
                         <!-- todo: insert ligne -->
 
-                        <div class="bottomFooterContainer">
+                        
+                </div>
+
+                <div class="bottomFooterContainer">
                                 <div class="elemBottomFooter">
                                         <p>© 2025 SocialScript — Tous droits réservés</p>
                                 </div>
@@ -200,7 +310,6 @@
                                         <a href="">Contact : info@socialscript.be</a> <!-- todo: insert mailto-->
                                 </div>
                         </div>
-                </div>
         </footer>
 
 </body>
