@@ -1,0 +1,190 @@
+ * {
+     border: 0;
+ }
+
+ :root {
+     --primary: #9D71E8;
+     /* Medium purple */
+     --primary700: #66479C;
+     /* 700
+    --secondary: #B2C9FF; /* Night Snow */
+     --error: #FF5E73;
+     --success: #71e89d;
+     /* Enchanted Emerald */
+     --white: #ffffff;
+     --accent: #FFD35E;
+     /* Chickadee */
+     --accent700: #AE8E38;
+     --gray: #3b3b3b;
+     --gray200: #949494;
+     --gray300: #767676;
+     --gray800: #181818;
+     --black: #000000;
+ }
+
+ /* ---------------------------- */
+ /* ----------- BTN ------------ */
+ /* ---------------------------- */
+
+ /* base style for all buttons */
+ .btn {
+     padding: 1rem 1.5rem;
+     background: transparent;
+     font-weight: 16px;
+     border-radius: 0.75rem;
+     cursor: pointer;
+ }
+
+ /* variations */
+ .btn-primary {
+     background: var(--primary);
+     color: var(--gray800);
+
+     &:hover {
+         background: var(--primary700);
+         color: var(--white);
+     }
+
+ }
+
+
+
+
+ .btn-secondary {
+     background: var(--secondary);
+     color: var(--gray800);
+
+     &:hover {
+         background: var(--secondary700);
+         color: var(--gray800);
+     }
+
+     &:disabled {
+         background: var(--gray200);
+         color: var(--gray400);
+     }
+ }
+
+
+
+ .btn-secondary .btn-cta {
+     color: var(--accent);
+
+     &:hover {
+         color: var(--accent700);
+     }
+ }
+
+
+
+ .btn-success {
+     background: var(--success);
+     color: var(--gray800);
+ }
+
+
+ .btn-error {
+     background: var(--error);
+     color: var(--white);
+ }
+
+ /* --------------------------- */
+ /* ----------- TEXT ---------- */
+ /* --------------------------- */
+
+ h1 {}
+
+ h2 {}
+
+ h3 {
+     /* sectionTilte */
+
+ }
+
+ h4 {
+     /* !tagline only?*/
+
+ }
+
+ h5 {}
+
+ .tagline {}
+
+
+
+ /* --------------------------- */
+ /* ----------- NAV ---------- */
+ /* --------------------------- */
+
+ header {
+     nav {
+
+         /* style de la balise nav présente dans le header */
+         ul {
+            li {
+
+            }
+         }
+     }
+ }
+
+ /* --------------------------- */
+ /* ----------- MAIN ---------- */
+ /* --------------------------- */
+
+ /* Generic */
+ .containerRight {}
+
+
+ .containerLeft {}
+
+ .containerCards {}
+
+ .cards {}
+
+
+
+ /* Specific */
+
+ .Sec1_Why {
+
+ }
+
+ .Sec2_How {
+
+ }
+
+ .Sec3_About{
+    
+ }
+
+ .Sec4_Feature {}
+
+ .Sec5_FAQ {}
+
+
+ .accordion {
+     /* FAQ */
+
+
+ }
+
+ .panel {
+     /* FAQ */
+
+ }
+
+
+ /* --------------------------- */
+ /* ----------- FOOTER ---------- */
+ /* --------------------------- */
+
+ footer {
+     &.footerContainer {
+         &.footerContainerLeft {}
+
+         &.footerContainerRight {}
+
+     }
+
+ }
