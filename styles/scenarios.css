@@ -1,0 +1,94 @@
+
+/* ========================================
+   BOUTONS
+======================================== */
+.btn-level {
+
+}
+
+.btn-level:hover {
+    
+}
+
+.btn-theme {
+  
+}
+
+.btn-theme:hover {
+   
+}
+
+.btn-return {
+   
+}
+
+.btn-return:hover {
+   
+}
+
+.restart-btn {
+    
+}
+
+.restart-btn:hover {
+    
+}
+
+.option-btn {
+    
+}
+
+.option-btn:hover {
+    
+}
+
+.option-btn.disabled {
+    
+}
+
+/* ========================================
+   SCENARIO / CONTENU
+======================================== */
+.scenario-contexte {
+    
+}
+
+.interlocuteur-container {
+   
+}
+
+.imgAvatar {
+  width: 50px;  
+}
+
+.result-container {
+    
+}
+
+/* ========================================
+   FEEDBACK / RÉSULTAT
+======================================== */
+.feedback-container {
+   
+}
+
+.feedback-reaction {
+    
+}
+
+.feedback-reaction img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.feedback-analyse {
+  
+}
+
+.feedback-type {
+    font-style: italic;
+   
+}

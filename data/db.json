@@ -40,6 +40,90 @@
         }
       ],
       "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+    },
+
+    {
+      "id": "scenario_02",
+      "niveau": "facile",
+      "theme": "demander_une_faveur",
+      "contexte": "Vous êtes dans un restaurnant, vous avez commandé à diner et aimerai aussi un verre d'eau gratuit. vous savez qu'en Belgique il n'est pas coutume de proposer de l'eau gratuite",
+      "interlocuteur": {
+        "nom": "Serveur·e",
+        "replique": "Vous désirez quelque chose à boire ?",
+        "avatar": "scenario_02"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "texte option A",
+          "style": "Assertive",
+          "reaction": "reaction option A",
+          "analyse": "Analyse option A",
+          "pourquoi": "info option A"
+        },
+        {
+          "id": "B",
+          "texte": "texte option B",
+          "style": "Passive / Évitante",
+          "reaction": "reaction option B",
+          "tonReaction": "", 
+          "analyse": "analyse option B",
+          "consequences": "consequence option B",
+          "alternative": "alternative option B"
+        },
+        {
+          "id": "C",
+          "texte": "texte option C",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "reaction option C",
+          "analyse": "Analyse option C",
+          "pourquoi": "info option C",
+          "attention": "attention option C"
+        }
+      ],
+      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+    },
+
+    {
+      "id": "scenario_03",
+      "niveau": "facile",
+      "theme": "gestion_imprevu",
+      "contexte": "La réunion que vous deviez avoir en visioconférence est finalement en présentiel",
+      "interlocuteur": {
+        "nom": "Manager",
+        "replique": "Ca ne te pose pas de problème qu'on se voit finalement en face à face ? C'est plus sympa pour tout le monde non?",
+        "avatar": "scenario_03"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "texte option A",
+          "style": "Assertive",
+          "reaction": "reaction option A",
+          "analyse": "Analyse option A",
+          "pourquoi": "info option A"
+        },
+        {
+          "id": "B",
+          "texte": "texte option B",
+          "style": "Passive / Évitante",
+          "reaction": "reaction option B",
+          "tonReaction": "", 
+          "analyse": "analyse option B",
+          "consequences": "consequence option B",
+          "alternative": "alternative option B"
+        },
+        {
+          "id": "C",
+          "texte": "texte option C",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "reaction option C",
+          "analyse": "Analyse option C",
+          "pourquoi": "info option C",
+          "attention": "attention option C"
+        }
+      ],
+      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
     }
   ]
 }
