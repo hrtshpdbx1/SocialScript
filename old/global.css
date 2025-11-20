@@ -1,5 +1,6 @@
  * {
      border: 0;
+     box-sizing: border-box; 
  }
 
  :root {
@@ -9,10 +10,9 @@
      /* Medium purple */
      --primary700: #66479C;
      /* 700*/
-
-
      --secondary: #B2C9FF;
      /* Night Snow */
+     --secondary700:#6B89D0;
      --error: #FF5E73;
      --success: #71e89d;
      /* Enchanted Emerald */
@@ -91,59 +91,64 @@
  /* ----------- BTN ------------ */
  /* ---------------------------- */
 
- /* base style for all buttons */
+ /* Base style for ALL buttons - propriétés communes */
  .btn {
-     padding: 1rem 1.5rem;
+     /* Spacing */
+     padding: 0.25rem 0.80rem;
+
+     /* Appearance */
      background: transparent;
      border-radius: 0.75rem;
+     /* 12px */
+     border: none;
      cursor: pointer;
+     text-decoration: none;
+
+     /* Typography */
      font-family: var(--font-principale);
-     font-size: var(--taille-normale);
+     font-size: var(--taille-petite);
      font-weight: var(--poids-moyen);
-     letter-spacing: var(--espacement-large);
+     letter-spacing: var(--espacement-normal);
+
+     /* Transition for smooth hover effects */
+     transition: all 0.2s ease;
  }
 
  /* variations */
  .btn-primary {
      background: var(--primary);
      color: var(--gray800);
-
-     &:hover {
-         background: var(--primary700);
-         color: var(--white);
-     }
-
  }
 
-
-
+ .btn-primary:hover {
+     background: var(--primary700);
+     color: var(--white);
+ }
 
  .btn-secondary {
      background: var(--secondary);
      color: var(--gray800);
-
-     &:hover {
-         background: var(--secondary700);
-         color: var(--gray800);
-     }
-
-     &:disabled {
-         background: var(--gray200);
-         color: var(--gray400);
-     }
  }
 
-
-
- .btn-secondary .btn-cta {
-     color: var(--accent);
-
-     &:hover {
-         color: var(--accent700);
-     }
+ .btn-secondary:hover {
+     background: var(--secondary700);
+     color: var(--white);
  }
 
+ .btn-secondary:disabled {
+     background: var(--gray200);
+ }
 
+ .btn-cta {
+     background: var(--accent);
+     color: var(--gray800);
+    }
+
+      .btn-cta:hover {
+         color: var(--white);
+         background: var(--accent700);
+     }
+ 
 
  .btn-success {
      background: var(--success);
@@ -181,6 +186,7 @@
  /* Tailles spécifiques pour chaque niveau de titre */
  h1 {
      font-size: var(--taille-hero);
+     font-weight: var(--poids-black);
      letter-spacing: var(--espacement-serre);
      /* font-weight: var(--poids-black); */
  }
@@ -195,19 +201,25 @@
  }
 
 
- h4 {
-     /* !tagline only?*/
+ h4 {/* tagline only?*/
      text-transform: uppercase;
-     color: var(--gray);
+     color: var(--gray300);
+     font-weight: var(--poids-moyen);
+     font-size: var(--taille-petite);
  }
 
- h5 {}
+ h5 {
+    color: var(--gray800);
+     font-weight: var(--poids-semi-gras);
+     font-size: var(--taille-moyenne);
+     line-height: var(--hauteur-ligne-espacee);
+ }
 
 
  /* Paragraphes */
  p {
      font-size: var(--taille-normale);
-     line-height: var(--hauteur-ligne-espacee);
+     line-height: var(--hauteur-ligne-normale);
  }
 
  /* Texte petit (mentions légales, notes, etc.) */

@@ -1,0 +1,336 @@
+/* -------------------------------------- */
+/*          GLOBAL RESET & BASE           */
+/* -------------------------------------- */
+* {
+    border: 0;
+    box-sizing: border-box;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+:root {
+    /* COLORS */
+    --primary: #9D71E8;
+    --primary-700: #66479C;
+    --secondary: #B2C9FF;
+    --secondary-700: #6B89D0;
+    --error: #FF5E73;
+    --success: #71e89d;
+    --white: #f5f1fd;
+    --accent: #FFD35E;
+    --accent-700: #AE8E38;
+    --gray: #3b3b3b;
+    --gray-200: #949494;
+    --gray-300: #767676;
+    --gray-800: #181818;
+    --black: #000000;
+
+    /* SPACING */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+
+    /* RADIUS */
+    --radius-xs: 0.25rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-full: 9999px;
+
+    /* SHADOWS */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.20);
+
+    /* FONTS */
+    --font-main: "Nunito", sans-serif;
+    --font-code: "Courier New", monospace;
+    --font-size-small: 0.875rem;
+    --font-size-normal: 1rem;
+    --font-size-medium: 1.125rem;
+    --font-size-large: 1.5rem;
+    --font-size-title: 2rem;
+    --font-size-hero: 3rem;
+
+    --weight-extra-light: 200;
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semi-bold: 600;
+    --weight-bold: 700;
+    --weight-extra-bold: 800;
+    --weight-black: 900;
+
+    --line-tight: 1.2;
+    --line-normal: 1.5;
+    --line-loose: 1.8;
+
+    --letter-tight: -0.02em;
+    --letter-normal: 0;
+    --letter-wide: 0.05em;
+}
+  
+
+
+body {
+    font-family: var(--font-main);
+    font-optical-sizing: auto;
+    font-size: var(--font-size-normal);
+    font-weight: var(--weight-regular);
+    line-height: var(--line-normal);
+    color: var(--gray-800);
+    background: white;
+}
+
+/* Focus visible */
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-main);
+    font-weight: var(--weight-bold);
+    line-height: var(--line-tight);
+}
+
+h1 { /* Hero */
+    font-size: var(--font-size-hero);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--letter-wide);
+    /* color:var(--white); */
+
+}
+
+h2 {
+    font-size: var(--font-size-hero);
+    color:var(--gray); /* ok pour index mais vérifier autres pages */
+   
+}
+
+h3 {
+    font-size: var(--font-size-large);
+}
+
+h4 {
+    text-transform: uppercase;
+    color: var(--gray-300);
+    font-weight: var(--weight-medium);
+    font-size: var(--font-size-small);
+}
+
+h5 {
+    color: var(--gray-800);
+    font-weight: var(--weight-semi-bold);
+    font-size: var(--font-size-medium);
+    line-height: var(--line-loose);
+}
+
+p {
+    margin-bottom: var(--space-4);
+}
+
+.text-small {
+    font-size: var(--font-size-small);
+}
+
+strong,
+b {
+    font-weight: var(--weight-bold);
+}
+
+/* BLOCKQUOTE */
+blockquote {
+    font-family: "Merriweather", serif;
+    font-style: italic;
+    font-size: var(--font-size-medium);
+    letter-spacing: var(--letter-tight);
+}
+
+/* UTILITY CLASSES */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-gray {
+    color: var(--gray-300);
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+}
+
+.section {
+    padding-block: var(--space-12);
+}
+
+
+/* test typo curcive */
+
+.kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.kalam-regular {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-style: normal;
+  
+}
+
+.kalam-bold {
+  font-family: "Kalam", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+/* 
+.solitreo-regular {
+  font-family: "Solitreo", cursive;
+  font-weight: 500;
+  font-style: normal;
+} */
+
+
+
+
+
+/* BUTTONS */
+.btn {
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--letter-normal);
+    box-shadow: var(--shadow-sm);
+    transition: all .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--gray-800);
+}
+
+.btn-primary:hover {
+    background: var(--primary-700);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--gray-800);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-700);
+    color: var(--white);
+}
+
+.btn-secondary:disabled {
+    background: var(--gray-200);
+}
+
+.btn-cta {
+    background: var(--accent);
+    color: var(--gray-800);
+}
+
+.btn-cta:hover {
+    background: var(--accent-700);
+    color: var(--white);
+}
+
+.btn-success {
+    background: var(--success);
+    color: var(--gray-800);
+}
+
+.btn-error {
+    background: var(--error);
+    color: var(--white);
+}
+
+.btn-lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--font-size-medium);
+}
+
+.btn-sm {
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-small);
+}
+
+.btn-nav{
+     padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    border: var(--gray-200) solid 1px ;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-size: var(--font-size-small);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--letter-normal);
+    box-shadow: var(--shadow-sm);
+    transition: all .2s ease;
+}
+
+.btn-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    background-color: #B2C9FF;
+    color: var(--gray-800)
+}
+
+
+/* CARDS */
+.card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,55 @@
+:root {
+  --underline-color: #FFD35E; /* couleur de la ligne */
+  --underline-width: 12; /* hauteur de la ligne */
+  --underline-intrinsic-width: 8; /* référence pour scale */
+  --underline-cap-width: 4px; /* largeur du cap */
+  --underline-offset-y: 2px; /* décalage vertical */
+  --underline-padding-x: 0.12em; /* padding horizontal */
+  
+  --cap-image-left: url(https://files-d4s40otz1.now.sh/left.svg);
+  --cap-image-right: url(https://files-4vvqilj8v.now.sh/right.svg);
+}
+
+
+/* https://codepen.io/Ash/pen/WBMxpp  */
+/* https://dev.to/sharkcoder/css-underline-10-examples-3k7m */
+/* UNDERLINE FANCY SOCIALSCRIPT */
+.heading {
+  display: inline;
+  box-decoration-break: clone;
+  padding: 0 calc(var(--underline-padding-x) + var(--underline-cap-width));
+  background-repeat: no-repeat;
+
+  --underline-width-scale: calc(var(--underline-width) / var(--underline-intrinsic-width));
+
+  background-image:
+    linear-gradient(180deg, var(--underline-color), var(--underline-color)),
+    var(--cap-image-left),
+    var(--cap-image-right);
+
+  background-size:
+    calc(100% - (2 * var(--underline-cap-width))) var(--underline-width),
+    var(--underline-cap-width) var(--underline-width),
+    var(--underline-cap-width) var(--underline-width);
+
+  background-position:
+    left bottom,
+    left bottom,
+    right bottom;
+}
+
+.heading--learn {
+  --underline-color: var(--accent);
+  --cap-image-left: url(https://files-d4s40otz1.now.sh/left.svg);
+  --cap-image-right: url(https://files-4vvqilj8v.now.sh/right.svg);
+  font-family: "Kalam", cursive;
+  color: var(--accent);
+}
+
+.heading--play {
+  --underline-color: var(--secondary);
+  --cap-image-left: url(https://files-6lc03kjqt.now.sh/left-2.svg);
+  --cap-image-right: url(https://files-e7gkh52mq.now.sh/right-2.svg);
+  font-family: "Kalam", cursive;
+  color: var(--secondary-700);
+}

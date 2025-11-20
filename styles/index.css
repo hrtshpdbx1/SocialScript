@@ -1,0 +1,173 @@
+/* -------------------------------------- */
+/*                 HEADER NAV             */
+/* -------------------------------------- */
+header nav {
+    /* background-color: var(--gray-800); */
+    /* box-shadow: var(--shadow-lg); */
+}
+
+header nav .containerNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4);
+}
+
+header nav .containerNav .navLeft  {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+header nav img {
+    max-width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--gray-800);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+}
+
+header nav ul li a:hover {
+    color: var(--accent);
+}
+
+.navMiddle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+
+
+/* -------------------------------------- */
+/*                 HERO                  */
+/* -------------------------------------- */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    /* background-image: url("/img/ashley-whitlatch-36aGnv29Ss0-unsplash.jpg"); */
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    font-family: var(--font-main);
+    text-align: center;
+}
+
+.hero-heading {
+    width: 60%;
+    span {
+        font-family: "Kalam", cursive;
+        text-decoration: underline;
+        text-decoration-thickness: 0.4rem;
+    }
+}
+
+
+.heading--learn {
+    color: var(--accent);
+}
+
+.heading--play {
+    color: var(--secondary-700);
+}
+
+
+/* -------------------------------------- */
+/*                 MAIN                   */
+/* -------------------------------------- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.Sec1_Why {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    border: 2px solid darkblue;
+    width: 100%;
+    height: fit-content;
+    padding:var(--space-4);
+    
+
+    .heading_sec1 {
+        width: 95%;
+        box-sizing: border-box;
+        border: 2px solid lightblue;
+        padding:var(--space-4);
+        /* margin: var(--space-4); */
+    }
+
+    .containerSect1 {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+        .elemSect1_left {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid lightblue;
+            width: 45%;
+            padding:var(--space-4);
+            gap: var(--space-1)
+        }
+
+        .elemSect1_right {
+            width: 45%;
+            height: fit-content;
+             display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    }
+}
+
+
+/* -------------------------------------- */
+/*                FOOTER                  */
+/* -------------------------------------- */
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gray-800);
+    padding: var(--space-6);
+    color: var(--white);
+}
+
+footer .footerContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-4);
+    font-size: var(--font-size-small);
+}
+
+footer .footerContainerLeft img {
+    max-width: 120px;
+}
+
+footer ul {
+    list-style: none;
+    gap: var(--space-2);
+}
+
+footer ul .list-title {
+    color: var(--success);
+}
