@@ -1,0 +1,136 @@
+/* ====================================================================== */
+/* =======================   PAGE : CODES SOCIAUX   ===================== */
+/* ====================================================================== */
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
+    height: auto;
+    min-height: 40vh;
+    font-family: var(--font-main);
+}
+
+@media (max-width: 768px) {
+    .hero-heading {
+        width: 90%;
+        font-size: 1.8rem;
+    }
+    .intro {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-8) var(--space-4);
+    border: 2px solid darkblue;
+    width: 100%;
+    max-width: 1200px;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 900px;
+    border: 2px solid lightblue;
+    text-align: center;
+}
+
+/* ===================== CARDS DE COMMUNICATION ===================== */
+.sec_communicationStyles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-6);
+    width: 100%;
+    padding: var(--space-4);
+}
+
+.com_cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    text-align: left;
+    border: 2px solid greenyellow;
+    border-radius: var(--radius-lg);
+    
+    /* CLÉS POUR TAILLES UNIFORMES */
+    height: 100%;
+    min-height: 500px;
+}
+
+.com_cards h3 {
+    margin-bottom: var(--space-2);
+}
+
+.com_cards h4 {
+    margin-bottom: var(--space-3);
+}
+
+.com_cards h5 {
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+.com_cards ul {
+    list-style: none;
+    padding-left: 0;
+    margin: var(--space-3) 0;
+}
+
+.com_cards li {
+    padding-left: var(--space-4);
+    margin-bottom: var(--space-2);
+    position: relative;
+}
+
+.com_cards li::before {
+    content: "💬";
+    position: absolute;
+    left: 0;
+}
+
+/* Grid responsive : 2 colonnes sur tablette, 1 colonne sur mobile */
+@media (max-width: 768px) {
+    .sec_communicationStyles {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+    
+    .com_cards {
+        min-height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .sec_communicationStyles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================== (TIMELINE) ===================== */
+.sec_assertivite {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    padding: var(--space-8);
+}
