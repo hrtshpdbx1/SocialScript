@@ -6,10 +6,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--space-12);
     text-align: center;
-    justify-content: space-evenly;
-    padding-top: var(--space-12);
-    padding-bottom: var(--space-12);
+    justify-content: center;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
     height: auto;
     min-height: 80vh;
     font-family: var(--font-main);
@@ -25,7 +26,6 @@
         box-shadow: none;
         opacity: 0.8;
 
-
         /* yellow line  */
         &:nth-child(1) {
             right: 50px;
@@ -38,7 +38,6 @@
             width: 10%;
             top: 110px;
             transform: rotate(25deg);
-
         }
 
         /* light purple line  */
@@ -52,7 +51,6 @@
             right: -100px;
             top: 510px;
         }
-
     }
 }
 
@@ -86,8 +84,6 @@
     .hero-heading {
         width: 90%;
         /* s'adapte mieux aux petits écrans */
-        font-size: 1.8rem;
-        /* réduit légèrement pour la lisibilité */
     }
 
     .intro {
@@ -111,11 +107,12 @@
 /**  ----------------  ***/
 
 .content-section {
+    /*! doit être en 100% */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-6) var(--space-12);
+    gap: var(--space-8);
+    margin: var(--space-6) var(--space-4);
     /* border: 6px solid rgb(139, 0, 93); */
     width: 100%;
     height: fit-content;
@@ -123,9 +120,12 @@
 
     /* * --- le sous conteneur --- **/
     .section-content {
-        padding: var(--space-6) var(--space-12);
+        /*! doit être en 90/80%*/
+        padding: var(--space-4) var(--space-2);
+        /* padding : top+bottom right+left*/
         /* border: green 12px solid; */
-        max-width: 80%;
+        min-width: 70%;
+        max-width: 90%;
     }
 
     /** ------------------------ --- */
@@ -136,20 +136,42 @@
         display: flex;
         flex-direction: column;
         gap: var(--space-2);
-        width: 100%;
+        width: 60%;
         box-sizing: border-box;
         max-width: 1200px;
         /* border: 2px solid lightblue; */
         text-align: center;
-        padding: var(--space-8);
+        padding: var(--space-4);
         /* margin: var(--space-4); */
+    }
+
+    @media (max-width: 768px) {
+        .content-section {
+            margin: var(--space-2) 0;
+            /* Réduit les marges */
+            padding: var(--space-4) var(--space-1);
+            /* Au lieu de --space-12 */
+        }
+
+        .section-header {
+            padding: var(--space-2);
+            /* Au lieu de --space-4 */
+            width: 90%;
+            /* Plus large sur mobile */
+        }
+
+        .section-content {
+            padding: var(--space-2) var(--space-1);
+            min-width: 95%;
+            /* Utilise presque toute la largeur */
+        }
     }
 
     /** ------------------------ --- */
     /** --- Layout deux colonnes --- */
     /** ------------------------ --- */
 
-/* ** ===================== Section "Why?" 50/50%================== */
+    /* ** ===================== Section "Why?" 50/50%================== */
     .section-content.two-col {
         display: flex;
         flex-direction: row;
@@ -157,7 +179,7 @@
         /* justify-content: space-around; */
         align-items: top;
         gap: var(--space-6);
-        padding: var(--space-12);
+        padding: var(--space-4);
         box-sizing: border-box;
 
         .col-left,
@@ -174,7 +196,7 @@
             .autism_illu {
                 width: 100%;
                 height: 100%;
-                max-height: 800px;
+                max-height: 600px;
                 object-fit: cover;
             }
 
@@ -200,13 +222,16 @@
     @media (max-width: 768px) {
         .section-content.two-col {
             flex-direction: column;
-            gap: var(--space-4);
+            gap: var(--space-2);
+            width: 100%;
+
         }
 
         .col-left,
         .col-right {
-            flex: 1 1 100%;
+            /* flex: 1 1 100%; */
             width: 100%;
+
         }
 
         .col-right img {
@@ -216,47 +241,84 @@
         }
     }
 
-        /* ===================== Timeline ===================== */
+    /* ===================== Timeline ===================== */
 
     /* === Conteneur principal === */
     .timeline {
         position: relative;
         /* Permet de positionner les éléments enfants en absolu */
         padding-left: var(--space-12);
+
         /* Espace à gauche pour la ligne + cercles (3rem = 48px) */
         /* Augmenter pour plus d'espace, diminuer pour rapprocher */
+        @media (max-width: 768px) {
+            padding-left: var(--space-6);
+        }
+
     }
 
     /* === Ligne verticale continue === */
     .timeline::before {
-        content: ''; /* Crée un pseudo-élément vide (obligatoire) */
-        position: absolute; /* Se positionne par rapport à .timeline */
-        left: var(--space-4); /* Position depuis le bord gauche (1rem = 16px) */
-        top: 0; /* Commence tout en haut */
-        bottom: 0; /* Va jusqu'en bas */
-        width: 1px; /* Épaisseur de la ligne */
-        background: var(--gray-800); /* Couleur de la ligne  */
+        content: '';
+        /* Crée un pseudo-élément vide (obligatoire) */
+        position: absolute;
+        /* Se positionne par rapport à .timeline */
+        left: var(--space-4);
+        /* Position depuis le bord gauche (1rem = 16px) */
+        top: 0;
+        /* Commence tout en haut */
+        bottom: 0;
+        /* Va jusqu'en bas */
+        width: 1px;
+        /* Épaisseur de la ligne */
+        background: var(--gray-800);
+        /* Couleur de la ligne  */
+
+        @media (max-width: 768px) {
+            top: -100;
+            left: 0;
+        }
 
     }
 
     /* === Chaque élément de la timeline === */
     .timeline-item {
-        position: relative; /* Permet de positionner les cercles par rapport à cet item */
-        margin-bottom: var(--space-8); /* Espace vertical entre chaque item (2rem = 32px) */
-        padding-left: var(--space-6); /* Espace entre le cercle et le texte (1.5rem = 24px) */
+        position: relative;
+        /* Permet de positionner les cercles par rapport à cet item */
+        margin-bottom: var(--space-8);
+        /* Espace vertical entre chaque item (2rem = 32px) */
+        padding-left: var(--space-6);
+
+        /* Espace entre le cercle et le texte (1.5rem = 24px) */
+        @media (max-width: 768px) {
+            padding-left: 0;
+            -padding-left: 0;
+        }
     }
 
     /* === Cercles sur la ligne === */
     .timeline-item::before {
-        content: ''; /* Crée un pseudo-élément vide */
-        position: absolute; 
-        left: calc(-1 * var(--space-8) - 16px); /* Position du cercle sur la ligne */
+        content: '';
+        /* Crée un pseudo-élément vide */
+        position: absolute;
+        left: calc(-1 * var(--space-8) - 16px);
+        /* Position du cercle sur la ligne */
         /*  déplacer le cercle : changer les pixels */
-        top: 0;  /* Aligné avec le haut du texte */
-        width: 35px; /* Largeur du cercle */
-        height: 35px; /* Hauteur du cercle (identique = cercle parfait) */
+        top: 0;
+        /* Aligné avec le haut du texte */
+        width: 35px;
+        /* Largeur du cercle */
+        height: 35px;
+        /* Hauteur du cercle (identique = cercle parfait) */
         border-radius: 50%;
         background: #3b3b3b;
+
+        @media (max-width: 768px) {
+            left: calc(-1 * var(--space-8) - 2px);
+            width: 25px;
+            height: 25px;
+        }
+
     }
 
     /* === Numérotation manuelle des items === */
@@ -278,7 +340,7 @@
 
     /* === Style des numéros === */
     .timeline-item::after {
-        position: absolute; 
+        position: absolute;
         left: calc(-1 * var(--space-8) - 4px);
         /* Position du numéro (centré dans le cercle) */
         /* Calcul : -2rem - 8px = -40px */
@@ -289,116 +351,183 @@
         color: white;
         font-weight: var(--weight-bold);
         font-size: var(--font-size-small);
+
+        @media (max-width: 768px) {
+            left: calc(-1 * var(--space-8) - -5px);
+            top: 2px;
+            font-size: var(font-size-extra-small);
+        }
+
     }
 
     /** ===================== Section "How?" 40/60%================== **/
     .section-content.two-col.reverse {
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding: 0px;
+        }
+
         .col-left {
             flex: 0 0 40%;
             max-width: 40%;
             /* Assure que ça ne dépasse pas 30% */
+
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+                min-width: 100%;
+            }
+
+            .text-container {
+                @media (max-width: 768px) {
+                    padding: var(--space-1);
+                }
+            }
         }
+
         .col-right {
             flex: 0 0 60%;
             /* Fixe à 70% */
             max-width: 60%;
-        }
-    }
 
+            @media (max-width: 768px) {
+                padding: 0px;
+                width: 100%;
+                min-width: 80%;
 
-    /** ===================== Section "Explorer" / cards ================== **/
-    /* Section content cards  */
-    .section-content.card-grid {
-        display: flex;
-        align-items: stretch;
-        /* test cards, old : center */
-        gap: var(--space-8);
-        justify-content: space-evenly;
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-evenly;
-            flex: 1 1 0;
-            min-height: 400px;
-            gap: var(--space-4);
-            padding: var(--space-8) var(--space-8);
-            text-align: left;
-            position: relative;
-            overflow: hidden;
-
-            /* selectionne les em dans les cards */
-            h5 {
-                font-weight: var(--weight-bold);
-                font-size: var(--font-size-large);
-
-                em {
-                    font-family: "Kalam", cursive;
-                    font-style: normal;
+                .heading-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    gap: var(--space-2);
                 }
             }
-
-            &:nth-child(1) { /* couleurs des cards */ 
-                color: var(--gray-800);
-                background-color: var(--primary-200);
-            }
-
-            &:nth-child(2) {
-                color: var(--white);
-                background-color: var(--primary-blue);
-
-                h5 {
-                    color: var(--white);
-                }
-            }
-
-            &:nth-child(3) {
-                color: var(--gray-800);
-                background-color: var(--accent);
-            }
-
-            .ribbon {
-                width: 50%;
-                height: auto;
-            }
-
-            .deco {
-                width: 60%;
-                height: auto;
-                position: absolute;
-                top: -40px;
-                right: -50px;
-                z-index: 1;
-            }
-        }
-    }
-
-    @media (max-width: 768px) {
-        .section-content.card-grid {
-            flex-direction: column;
-            gap: var(--space-4);
-        }
-
-        .card {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .card img {
-            width: 100%;
-            height: auto;
         }
     }
 }
 
-    /** ===================== Section FAQ ================== **/
+
+/** ===================== Section "Explorer" / cards ================== **/
+/* Section content cards  */
+.section-content.card-grid {
+    display: flex;
+    align-items: stretch;
+    /* test cards, old : center */
+    gap: var(--space-8);
+    justify-content: space-evenly;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex: 1 1 0;
+        /* min-height: 400px; */
+        max-height: 15%;
+        gap: var(--space-2);
+        padding: var(--space-4) var(--space-4);
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+
+
+        /* selectionne les em dans les cards */
+        h5 {
+            font-weight: var(--weight-bold);
+            font-size: var(--font-size-large);
+
+            em {
+                font-family: "Kalam", cursive;
+                font-style: normal;
+            }
+        }
+
+        p {
+            font-size: var(--font-size-small);
+        }
+
+        &:nth-child(1) {
+            /* couleurs des cards */
+            color: var(--gray-800);
+            background-color: var(--primary-200);
+        }
+
+        &:nth-child(2) {
+            color: var(--white);
+            background-color: var(--primary-blue);
+
+            h5 {
+                color: var(--white);
+            }
+        }
+
+        &:nth-child(3) {
+            color: var(--gray-800);
+            background-color: var(--accent);
+        }
+
+        .ribbon {
+            width: 50%;
+            height: auto;
+            box-shadow: none;
+        }
+
+        .deco {
+            width: 60%;
+            height: auto;
+            position: absolute;
+            top: -40px;
+            right: -50px;
+            z-index: 1;
+            box-shadow: none;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .section-content.card-grid {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .card {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 80vh;
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.img_transition { /* wave */
+    width: 20%;
+    box-shadow: none;
+
+    
+@media (max-width: 768px) {
+       width: 40%;
+    }
+}
+
+/** ===================== Section FAQ ================== **/
 
 .FAQ {
     display: flex;
     flex-direction: column;
     gap: 0;
     min-width: 80%;
+
 }
 
 .containerAccordion {
@@ -436,7 +565,8 @@
     outline-offset: -2px;
 }
 
-.accordion::-webkit-details-marker { /* Retire le triangle par défaut */
+.accordion::-webkit-details-marker {
+    /* Retire le triangle par défaut */
     display: none;
 }
 
@@ -444,7 +574,8 @@
     display: none;
 }
 
-.accordion::after { /* Icône + qui devient - */
+.accordion::after {
+    /* Icône + qui devient - */
     content: '\002B';
     color: var(--primary-800);
     font-weight: bold;
@@ -453,7 +584,8 @@
     transition: transform 0.3s ease;
 }
 
-.containerAccordion[open] .accordion {  /* Quand ouvert */
+.containerAccordion[open] .accordion {
+    /* Quand ouvert */
     background-color: var(--primary-200);
     border-bottom: 1px solid var(--primary-500);
 }
@@ -462,7 +594,8 @@
     content: "\2212";
 }
 
-.panel { /* Panel (contenu) */
+.panel {
+    /* Panel (contenu) */
     padding: var(--space-4);
     background-color: var(--primary-200);
     line-height: 1.6;
@@ -490,62 +623,94 @@
 }
 
 
-    /** ===================== Section "About" Coloblock ================== **/
+/** ===================== Section "About" Colorblock ================== **/
 .colorblock_section {
     background-color: var(--primary-blue);
-    padding: var(--space-4);
+    /* padding: var(--space-2); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: green 2px solid; */
 
-    h3,
+    h2,
     h4 {
+        /* force à être blanc (sinon gris)*/
         color: var(--white);
         font-weight: var(--weight-medium);
-
-        em {
-            color: var(--accent);
-            font-family: "Kalam", cursive;
-            font-style: normal;
-        }
     }
+
 
     .container-about {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
-        padding: auto;
+        padding: var(--space-6);
         gap: var(--space-2);
         color: var(--white);
+        /* border: 2px solid gold; */
+        max-width: 80%;
 
-        h3 {
-            font-style: italic;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: var(--space-1);
         }
 
         .container-img {
-            display: flex;
-            flex-direction: column;
+            /* display: flex;
+            flex-direction: column; */
             width: 30%;
             align-items: center;
             text-align: center;
 
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+
             img {
-                max-width: 100%;
+                max-width: 80%;
                 height: auto;
             }
         }
 
         .container-quote {
-            width: 70%;
             display: flex;
             flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
             gap: var(--space-4);
+            width: 70%;
+            padding: var(--space-4);
+
+            @media (max-width: 768px) {
+                width: 100%;
+                text-align: center;
+                padding: 0px;
+                text-wrap: wrap;
+                font-size: var(--font-size-small);
+            }
+
 
             blockquote {
-                font-size: 1.50rem;
                 line-height: var(--line-loose);
             }
         }
     }
 }
+
+@media (max-width: 768px) {
+    .container-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
 
 /* ------------------------------------------------------- */
 /*                 Footer - cf. Global css                 */

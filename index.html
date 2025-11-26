@@ -5,9 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SocialScript</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/global2.css">
         <link rel="stylesheet" href="styles/index.css">
+
+        <!-- Google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -22,17 +26,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
                 integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
                 crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <!-- Load an icon library hamburger menu -->
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- autre font handwritten -->
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+HR:wght@100..400&family=Solitreo&display=swap"
                 rel="stylesheet">
 
-        <!-- <script defer src="./scripts/index.js"></script> -->
-
+        <!-- * JS * -->
+        <script defer src="./scripts/index.js"></script>
         <script defer src="./scripts/app.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </head>
@@ -44,32 +49,32 @@
 
         <header>
                 <!-- -------------------- Nav Bar --------------------  -->
-                <nav>
+                <nav class="topnav">
                         <div class="containerNav">
-                                <div class="navLeft">
-                                        <a href="index.html"><img src="img/logo.png" alt="logo-socialscript"></a>
+                                <div class="navLeft"> <!-- Logo toujours visible -->
+                                        <a href="index.html"><img src="img/logo.png" alt="logo-socialscript">
+                                        </a>
                                 </div>
-
-                                <div class="navMiddle">
+                                <!-- Menu caché sur mobile -->
+                                <div id="myLinks" class="navMiddle">
                                         <ul>
                                                 <li><a class="btn-nav" href="index.html">Accueil</a></li>
                                                 <li><a class="btn-nav" href="codessociaux.html">Les code sociaux</a>
                                                 </li>
                                                 <li><a class="btn-nav" href="ressources.html">Ressources</a></li>
-                                                <li><a class="btn-nav" href="#aboutAnchorl">A propos</a></li>
-                                                <!-- todo : anchor  -->
+                                                <li><a class="btn-nav" href="#aboutAnchor">A propos</a></li>
                                         </ul>
                                 </div>
                                 <div class="navRight">
+                                        <a href="scenarios.html" class="btn-cta desktop-cta btn">Les scenarios</a>
+                                        <!-- todo : le cacher sur mobile ?  -->
 
-                                        <a href="scenarios.html" class="btn btn-cta">Les scenarios</a>
+                                        <!-- Icône hamburger (visible uniquement sur mobile) -->
+                                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                                <i class="fa fa-bars"></i>
+                                        </a>
                                 </div>
                         </div>
-
-
-
-
-
                 </nav>
                 <!-- <img class="sticky_img" src="img/6.png" alt=""> -->
                 <!-- todo: Aude / demander pk sticky ne fontionne pas  -->
@@ -82,39 +87,36 @@
 
                 <!-- ** Hero  ---->
                 <div class="mainContainer">
-                        <!-- <h4 class="tagline"></h4>
-                <h3 class="sectionTilte"></h3>
-                <p></p> -->
-
-
-
-                        <div class="intro">
-
-                                <img class="deco_intro_img" src="img/6.png" alt="">
-                                <img class="deco_intro_img" src="img/13.png" alt="">
-                                <img class="deco_intro_img" src="img/7.png" alt="">
-                                <img class="deco_intro_img" src="img/2.png" alt="">
-
-                                <h1 class="hero-heading">
-                                        Un espace pour
-                                        <span class="heading heading--learn">comprendre</span> et
-                                        <span class="heading heading--play">s'exercer</span> aux situations sociales.
-                                </h1>
-
-                                <a href="scenarios.html" class="btn btn-primary">Acceder aux scenarios</a>
-                        </div>
-
-
-                        <!-- ** --------------------  ---->
-                        <!-- ** ------- Sec 1 -  Why  ---->
-                        <!-- ** --------------------  ---->
 
                         <div class="content-section">
+                                <div class="intro">
+
+                                        <img class="deco_intro_img" src="img/6.png" alt="">
+                                        <img class="deco_intro_img" src="img/13.png" alt="">
+                                        <img class="deco_intro_img" src="img/7.png" alt="">
+                                        <img class="deco_intro_img" src="img/2.png" alt="">
+
+                                        <h1 class="hero-heading">
+                                                Un espace pour
+                                                <span class="heading heading--learn">comprendre</span> et
+                                                <span class="heading heading--play">s'exercer</span> aux situations
+                                                sociales.
+                                        </h1>
+
+                                        <a href="scenarios.html" class="btn btn-primary">Acceder aux scenarios</a>
+                                </div>
+
+
+                                <!-- ** --------------------  ---->
+                                <!-- ** ------- Sec 1 -  Why  ---->
+                                <!-- ** --------------------  ---->
+
+                                <!-- <div class="content-section"> -->
                                 <!-- old sect1 Why -->
 
                                 <div class="section-header">
-                                        <h4 class="tagline">Comprendre. Expérimenter. Choisir votre voie.</h4>
-                                        <h3>Développer ses habiletés sociales par la pratique</h3>
+                                        <h3 class="tagline">Comprendre. Expérimenter. Choisir votre voie.</h3>
+                                        <h2>Développer ses habiletés sociales par la pratique</h2>
                                         <p>Pour les personnes neurodivergentes en particulier, mais aussi pour les
                                                 personnes timides ou qui découvrent un nouvel environnement, décoder les
                                                 codes sociaux implicites peut être un véritable casse-tête. SocialScript
@@ -126,7 +128,7 @@
                                         <div class="col-left">
                                                 <div class="timeline">
                                                         <div class="timeline-item">
-                                                                <h5>Décoder l'implicite</h5>
+                                                                <h4>Décoder l'implicite</h4>
                                                                 <p>Les neurotypiques apprennent les conventions sociales
                                                                         par osmose.
                                                                         Vous devez
@@ -138,8 +140,8 @@
                                                         </div>
 
                                                         <div class="timeline-item">
-                                                                <h5>Pratiquer sans
-                                                                        conséquences</h5>
+                                                                <h4>Pratiquer sans
+                                                                        conséquences</h4>
 
                                                                 <p>Dans la vie réelle, une "erreur" sociale peut avoir
                                                                         des conséquences
@@ -154,7 +156,7 @@
                                                         </div>
 
                                                         <div class="timeline-item">
-                                                                <h5>Comprendre l'impact de vos choix</h5>
+                                                                <h4>Comprendre l'impact de vos choix</h4>
                                                                 <p>Plusieurs formulations peuvent fonctionner selon le
                                                                         contexte et vos
                                                                         objectifs.
@@ -167,7 +169,7 @@
 
 
                                                         <div class="timeline-item">
-                                                                <h5>Développer votre assertivité</h5>
+                                                                <h4>Développer votre assertivité</h4>
                                                                 <p>Dire non, poser des limites ou exprimer un désaccord
                                                                         n'est ni méchant
                                                                         ni
@@ -192,15 +194,15 @@
                                                 <img class="autism_illu" src="img/autism_illu (1).png" alt="">
                                         </div>
                                 </div>
-                        </div> <!-- fin Sec1_Why  -->
 
 
-                        <!-- ** Sec 4 -  Explorer les features du site  ---->
-                        <div class="content-section">
+
+                                <!-- ** Sec 4 -  Explorer les features du site  ---->
+                                <!-- <div class="content-section"> -->
                                 <div class="section-header">
-                                        <h4 class="tagline">Découvrez toutes les ressources </h4>
+                                        <h3 class="tagline">Découvrez toutes les ressources </h3>
                                         <!-- todo: trouver une autre tagline -->
-                                        <h3>Explorer SocialScript</h3>
+                                        <h2>Explorer SocialScript</h2>
                                         <p>SocialScript vous accompagne dans votre apprentissage des habiletés
                                                 sociales
                                                 avec des
@@ -212,52 +214,38 @@
                                         <div class="card">
                                                 <img class="ribbon" src="img/9.png" alt="" srcset="">
                                                 <img class="deco" src="img/3.png" alt="" srcset="">
-                                                <h5> <em>Jouer</em> avec des scénarios</h5>
-                                                <p>Explorez des situations sociales courantes : refuser une
-                                                        invitation,
-                                                        demander de l'aide, poser une limite, gérer un
-                                                        désaccord.
-                                                        Choisissez parmi plusieurs réponses et recevez des
-                                                        feedbacks
-                                                        détaillés pour comprendre les dynamiques en jeu.</p>
+                                                <h4> <em>Jouer</em> avec des scénarios</h4>
+                                                <p>Pratiquez des situations du quotidien (refuser, poser une limite,
+                                                        négocier) et recevez des feedbacks détaillés pour comprendre les
+                                                        dynamiques sociales.</p>
                                         </div>
                                         <div class="card">
                                                 <img class="ribbon" src="img/10.png" alt="" srcset="">
                                                 <img class="deco" src="img/1.png" alt="" srcset="">
-                                                <h5><em>Comprendre</em> les codes sociaux</h5>
-                                                <p>Communication passive, agressive, passive-agressive,
-                                                        assertive :
-                                                        apprenez à les reconnaître, à comprendre leurs impacts,
-                                                        et à
-                                                        développer une approche qui vous ressemble. Découvrez
-                                                        aussi
-                                                        pourquoi l'assertivité est une compétence précieuse.</p>
+                                                <h4><em>Comprendre</em> les codes</h4>
+                                                <p>Découvrez les différents styles de communication (passive, agressive,
+                                                        assertive) et développez une approche qui vous ressemble.</p>
                                         </div>
                                         <div class="card">
                                                 <img class="ribbon" src="img/11.png" alt="" srcset="">
                                                 <img class="deco" src="img/dots.png" alt="" srcset="">
-                                                <h5><em>Explorer</em> les ressources</h5>
-                                                <p>Associations spécialisées dans l'accompagnement des personnes
-                                                        neurodivergentes, livres, annuaire de
-                                                        professionnel·les, podcasts et outils
-                                                        pour
-                                                        approfondir vos connaissances sur la neurodivergence et
-                                                        les
-                                                        habiletés sociales.</p>
+                                                <h4><em>Explorer</em> les ressources</h4>
+                                                <p>Accédez à des associations, livres, professionnels et podcasts pour
+                                                        approfondir vos connaissances sur la neurodivergence.</p>
                                         </div>
                                 </div> <!-- section-content card-grid -->
-                        </div> <!-- fin Sec4 Features-->
 
 
-                        <!-- ** Sec 2 -  Cmt ça marche ? ---->
 
-                        <div class="content-section">
+                                <!-- ** Sec 2 -  Cmt ça marche ? ---->
+
+
                                 <div class="section-content two-col reverse">
                                         <div class="col-left">
 
-                                                <h4 class="tagline">Comment ça fonctionne ?</h4>
-                                                <h3>Un processus simple en 4 étapes pour pratiquer et progresser à
-                                                        votre rythme</h3>
+                                                <h3 class="tagline">Comment ça fonctionne ?</h3>
+                                                <h2>Un processus simple en 4 étapes pour pratiquer et progresser à
+                                                        votre rythme</h2>
                                                 <a href="scenarios.html" class="btn btn-primary">Essayer un scénario</a>
                                         </div>
 
@@ -265,7 +253,7 @@
 
                                                 <div class="heading-container">
                                                         <i class="fa-solid fa-gauge-high"></i>
-                                                        <h5>Choisissez votre niveau</h5>
+                                                        <h4>Choisissez votre niveau</h4>
                                                 </div>
                                                 <div class="text-container">
                                                         <p>Facile, moyen ou difficile selon votre confort. Commencez par
@@ -277,7 +265,7 @@
 
 
                                                 <div class="heading-container"><i class="fa-solid fa-eye"></i>
-                                                        <h5>Découvrez la situation</h5>
+                                                        <h4>Découvrez la situation</h4>
                                                 </div>
 
 
@@ -294,7 +282,7 @@
                                                 </div>
 
                                                 <div class="heading-container"><i class="fa-solid fa-comments"></i>
-                                                        <h5>Sélectionnez votre réponse</h5>
+                                                        <h4>Sélectionnez votre réponse</h4>
                                                 </div>
                                                 <div class="text-container">
                                                         <p>Trois options s'offrent à vous, chacune reflétant un style de
@@ -306,7 +294,7 @@
 
                                                 <div class="heading-container"> <i
                                                                 class="fa-solid fa-magnifying-glass"></i>
-                                                        <h5>Analysez le feedback</h5>
+                                                        <h4>Analysez le feedback</h4>
                                                 </div>
                                                 <div class="text-container">
                                                         <p>Découvrez la réaction de votre interlocuteur·ice et un
@@ -323,15 +311,11 @@
                                         </div>
 
                                 </div>
-                        </div> <!-- ! ??? -->
-
-
-                        <!-- ** Sec 5 - FAQ ---->
-                        <div class="content-section">
+                                <!-- ** Sec 5 - FAQ ---->
+                                <img src="img/wave_green.png" alt="" class="img_transition">
                                 <div class="section-header">
-
-                                        <h4 class="tagline">Foire aux Questions</h4>
-                                        <h3>FAQ</h3>
+                                        <h3 class="tagline">Foire aux Questions</h3>
+                                        <h2>FAQ</h2>
                                         <p>Nous avons rassemblé ici les questions que se posent le plus souvent
                                                 les
                                                 personnes qui découvrent SocialScript. Si votre question
@@ -477,43 +461,43 @@
                                                 </div>
                                         </details>
                                 </div>
-                        </div>
-                        
-                        <!-- ** New section colorblock ---->
 
-                        <div id="aboutAnchor" class="content-section colorblock_section">
 
-                                <div class="section-header">
-                                        <h4 class="tagline">À propos</h4>
-                                        <h3>Issu d'une expérience vécue</h3>
-                                </div>
-                                <div class="content-section section-content container-about">
-                                        <div class="container-img">
-                                                <img src="img/louise.png"
-                                                        alt="photo de Louise Moraldy, creatrice du site">
-                                                
+                                <!-- ** New section colorblock ---->
+
+                                <div id="aboutAnchor" class="colorblock_section">
+
+                                        <div class="section-header">
+                                                <h3 class="tagline">À propos</h3>
+                                                <h2>Issu d'une expérience vécue</h2>
                                         </div>
-                                        <div class="container-quote">
-                                                <blockquote> C'est par la répétition et l'analyse consciente des
-                                                        interactions que j'ai acquis des compétences
-                                                        sociales qui ne me venaient pas naturellement.
-                                                      J'ai toujours rêvé d'un <em>environnement où
-                                                                m'entraîner ans craindre les malentendus
-                                                                ou les faux pas</em> du temps réel.   </blockquote>   <blockquote>  Ce
-                                                        projet est cette réalisation : un simulateur où
-                                                        les personnes neurodivergentes peuvent
-                                                        <em>expérimenter, analyser et progresser dans un
-                                                                cadre structuré et bienveillants</em>.
-                                                        
+                                        <div class="container-about">
+                                                <div class="container-img">
+                                                        <img src="img/louise.png"
+                                                                alt="photo de Louise Moraldy, creatrice du site">
+
+                                                </div>
+                                                <div class="container-quote">
+                                                        <blockquote> C'est par la répétition et l'analyse consciente des
+                                                                interactions que j'ai acquis des compétences
+                                                                sociales qui ne me venaient pas naturellement.
+                                                                J'ai toujours rêvé d'un <em>environnement où
+                                                                        m'entraîner ans craindre les malentendus
+                                                                        ou les faux pas</em> du temps réel. Ce
+                                                                projet est cette réalisation : un simulateur où
+                                                                les personnes neurodivergentes peuvent
+                                                                <em>expérimenter, analyser et progresser dans un
+                                                                        cadre structuré et bienveillants</em>.
+
                                                         </blockquote>
                                                         <p>Louise Moraldy, créatrice du site et elle-même
-                                                        autiste et TDAH.</p>
-                                        </div>
+                                                                autiste et TDAH.</p>
+                                                </div>
 
+                                        </div>
                                 </div>
+
                         </div>
-                        
-                </div>
 
                 </div> <!-- fin MainContainer-->
         </main>
