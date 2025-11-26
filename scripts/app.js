@@ -66,11 +66,12 @@ function showLevelButtons() {
     DIV_SCENARIO.appendChild(titre);
 
     const niveaux = ['facile', 'moyen', 'difficile'];
-    niveaux.forEach(function(niveau) {
+    niveaux.forEach(function (niveau) {
         const btn = document.createElement('button');
         btn.textContent = niveau.charAt(0).toUpperCase() + niveau.slice(1);
-        btn.classList.add('btn-level');
-        btn.addEventListener('click', function() {
+        btn.classList.add('btn');
+        btn.classList.add('btn-secondary');
+        btn.addEventListener('click', function () {
             showScenarioByLevel(niveau);
         });
         DIV_SCENARIO.appendChild(btn);
@@ -114,8 +115,9 @@ function showThemeButtons(scenariosFiltres) {
     for (let i = 0; i < themes.length; i++) {
         const btn = document.createElement('button');
         btn.textContent = themes[i];
-        btn.classList.add('btn-theme');
-        btn.addEventListener('click', function() {
+        btn.classList.add('btn');
+        btn.classList.add('btn-primary');
+        btn.addEventListener('click', function () {
             chooseScenarioByTheme(scenariosFiltres, themes[i]);
         });
         DIV_SCENARIO.appendChild(btn);
@@ -147,6 +149,13 @@ function chooseScenarioByTheme(scenariosFiltres, themeChoisi) {
 function renderScenario(scenario) {
     DIV_SCENARIO.innerHTML = '';
 
+
+    // Titre avant l'élement interactif
+    const titreContexte = document.createElement('h3'); // ou 'div' avec une classe
+    titreContexte.textContent = "Contexte :";
+    titreContexte.classList.add('section-title');  //** integrer au css ** /
+    DIV_SCENARIO.appendChild(titreContexte);
+
     // CONTEXTE
     const pContexte = document.createElement('p');
     pContexte.textContent = scenario.contexte;
@@ -155,6 +164,7 @@ function renderScenario(scenario) {
 
     // INTERLOCUTEUR
     const divInterlo = document.createElement('div');
+    // création div contenant avatar + question 
     divInterlo.classList.add('interlocuteur-container');
     const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
     const imgAvatar = document.createElement('img');
@@ -164,7 +174,7 @@ function renderScenario(scenario) {
     imgAvatar.style.verticalAlign = 'middle';
     divInterlo.appendChild(imgAvatar);
 
-    const spanNom = document.createElement('strong');
+    const spanNom = document.createElement('strong'); //nom de l'interlocteur
     spanNom.textContent = " " + scenario.interlocuteur.nom;
     divInterlo.appendChild(spanNom);
 
@@ -173,18 +183,18 @@ function renderScenario(scenario) {
 
     DIV_SCENARIO.appendChild(divInterlo);
 
-    // RESULTAT
-    const divResultat = document.createElement('div');
-    divResultat.id = 'resultDiv';
-    divResultat.classList.add('result-container');
-    DIV_SCENARIO.appendChild(divResultat);
+        // Titre avant l'élement interactif
+    const titreOptions = document.createElement('h2'); // ou 'div' avec une classe
+    titreOptions.textContent = "Choisissez une réponse :";
+    titreOptions.classList.add('section-title');
+    DIV_SCENARIO.appendChild(titreOptions);
 
     // BOUTONS OPTIONS
     for (let i = 0; i < scenario.options.length; i++) {
         const option = scenario.options[i];
         const btnOption = document.createElement('button');
         btnOption.textContent = option.texte;
-        btnOption.classList.add('option-btn');
+        btnOption.classList.add('btn', 'option-btn');
 
         btnOption.addEventListener('click', function () {
             showResult(option, divResultat, urlAvatar, scenario);
@@ -193,13 +203,23 @@ function renderScenario(scenario) {
         DIV_SCENARIO.appendChild(btnOption);
     }
 
+    
+    // RESULTAT
+    const divResultat = document.createElement('div');
+    divResultat.id = 'resultDiv';
+    divResultat.classList.add('result-container');
+    DIV_SCENARIO.appendChild(divResultat);
+
+
+
+
     // BOUTON REJOUER (caché au départ)
     const btnRestart = document.createElement('button');
     btnRestart.textContent = "Rejouer le scénario";
     btnRestart.classList.add('restart-btn');
     btnRestart.style.marginTop = '20px';
     btnRestart.style.display = 'none';
-    btnRestart.addEventListener('click', function() {
+    btnRestart.addEventListener('click', function () {
         renderScenario(scenario);
     });
     DIV_SCENARIO.appendChild(btnRestart);
@@ -220,6 +240,7 @@ function renderScenario(scenario) {
 // ========================================
 
 function showResult(option, divResultat, urlAvatar, scenario) {
+    // remplace le contenu de la divResultat
     divResultat.innerHTML = `
         <div class="feedback-container">
             <h3>Résultat de votre choix</h3>
@@ -237,12 +258,16 @@ function showResult(option, divResultat, urlAvatar, scenario) {
     `;
     divResultat.style.display = 'block';
 
-    // Désactive les boutons options
-    const tousLesBoutons = document.querySelectorAll('.option-btn');
-    for (let i = 0; i < tousLesBoutons.length; i++) {
-        tousLesBoutons[i].disabled = true;
-        tousLesBoutons[i].classList.add('disabled');
-    }
+//  // Masquer toutes les autres options non choisies //! ils sont dans divSCENARIO
+// const tousLesBoutons = document.querySelectorAll('.option-btn');
+// tousLesBoutons.forEach(btn => {
+//      console.log('Texte du bouton :', btn.textContent, '| Option choisie :', option.eaction
+//     if (btn.textContent !== option.texte) {
+//         btn.style.display = 'none'; // cache les autres options
+//     } else {
+//         btn.classList.add('selected-option'); // option choisie
+//     }
+// });
 
     // Affiche le bouton Rejouer
     const btnRestart = DIV_SCENARIO.querySelector('.restart-btn');

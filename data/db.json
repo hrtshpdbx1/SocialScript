@@ -1,5 +1,6 @@
 {
   "scenarios": [
+
     {
       "id": "scenario_01",
       "niveau": "facile",
@@ -13,117 +14,364 @@
       "options": [
         {
           "id": "A",
-          "texte": "Oh c'est gentil ! Malheureusement je ne suis pas disponible samedi, mais j'espère que tu passeras une super soirée !",
+          "texte": "Option A texte",
           "style": "Assertive",
-          "reaction": "Pas de souci ! Merci quand même, on se voit lundi alors !",
-          "analyse": "Cette réponse combine plusieurs éléments efficaces d'une communication assertive. Vous reconnaissez l'invitation, ce qui valorise l'autre et montre que vous appréciez l'attention. Vous exprimez ensuite clairement votre indisponibilité sans entrer dans des justifications excessives. Enfin, vous terminez sur une note positive en souhaitant à votre collègue de passer une bonne soirée.",
-          "pourquoi": "Votre collègue comprend que votre refus n'est pas un rejet personnel. La clarté de votre réponse évite l'ambiguïté et les malentendus. Cette approche préserve la relation professionnelle tout en respectant vos propres limites."
+          "reaction": "Réaction option A",
+          "analyse": "Analyse option A",
+          "pourquoi": "Pourquoi option A"
         },
         {
           "id": "B",
-          "texte": "Samedi ? Euh... je ne sais pas encore, je te confirme plus tard ?",
+          "texte": "Option B texte",
           "style": "Passive / Évitante",
-          "reaction": "Ah... d'accord. Bon, tiens-moi au courant alors !",
-          "tonReaction": "légèrement déçu, incertain",
-          "analyse": "Cette réponse reflète une hésitation qui peut être interprétée de plusieurs façons par votre interlocuteur. Les hésitations verbales et l'absence de position claire créent de l'ambiguïté. Votre collègue ne sait pas si vous êtes vraiment intéressé·e mais avez un empêchement, si vous cherchez une excuse polie pour refuser, ou si vous avez réellement besoin de vérifier votre agenda.",
-          "consequences": "Votre collègue risque de revenir vers vous pour obtenir une réponse, ce qui prolonge la situation inconfortable. Il peut aussi interpréter votre hésitation comme un manque d'intérêt et se sentir blessé.",
-          "alternative": "Si vous avez réellement besoin de vérifier quelque chose, soyez plus spécifique : 'Je dois vérifier si j'ai quelque chose de prévu ce soir-là, je te confirme d'ici demain midi, ça te va ?'"
+          "reaction": "Réaction option B",
+          "tonReaction": "",
+          "analyse": "Analyse option B",
+          "consequences": "Conséquence option B",
+          "alternative": "Alternative option B"
         },
         {
           "id": "C",
-          "texte": "Merci pour l'invitation, mais les grandes soirées ce n'est pas trop mon truc.",
+          "texte": "Option C texte",
           "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Ah je comprends ! Bon, on aura l'occasion de se voir au bureau de toute façon !",
-          "analyse": "Cette réponse est directe et honnête. Vous remerciez pour l'invitation, puis vous exprimez clairement votre refus en donnant une raison qui concerne vos préférences personnelles, pas la personne qui invite. Vous partagez une information sur vous-même plutôt que de chercher une excuse externe.",
-          "pourquoi": "Votre collègue comprend que ce n'est pas personnel — vous n'évitez pas lui, vous évitez les grandes soirées en général. Cette honnêteté peut être appréciée et évite les malentendus futurs.",
-          "attention": "Cette approche demande un certain niveau de confiance et de confort avec la vulnérabilité. Partager vos préférences personnelles peut vous sentir exposé·e, surtout dans un contexte professionnel."
+          "reaction": "Réaction option C",
+          "analyse": "Analyse option C",
+          "pourquoi": "Pourquoi option C",
+          "attention": "Attention option C"
         }
       ],
-      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+      "aRetenir": "Résumé à retenir pour ce scénario"
     },
-
     {
       "id": "scenario_02",
       "niveau": "facile",
       "theme": "demander_une_faveur",
-      "contexte": "Vous êtes dans un restaurnant, vous avez commandé à diner et aimerai aussi un verre d'eau gratuit. vous savez qu'en Belgique il n'est pas coutume de proposer de l'eau gratuite",
+      "contexte": "Vous souhaitez demander un petit service à un ami.",
       "interlocuteur": {
-        "nom": "Serveur·e",
-        "replique": "Vous désirez quelque chose à boire ?",
+        "nom": "Ami·e",
+        "replique": "Tu pourrais m'aider avec ça ?",
         "avatar": "scenario_02"
       },
       "options": [
         {
           "id": "A",
-          "texte": "texte option A",
+          "texte": "Option A texte",
           "style": "Assertive",
-          "reaction": "reaction option A",
-          "analyse": "Analyse option A",
-          "pourquoi": "info option A"
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
         },
         {
           "id": "B",
-          "texte": "texte option B",
+          "texte": "Option B texte",
           "style": "Passive / Évitante",
-          "reaction": "reaction option B",
-          "tonReaction": "", 
-          "analyse": "analyse option B",
-          "consequences": "consequence option B",
-          "alternative": "alternative option B"
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
         },
         {
           "id": "C",
-          "texte": "texte option C",
+          "texte": "Option C texte",
           "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "reaction option C",
-          "analyse": "Analyse option C",
-          "pourquoi": "info option C",
-          "attention": "attention option C"
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
         }
       ],
-      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+      "aRetenir": "Résumé à retenir pour ce scénario"
     },
-
     {
       "id": "scenario_03",
       "niveau": "facile",
       "theme": "gestion_imprevu",
-      "contexte": "La réunion que vous deviez avoir en visioconférence est finalement en présentiel",
+      "contexte": "La réunion prévue en visioconférence devient présentielle.",
       "interlocuteur": {
         "nom": "Manager",
-        "replique": "Ca ne te pose pas de problème qu'on se voit finalement en face à face ? C'est plus sympa pour tout le monde non?",
+        "replique": "Ça ne te pose pas de problème de venir au bureau finalement ?",
         "avatar": "scenario_03"
       },
       "options": [
         {
           "id": "A",
-          "texte": "texte option A",
+          "texte": "Option A texte",
           "style": "Assertive",
-          "reaction": "reaction option A",
-          "analyse": "Analyse option A",
-          "pourquoi": "info option A"
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
         },
         {
           "id": "B",
-          "texte": "texte option B",
+          "texte": "Option B texte",
           "style": "Passive / Évitante",
-          "reaction": "reaction option B",
-          "tonReaction": "", 
-          "analyse": "analyse option B",
-          "consequences": "consequence option B",
-          "alternative": "alternative option B"
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
         },
         {
           "id": "C",
-          "texte": "texte option C",
+          "texte": "Option C texte",
           "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "reaction option C",
-          "analyse": "Analyse option C",
-          "pourquoi": "info option C",
-          "attention": "attention option C"
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
         }
       ],
-      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+  
+    {
+      "id": "scenario_04",
+      "niveau": "moyen",
+      "theme": "conflit_travail",
+      "contexte": "Un collègue critique votre travail devant l'équipe.",
+      "interlocuteur": {
+        "nom": "Collègue",
+        "replique": "Je pense que ton travail sur ce projet n'était pas top.",
+        "avatar": "scenario_04"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+    {
+      "id": "scenario_05",
+      "niveau": "moyen",
+      "theme": "négociation",
+      "contexte": "Vous devez négocier un délai plus long avec votre supérieur.",
+      "interlocuteur": {
+        "nom": "Manager",
+        "replique": "Tu penses pouvoir finir ça d'ici demain ?",
+        "avatar": "scenario_05"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+    {
+      "id": "scenario_06",
+      "niveau": "moyen",
+      "theme": "gestion_stress",
+      "contexte": "Vous devez faire face à une situation urgente sans préparation.",
+      "interlocuteur": {
+        "nom": "Collègue",
+        "replique": "On doit gérer ça maintenant ! Tu es prêt·e ?",
+        "avatar": "scenario_06"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+
+    {
+      "id": "scenario_07",
+      "niveau": "difficile",
+      "theme": "conflit_direct",
+      "contexte": "Un client est mécontent et vous critique sévèrement en public.",
+      "interlocuteur": {
+        "nom": "Client",
+        "replique": "Je ne suis pas du tout satisfait de votre travail !",
+        "avatar": "scenario_07"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+    {
+      "id": "scenario_08",
+      "niveau": "difficile",
+      "theme": "négociation_sensible",
+      "contexte": "Vous devez discuter d'une augmentation avec votre supérieur exigeant.",
+      "interlocuteur": {
+        "nom": "Manager",
+        "replique": "Pourquoi penses-tu mériter cette augmentation ?",
+        "avatar": "scenario_08"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
+    },
+    {
+      "id": "scenario_09",
+      "niveau": "difficile",
+      "theme": "crise_urgence",
+      "contexte": "Un problème critique survient en plein projet et toute l'équipe est sous pression.",
+      "interlocuteur": {
+        "nom": "Chef de projet",
+        "replique": "On doit résoudre ça immédiatement, es-tu prêt·e ?",
+        "avatar": "scenario_09"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Option A texte",
+          "style": "Assertive",
+          "reaction": "Réaction A",
+          "analyse": "Analyse A",
+          "pourquoi": "Pourquoi A"
+        },
+        {
+          "id": "B",
+          "texte": "Option B texte",
+          "style": "Passive / Évitante",
+          "reaction": "Réaction B",
+          "tonReaction": "",
+          "analyse": "Analyse B",
+          "consequences": "Conséquence B",
+          "alternative": "Alternative B"
+        },
+        {
+          "id": "C",
+          "texte": "Option C texte",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Réaction C",
+          "analyse": "Analyse C",
+          "pourquoi": "Pourquoi C",
+          "attention": "Attention C"
+        }
+      ],
+      "aRetenir": "Résumé à retenir pour ce scénario"
     }
   ]
 }
+

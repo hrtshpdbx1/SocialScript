@@ -1,94 +1,209 @@
+/* ========================================
+ STRUCTURE
+======================================== */
+
+
+
+/**  ----------------  ***/
+/**  LE BIG CONTENEUR  ***/
+/**  ----------------  ***/
+
+.content-section {
+   /*! doit être en 100% */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--space-8);
+   margin: var(--space-6) var(--space-4);
+   /* border: 6px solid rgb(139, 0, 93); */
+   width: 100%;
+   height: fit-content;
+   margin: 0 auto;
+
+   /* * --- le sous conteneur --- **/
+   .section-content {
+      /*! doit être en 90/80%*/
+      padding: var(--space-4) var(--space-2);
+      /* padding : top+bottom right+left*/
+      /* border: green 12px solid; */
+      min-width: 70%;
+      max-width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+   }
+
+   /** ------------------------ --- */
+   /** ------- Section titre ------ */
+   /** ------------------------ --- */
+
+   .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      width: 60%;
+      box-sizing: border-box;
+      max-width: 1200px;
+      /* border: 2px solid lightblue; */
+      text-align: center;
+      padding: var(--space-4);
+      /* margin: var(--space-4); */
+   }
+
+   @media (max-width: 768px) {
+      .content-section {
+         margin: var(--space-2) 0;
+         /* Réduit les marges */
+         padding: var(--space-4) var(--space-1);
+         /* Au lieu de --space-12 */
+      }
+
+      .section-header {
+         padding: var(--space-2);
+         /* Au lieu de --space-4 */
+         width: 90%;
+         /* Plus large sur mobile */
+      }
+
+      .section-content {
+         padding: var(--space-2) var(--space-1);
+         min-width: 95%;
+         /* Utilise presque toute la largeur */
+      }
+   }
+
+}
+
+/* ========================================
+SCENARIO
+======================================== */
+
+.scenario { /* = DIV_SCENARIO */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   gap: var(--space-4);
+   background-color: lightblue;
+   border: 2px red solid ;
+}
+
+.scenario-contexte {
+   flex-direction: row;
+   align-items: center;
+   justify-content: flex-end;
+   border: 1px;
+   background-color: var(--gray-100);
+   padding: var(--space-2);
+   border-radius: var(--radius-sm);
+   box-shadow: var(--shadow-md);
+   background-color: lightseagreen;
+}
+
+.interlocuteur-container {
+   display: flex;
+   align-items: center;
+   gap: var(--space-1);
+   border: 1px;
+   padding: var(--space-2);
+   border-radius: var(--radius-sm);
+   box-shadow: var(--shadow-md);
+   background-color: lightcoral;
+}
+
+strong { /* Nom de l'avatar */
+}
+
+
+.imgAvatar {
+   width: 50px;
+}
+
+.result-container {
+   background-color: lightgoldenrodyellow;
+     padding: var(--space-2);
+   border-radius: var(--radius-sm);
+   box-shadow: var(--shadow-md);
+}
+
+/* Pour plus tard : exemple de speech bubble 
+.speech-bubble {
+	position: relative;
+	background: #c0c0c0;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #c0c0c0;
+	border-left: 0;
+	margin-top: -20px;
+	margin-left: -20px;
+} */
+
 
 /* ========================================
    BOUTONS
 ======================================== */
 .btn-level {
-
+   /* n'est plus utilisé, cf global, btn-secondary */
 }
 
-.btn-level:hover {
+/* .btn-level:hover {
     
-}
+} */
 
-.btn-theme {
-  
-}
+.btn-theme {}
 
-.btn-theme:hover {
-   
-}
+.btn-theme:hover {}
 
 .btn-return {
-   
+   /* todo:  */
 }
 
-.btn-return:hover {
-   
-}
+.btn-return:hover {}
 
-.restart-btn {
-    
-}
+.restart-btn {}
 
-.restart-btn:hover {
-    
-}
+.restart-btn:hover {}
 
 .option-btn {
-    
+/* todo: */ 
+  background: lightslategrey
 }
 
-.option-btn:hover {
-    
-}
+.option-btn:hover {}
 
-.option-btn.disabled {
-    
-}
+.option-btn.disabled {}
 
-/* ========================================
-   SCENARIO / CONTENU
-======================================== */
-.scenario-contexte {
-    
-}
 
-.interlocuteur-container {
-   
-}
 
-.imgAvatar {
-  width: 50px;  
-}
-
-.result-container {
-    
-}
 
 /* ========================================
    FEEDBACK / RÉSULTAT
 ======================================== */
-.feedback-container {
-   
-}
+.feedback-container {}
 
-.feedback-reaction {
-    
-}
+.feedback-reaction {}
 
 .feedback-reaction img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 5px;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   vertical-align: middle;
+   margin-right: 5px;
 }
 
-.feedback-analyse {
-  
-}
+.feedback-analyse {}
 
 .feedback-type {
-    font-style: italic;
-   
+   font-style: italic;
+
 }

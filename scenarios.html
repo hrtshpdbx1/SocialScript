@@ -5,71 +5,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scenarios - SocialScript</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/global2.css">
     <link rel="stylesheet" href="styles/scenarios.css">
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/brands.min.css"
+        integrity="sha512-WxpJXPm/Is1a/dzEdhdaoajpgizHQimaLGL/QqUIAjIihlQqlPQb1V9vkGs9+VzXD7rgI6O+UsSKl4u5K36Ydw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Load an icon library hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- autre font handwritten -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+HR:wght@100..400&family=Solitreo&display=swap"
+        rel="stylesheet">
+
+    <!-- * JS * -->
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script defer src="./scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 </head>
 
 <body>
+    <!-- ** -------------------- Header -------------------- -->
+
+    <header>
+        <!-- -------------------- Nav Bar --------------------  -->
+        <nav class="topnav">
+            <div class="containerNav">
+                <div class="navLeft"> <!-- Logo toujours visible -->
+                    <a href="index.html"><img src="img/logo.png" alt="logo-socialscript">
+                    </a>
+                </div>
+                <!-- Menu caché sur mobile -->
+                <div id="myLinks" class="navMiddle">
+                    <ul>
+                        <li><a class="btn-nav" href="index.html">Accueil</a></li>
+                        <li><a class="btn-nav" href="codessociaux.html">Les code sociaux</a>
+                        </li>
+                        <li><a class="btn-nav" href="ressources.html">Ressources</a></li>
+                        <li><a class="btn-nav" href="#aboutAnchor">A propos</a></li>
+                    </ul>
+                </div>
+                <div class="navRight">
+                    <a href="scenarios.html" class="btn-cta desktop-cta btn">Les scenarios</a>
+                    <!-- Icône hamburger (visible uniquement sur mobile) -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!-- <img class="sticky_img" src="img/6.png" alt=""> -->
+
+    </header>
+
+    <!-- ! -------------- MAIN ----------------------->
+
+    <div class="content-section"> <!-- BIG CONTENEUR -->
+        <div class="section-header">
+            <h1> Explorer les scenarios </h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam similique eos totam pariatur iure
+                nobis, sint
+                obcaecati beatae, eligendi, quia rem non ratione. Facere fugit quam error aliquam quasi necessitatibus?
+            </p>
+        </div>
+
+        <div class="section-content">
+
+            <div id="scenario">
+                <!--  Container où s'affichent tous les éléments dynamiques -->
+            </div>
+              <a href="codessociaux.html" class="btn_violet">En savoir plus des codes sociaux</a>
+              
+        </div>
+
+    </div>
 
 
-    <!-- -------------------- Nav Bar --------------------  -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="scenarios.html">Scenarios</a></li>
-            <li><a href="#aboutAnchor">À propos</a></li> <!-- todo : vérifier anchor  -->
-            <li><a href="ressources.html">Ressources</a></li>
-            <li><a href="scenarios.html" class="btn_green">Commencez l'entraînement</a></li>
-        </ul>
-    </nav>
-    <main>
-        <!-- ! -------------- MAIN ----------------------->
-         <h1> Explorer les scenarios </h1>
-         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam similique eos totam pariatur iure nobis, sint obcaecati beatae, eligendi, quia rem non ratione. Facere fugit quam error aliquam quasi necessitatibus?</p>
-        <div id="scenario"></div> <!--  Container principal où s'affichent tous les éléments dynamiques -->
-          <a href="codessociaux.html" class="btn_violet">En savoir plus des codes sociaux</a>
+
+
+  
     </main>
 
     <!-- ! -------------- FOOTER----------------------->
     <footer>
         <div class="footerContainer">
-            <div clas="footerContainerLeft">
-                <img src="" alt="">
-                <!-- todo: add a logo -->
-            </div> <!-- fin footerContainerLeft -->
-            <div clas="footerContainerRight">
-                <div class="navListFooter">
-                    <ul>Navigation</ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="scenarios.html">Scénarios interactifs</a></li>
-                    <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
-                    <li><a href="ressources.html">Ressources</a></li>
-                    <li><a href="">À propos</a></li>
+            <div class="container-three-col">
+                <div class="footerContainerLeft">
+                    <img src="img/logo.png" alt="logo">
+                    <p>SocialScript — Simulateur d’interactions sociales </p>
+                    <!-- todo: add a logo -->
+
+                </div> <!-- fin footerContainerLeft -->
+
+                <div class="navListFooter_middle">
+                    <ul>
+                        <li class="list-title">Navigation</li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="scenarios.html">Scénarios interactifs</a></li>
+                        <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                    </ul>
                 </div>
-                <div class="navListFooter">
-                    <ul><a href="">Legal</a></ul>
-                    <li><a href="">Mentions légales</a></li>
-                    <li><a href="">Politique de confidentialité</a></li>
-                    <li><a href="">Accessibilité</a></li>
-                    <li><a href="">Contact/a></li>
+                <div class="navListFooter_right">
+                    <ul>
+                        <li class="list-title">Legal</li>
+                        <li><a href="">Mentions légales</a></li>
+                        <li><a href="">Politique de confidentialité</a></li>
+                        <li><a href="">Accessibilité</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
                 </div>
-            </div> <!-- fin footerContainerRight -->
-            <!-- todo: insert ligne -->
+
+            </div>
+
+            <div class="ligne">
+
+            </div>
 
             <div class="bottomFooterContainer">
                 <div class="elemBottomFooter">
-                    <p>© 2025 SocialScript — Tous droits réservés</p>
+                    <p>© 2025 SocialScript — Tous droits réservés </p>
                 </div>
                 <div class="elemBottomFooter">
-                    <a href="">Contact : info@socialscript.be</a> <!-- todo: insert mailto-->
+                    <p> <a href="">Contact : info@socialscript.be</a> <!-- todo: insert mailto-->
+                    </p>
                 </div>
             </div>
         </div>

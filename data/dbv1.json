@@ -1,0 +1,128 @@
+
+v1
+  "scenarios": [
+    {
+      "id": "scenario_01",
+      "niveau": "facile",
+      "theme": "invitation_sociale",
+      "contexte": "À la pause café, un collègue vous invite à son anniversaire.",
+      "interlocuteur": {
+        "nom": "Collègue",
+        "replique": "Ça te dirait de venir samedi soir ?",
+        "avatar": "scenario_01"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "Oh c'est gentil ! Malheureusement je ne suis pas disponible samedi, mais j'espère que tu passeras une super soirée !",
+          "style": "Assertive",
+          "reaction": "Pas de souci ! Merci quand même, on se voit lundi alors !",
+          "analyse": "Cette réponse combine plusieurs éléments efficaces d'une communication assertive. Vous reconnaissez l'invitation, ce qui valorise l'autre et montre que vous appréciez l'attention. Vous exprimez ensuite clairement votre indisponibilité sans entrer dans des justifications excessives. Enfin, vous terminez sur une note positive en souhaitant à votre collègue de passer une bonne soirée.",
+          "pourquoi": "Votre collègue comprend que votre refus n'est pas un rejet personnel. La clarté de votre réponse évite l'ambiguïté et les malentendus. Cette approche préserve la relation professionnelle tout en respectant vos propres limites."
+        },
+        {
+          "id": "B",
+          "texte": "Samedi ? Euh... je ne sais pas encore, je te confirme plus tard ?",
+          "style": "Passive / Évitante",
+          "reaction": "Ah... d'accord. Bon, tiens-moi au courant alors !",
+          "tonReaction": "légèrement déçu, incertain",
+          "analyse": "Cette réponse reflète une hésitation qui peut être interprétée de plusieurs façons par votre interlocuteur. Les hésitations verbales et l'absence de position claire créent de l'ambiguïté. Votre collègue ne sait pas si vous êtes vraiment intéressé·e mais avez un empêchement, si vous cherchez une excuse polie pour refuser, ou si vous avez réellement besoin de vérifier votre agenda.",
+          "consequences": "Votre collègue risque de revenir vers vous pour obtenir une réponse, ce qui prolonge la situation inconfortable. Il peut aussi interpréter votre hésitation comme un manque d'intérêt et se sentir blessé.",
+          "alternative": "Si vous avez réellement besoin de vérifier quelque chose, soyez plus spécifique : 'Je dois vérifier si j'ai quelque chose de prévu ce soir-là, je te confirme d'ici demain midi, ça te va ?'"
+        },
+        {
+          "id": "C",
+          "texte": "Merci pour l'invitation, mais les grandes soirées ce n'est pas trop mon truc.",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "Ah je comprends ! Bon, on aura l'occasion de se voir au bureau de toute façon !",
+          "analyse": "Cette réponse est directe et honnête. Vous remerciez pour l'invitation, puis vous exprimez clairement votre refus en donnant une raison qui concerne vos préférences personnelles, pas la personne qui invite. Vous partagez une information sur vous-même plutôt que de chercher une excuse externe.",
+          "pourquoi": "Votre collègue comprend que ce n'est pas personnel — vous n'évitez pas lui, vous évitez les grandes soirées en général. Cette honnêteté peut être appréciée et évite les malentendus futurs.",
+          "attention": "Cette approche demande un certain niveau de confiance et de confort avec la vulnérabilité. Partager vos préférences personnelles peut vous sentir exposé·e, surtout dans un contexte professionnel."
+        }
+      ],
+      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+    },
+    {
+      "id": "scenario_02",
+      "niveau": "facile",
+      "theme": "demander_une_faveur",
+      "contexte": "Vous êtes dans un restaurnant, vous avez commandé à diner et aimerai aussi un verre d'eau gratuit. vous savez qu'en Belgique il n'est pas coutume de proposer de l'eau gratuite",
+      "interlocuteur": {
+        "nom": "Serveur·e",
+        "replique": "Vous désirez quelque chose à boire ?",
+        "avatar": "scenario_02"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "texte option A",
+          "style": "Assertive",
+          "reaction": "reaction option A",
+          "analyse": "Analyse option A",
+          "pourquoi": "info option A"
+        },
+        {
+          "id": "B",
+          "texte": "texte option B",
+          "style": "Passive / Évitante",
+          "reaction": "reaction option B",
+          "tonReaction": "", 
+          "analyse": "analyse option B",
+          "consequences": "consequence option B",
+          "alternative": "alternative option B"
+        },
+        {
+          "id": "C",
+          "texte": "texte option C",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "reaction option C",
+          "analyse": "Analyse option C",
+          "pourquoi": "info option C",
+          "attention": "attention option C"
+        }
+      ],
+      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+    },
+    {
+      "id": "scenario_03",
+      "niveau": "facile",
+      "theme": "gestion_imprevu",
+      "contexte": "La réunion que vous deviez avoir en visioconférence est finalement en présentiel",
+      "interlocuteur": {
+        "nom": "Manager",
+        "replique": "Ca ne te pose pas de problème qu'on se voit finalement en face à face ? C'est plus sympa pour tout le monde non?",
+        "avatar": "scenario_03"
+      },
+      "options": [
+        {
+          "id": "A",
+          "texte": "texte option A",
+          "style": "Assertive",
+          "reaction": "reaction option A",
+          "analyse": "Analyse option A",
+          "pourquoi": "info option A"
+        },
+        {
+          "id": "B",
+          "texte": "texte option B",
+          "style": "Passive / Évitante",
+          "reaction": "reaction option B",
+          "tonReaction": "", 
+          "analyse": "analyse option B",
+          "consequences": "consequence option B",
+          "alternative": "alternative option B"
+        },
+        {
+          "id": "C",
+          "texte": "texte option C",
+          "style": "Assertive / Directe avec explication personnelle",
+          "reaction": "reaction option C",
+          "analyse": "Analyse option C",
+          "pourquoi": "info option C",
+          "attention": "attention option C"
+        }
+      ],
+      "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+    }
+  ]
+}
