@@ -90,6 +90,21 @@ justify-content: space-evenly;
 gap: var(--space-2)
 }
 
+.container-btn-option{
+   display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-evenly;
+gap: var(--space-2)
+}
+
+.container-btn-nav {
+display: flex;
+flex-direction: row;
+align-items:center;
+justify-content: space-evenly;
+padding: var(--space-4);
+}
 
 /* ========================================
 INITIALISATION 
@@ -111,8 +126,6 @@ SCENARIO
    align-items: center;
    justify-content: space-between;
    gap: var(--space-4);
-   background-color: lightblue;
-   border: 2px red solid ;
 }
 
 .scenario-contexte {
@@ -124,7 +137,7 @@ SCENARIO
    padding: var(--space-2);
    border-radius: var(--radius-sm);
    box-shadow: var(--shadow-md);
-   background-color: lightseagreen;
+   background-color: var(--gray-100)
 }
 
 .interlocuteur-container {
@@ -135,22 +148,25 @@ SCENARIO
    padding: var(--space-2);
    border-radius: var(--radius-sm);
    box-shadow: var(--shadow-md);
-   background-color: lightcoral;
+   background-color: var(--secondary);
 }
 
 strong { /* Nom de l'avatar */
 }
 
+.section-title {
+   display: flex;
+   align-items: center ;
+   justify-content: center;
+}
 
 .imgAvatar {
    width: 50px;
 }
 
 .result-container {
-   background-color: lightgoldenrodyellow;
-     padding: var(--space-2);
+   padding: var(--space-2);
    border-radius: var(--radius-sm);
-   box-shadow: var(--shadow-md);
 }
 
 /* Pour plus tard : exemple de speech bubble 
@@ -201,33 +217,57 @@ strong { /* Nom de l'avatar */
 .restart-btn:hover {}
 
 .option-btn {
-/* todo: */ 
-  background: lightslategrey
+  background: var(--secondary-700);
+  color: var(--white);
 }
 
-.option-btn:hover {}
+.option-btn:hover {
+    background: var(--secondary-800);
+  color: var(--white);
+}
 
-.option-btn.disabled {}
+.option-btn:disabled {
+    background: var(--gray-200);
+    color: var(--white);
+    pointer-events: none; 
+}
 
-
+.option-btn:disabled.option-choisie {
+    background: var(--secondary-800);
+  color: var(--white)
+}
 
 
 /* ========================================
    FEEDBACK / RÉSULTAT
 ======================================== */
-.feedback-container {}
+.feedback-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: var(--space-1);
+   margin-top: 5%;
+   border-radius: var(--radius-md);
+   background-color: var(--primary-200);
+}
 
-.feedback-reaction {}
+.feedback-reaction {
+/* Réaction de l'interlocuteur·ice */
+text-align: center;
+/* todo: mettre réponse en italic */
+}
 
-.feedback-reaction img {
+/* .feedback-reaction img {
    width: 40px;
    height: 40px;
    border-radius: 50%;
    vertical-align: middle;
    margin-right: 5px;
-}
+} */
 
-.feedback-analyse {}
+.feedback-analyse {
+   text-align: center;
+}
 
 .feedback-type {
    font-style: italic;

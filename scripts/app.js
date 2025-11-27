@@ -165,6 +165,7 @@ function showThemeButtons(scenariosFiltres) {
     // Crée le titre
     const titre = document.createElement('h2');
     titre.textContent = 'Choisissez un thème';
+    titre.style.textAlign = 'center';  
     DIV_SCENARIO.appendChild(titre);
 
     // Crée un container pour les boutons thème
@@ -191,7 +192,7 @@ function showThemeButtons(scenariosFiltres) {
     for (let i = 0; i < themes.length; i++) {
         const btn = document.createElement('button');
         btn.textContent = themes[i];
-        btn.classList.add('btn','btn-primary');
+        btn.classList.add('btn', 'btn-primary');
 
         // Ajoute les btns dans le container Theme
         containerBoutonsTheme.appendChild(btn);
@@ -204,16 +205,27 @@ function showThemeButtons(scenariosFiltres) {
         DIV_SCENARIO.appendChild(containerBoutonsTheme);
     }
     // Bouton pour revenir aux niveaux
+    //! ici container
+
+    
+    // Crée un container pour les boutons options
+    const containerBoutonsRetour= document.createElement('div');
+    containerBoutonsRetour.classList.add('container-btn-nav');
+
+
     const btnRetour = document.createElement('button');
     btnRetour.textContent = "Retour aux niveaux";
-    btnRetour.classList.add('btn','btn-return');
+    btnRetour.classList.add('btn', 'btn-return');
     // btnRetour.style.marginTop = '20px';
     btnRetour.addEventListener('click', function () {
         // Retourne à l'écran de choix de niveau
         showLevelButtons();
-    });
 
-    DIV_SCENARIO.appendChild(btnRetour);
+    });
+        containerBoutonsRetour.appendChild(btnRetour);
+    // Ajoute le container au DOM
+    DIV_SCENARIO.appendChild(containerBoutonsRetour);
+
 }
 
 // todo : param 
@@ -288,72 +300,126 @@ function renderScenario(scenario) {
     // Titre de la section options
     const titreOptions = document.createElement('h2'); // ou 'div' avec une classe
     titreOptions.textContent = "Choisissez une réponse :";
-    titreOptions.classList.add('section-title');
+    titreOptions.classList.add('section-title'); 
     DIV_SCENARIO.appendChild(titreOptions);
 
-    // Crée un bouton pour chaque option de réponse
-    for (let i = 0; i < scenario.options.length; i++) {
-        // Récupère l'option actuelle
-        const option = scenario.options[i];
-        // Crée le bouton
+    // Crée un container pour les boutons options
+    const containerBoutonsOption = document.createElement('div');
+    containerBoutonsOption.classList.add('container-btn-option');
+
+    
+         // Crée les boutons options
+    scenario.options.forEach(option => {
         const btnOption = document.createElement('button');
         btnOption.textContent = option.texte;
         btnOption.classList.add('btn', 'option-btn');
-        // Quand on clique sur l'option
-        btnOption.addEventListener('click', function () {
-            // Affiche le résultat de ce choix
-            // On passe plusieurs paramètres à showResult()
-            showResult(option, divResultat, urlAvatar, scenario);
-        });
+        btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario,btnOption));
+        containerBoutonsOption.appendChild(btnOption);
+    });
 
-        DIV_SCENARIO.appendChild(btnOption);
-    }
 
-    // --- SECTION RÉSULTAT ---
-    // Div vide qui contiendra le résultat après avoir cliqué sur une option
+    DIV_SCENARIO.appendChild(containerBoutonsOption);
+
+    // Div résultat unique
     const divResultat = document.createElement('div');
     divResultat.id = 'resultDiv';
     divResultat.classList.add('result-container');
     DIV_SCENARIO.appendChild(divResultat);
 
-    // --- BOUTONS DE NAVIGATION ---
+      // Container navigation
+    const containerBoutonsNav = document.createElement('div');
+    containerBoutonsNav.classList.add('container-btn-nav');
 
-    // Bouton pour rejouer le même scénario (caché au départ)
-    const btnRestart = document.createElement('button');
-    btnRestart.textContent = "Rejouer le scénario";
-    btnRestart.classList.add('btn','restart-btn');
-    btnRestart.style.marginTop = '20px';
-    btnRestart.style.display = 'none';  // Le bouton est invisible au début
-
-    btnRestart.addEventListener('click', function () {
-        // Recharge le même scénario (remet à zéro)
-        renderScenario(scenario);
-    });
-    DIV_SCENARIO.appendChild(btnRestart);
-
-    // Bouton pour revenir à la sélection des niveaux
     const btnRetourNiveau = document.createElement('button');
     btnRetourNiveau.textContent = "Retour aux niveaux";
-    btnRetourNiveau.classList.add('btn','btn-return');
-    // btnRetourNiveau.style.marginTop = '10px';
-    btnRetourNiveau.addEventListener('click', function () {
-        showLevelButtons();
-    });
-    DIV_SCENARIO.appendChild(btnRetourNiveau);
+    btnRetourNiveau.classList.add('btn', 'btn-return');
+    btnRetourNiveau.addEventListener('click', () => showLevelButtons());
+    containerBoutonsNav.appendChild(btnRetourNiveau);
+
+     DIV_SCENARIO.appendChild(containerBoutonsNav);
+
 }
+
+    // // Crée un bouton pour chaque option de réponse
+    // for (let i = 0; i < scenario.options.length; i++) {
+    //     // Récupère l'option actuelle
+    //     const option = scenario.options[i];
+    //     // Crée le bouton
+    //     const btnOption = document.createElement('button');
+    //     btnOption.textContent = option.texte;
+    //     btnOption.classList.add('btn', 'option-btn');
+    //     // Quand on clique sur l'option
+    //     btnOption.addEventListener('click', function () {
+    //         // Affiche le résultat de ce choix
+    //         // On passe plusieurs paramètres à showResult()
+    //         showResult(option, divResultat, urlAvatar, scenario);
+    //     });
+    //     // Ajoute les btns dans le container Options
+    //     containerBoutonsOption.appendChild(btnOption);
+    // }
+
+    // // Ajoute le container dans DIV SCENARIO
+    // DIV_SCENARIO.appendChild(containerBoutonsOption);
+
+    // --- SECTION RÉSULTAT ---
+
+    // Div vide qui contiendra le résultat après avoir cliqué sur une option
+//     const divResultat = document.createElement('div');
+//     divResultat.id = 'resultDiv';
+//     divResultat.classList.add('result-container');
+//     DIV_SCENARIO.appendChild(divResultat);
+
+//     // --- BOUTONS DE NAVIGATION ---
+//    // Crée un container pour les boutons nav
+//     const containerBoutonsNav = document.createElement('div');
+//     containerBoutonsNav.classList.add('container-btn-nav');
+
+
+    // // Bouton pour rejouer le même scénario (caché au départ)
+    // const btnRestart = document.createElement('button');
+    // btnRestart.textContent = "Rejouer le scénario";
+    // btnRestart.classList.add('btn', 'restart-btn');
+    // // btnRestart.style.marginTop = '20px';
+    // btnRestart.style.display = 'none';  // Le bouton est invisible
+ 
+    // btnRestart.addEventListener('click', function () {
+    //     // Recharge le même scénario (remet à zéro)
+    //     renderScenario(scenario);
+    // });
+
+//     // Bouton pour revenir à la sélection des niveaux
+//     const btnRetourNiveau = document.createElement('button');
+//     btnRetourNiveau.textContent = "Retour aux niveaux";
+//     btnRetourNiveau.classList.add('btn', 'btn-return');
+//     // btnRetourNiveau.style.marginTop = '10px';
+//     btnRetourNiveau.addEventListener('click', function () {
+//         showLevelButtons();
+//     });
+//     // DIV_SCENARIO.appendChild(btnRetourNiveau,);
+
+//     // Ajoute le btn Restart + Retour dans le container Nav
+//     containerBoutonsNav.append(btnRetourNiveau);
+
+//     // Ajoute le container dans DIV SCENARIO
+//     DIV_SCENARIO.appendChild(containerBoutonsNav);
+
+//      // Div résultat
+//     const divResultat = document.createElement('div');
+//     divResultat.id = 'resultDiv';
+//     divResultat.classList.add('result-container');
+//     DIV_SCENARIO.appendChild(divResultat);
+// }
 
 // ========================================
 // AFFICHAGE DU RÉSULTAT 
 // ========================================
 
-function showResult(option, divResultat, urlAvatar, scenario) {
-    // remplace le contenu de la divResultat
+function showResult(option, divResultat, urlAvatar, scenario,btnOption) {
     divResultat.innerHTML = `
         <div class="feedback-container">
             <h3>Résultat de votre choix</h3>
             <div class="feedback-reaction">
-                <strong>Réaction de l'interlocteur·ice :</strong>
-                <img src="${urlAvatar}" class="imgAvatar" alt="Avatar de l'interlocuteur·ice"></img>
+                <strong>Réaction de l'interlocuteur·ice :</strong>
                 <p>${option.reaction}</p>
             </div>
             <div class="feedback-analyse">
@@ -363,25 +429,65 @@ function showResult(option, divResultat, urlAvatar, scenario) {
             <p class="feedback-type">Type : <span>${option.type}</span></p>
         </div>
     `;
-    // Rend la div visible 
     divResultat.style.display = 'block';
 
-    //  // Masquer toutes les autres options non choisies //! ils sont dans divSCENARIO
-    // const tousLesBoutons = document.querySelectorAll('.option-btn');
-    // tousLesBoutons.forEach(btn => {
-    //      console.log('Texte du bouton :', btn.textContent, '| Option choisie :', option.eaction
-    //     if (btn.textContent !== option.texte) {
-    //         btn.style.display = 'none'; // cache les autres options
-    //     } else {
-    //         btn.classList.add('selected-option'); // option choisie
-    //     }
-    // });
+    // Désactive tous les boutons d'options 
+    const tousLesBoutons = DIV_SCENARIO.querySelectorAll('.option-btn');
+    tousLesBoutons.forEach(btn => btn.disabled = true);
 
-    // Affiche le bouton Rejouer
-    // querySelector() cherche le premier élément avec la classe 'restart-btn'
-    const btnRestart = DIV_SCENARIO.querySelector('.restart-btn');
-    // Si le bouton existe (vérification de sécurité)
-    if (btnRestart)
-        // Le rend visible
-        btnRestart.style.display = 'inline-block';
+     // Ajoute une classe spéciale au bouton choisi
+    btnOption.classList.add('option-choisie');
+
+    // Ajoute dynamiquement le bouton Rejouer
+    const btnRestart = document.createElement('button');
+    btnRestart.textContent = "Rejouer le scénario";
+    btnRestart.classList.add('btn', 'restart-btn');
+    btnRestart.addEventListener('click', () => renderScenario(scenario));
+
+    const containerNav = DIV_SCENARIO.querySelector('.container-btn-nav');
+    containerNav.appendChild(btnRestart);
 }
+
+// function showResult(option, divResultat, urlAvatar, scenario) {
+//     // remplace le contenu de la divResultat
+//     divResultat.innerHTML = `
+//         <div class="feedback-container">
+//             <h3>Résultat de votre choix</h3>
+//             <div class="feedback-reaction">
+//                 <strong>Réaction de l'interlocteur·ice :</strong>
+//                 <img src="${urlAvatar}" class="imgAvatar" alt="Avatar de l'interlocuteur·ice"></img>
+//                 <p>${option.reaction}</p>
+//             </div>
+//             <div class="feedback-analyse">
+//                 <strong>Analyse :</strong>
+//                 <p>${option.analyse}</p>
+//             </div>
+//             <p class="feedback-type">Type : <span>${option.type}</span></p>
+//         </div>
+//     `;
+//     // Rend la div visible 
+//     divResultat.style.display = 'block';
+
+//     //  // Masquer toutes les autres options non choisies //! ils sont dans divSCENARIO
+//     // const tousLesBoutons = document.querySelectorAll('.option-btn');
+//     // tousLesBoutons.forEach(btn => {
+//     //      console.log('Texte du bouton :', btn.textContent, '| Option choisie :', option.eaction
+//     //     if (btn.textContent !== option.texte) {
+//     //         btn.style.display = 'none'; // cache les autres options
+//     //     } else {
+//     //         btn.classList.add('selected-option'); // option choisie
+//     //     }
+//     // });
+
+//    // Crée le bouton Rejouer
+//     const btnRestart = document.createElement('button');
+//     btnRestart.textContent = "Rejouer le scénario";
+//     btnRestart.classList.add('btn', 'restart-btn');
+//     btnRestart.addEventListener('click', function () {
+//         renderScenario(scenario);
+//     });
+
+//     // Ajoute le bouton Rejouer dans le container nav déjà existant
+//     const containerNav = DIV_SCENARIO.querySelector('.container-btn-nav');
+//     containerNav.appendChild(btnRestart);
+// }
