@@ -3,7 +3,7 @@
 
     {
       "id": "scenario_01",
-      "niveau": "facile",
+      "niveau": "Facile",
       "theme": "invitation_sociale",
       "contexte": "À la pause café, un collègue vous invite à son anniversaire.",
       "interlocuteur": {
@@ -44,7 +44,7 @@
     },
     {
       "id": "scenario_02",
-      "niveau": "facile",
+      "niveau": "Facile",
       "theme": "demander_une_faveur",
       "contexte": "Vous souhaitez demander un petit service à un ami.",
       "interlocuteur": {
@@ -85,7 +85,7 @@
     },
     {
       "id": "scenario_03",
-      "niveau": "facile",
+      "niveau": "Facile",
       "theme": "gestion_imprevu",
       "contexte": "La réunion prévue en visioconférence devient présentielle.",
       "interlocuteur": {
@@ -127,7 +127,7 @@
   
     {
       "id": "scenario_04",
-      "niveau": "moyen",
+      "niveau": "Moyen",
       "theme": "conflit_travail",
       "contexte": "Un collègue critique votre travail devant l'équipe.",
       "interlocuteur": {
@@ -168,7 +168,7 @@
     },
     {
       "id": "scenario_05",
-      "niveau": "moyen",
+      "niveau": "Moyen",
       "theme": "négociation",
       "contexte": "Vous devez négocier un délai plus long avec votre supérieur.",
       "interlocuteur": {
@@ -209,7 +209,7 @@
     },
     {
       "id": "scenario_06",
-      "niveau": "moyen",
+      "niveau": "Moyen",
       "theme": "gestion_stress",
       "contexte": "Vous devez faire face à une situation urgente sans préparation.",
       "interlocuteur": {
@@ -251,7 +251,7 @@
 
     {
       "id": "scenario_07",
-      "niveau": "difficile",
+      "niveau": "Moyen",
       "theme": "conflit_direct",
       "contexte": "Un client est mécontent et vous critique sévèrement en public.",
       "interlocuteur": {
@@ -292,7 +292,7 @@
     },
     {
       "id": "scenario_08",
-      "niveau": "difficile",
+      "niveau": "Difficile",
       "theme": "négociation_sensible",
       "contexte": "Vous devez discuter d'une augmentation avec votre supérieur exigeant.",
       "interlocuteur": {
@@ -333,7 +333,7 @@
     },
     {
       "id": "scenario_09",
-      "niveau": "difficile",
+      "niveau": "Difficile",
       "theme": "crise_urgence",
       "contexte": "Un problème critique survient en plein projet et toute l'équipe est sous pression.",
       "interlocuteur": {

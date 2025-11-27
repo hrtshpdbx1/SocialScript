@@ -45,10 +45,11 @@ Le projet répond à un besoin d'apprentissage des codes sociaux dans un environ
    ```bash
    npm install -g json-server
    ```
-3. Lancer le serveur JSON pour les scénarios :
+3. Ouvrir le terminal dans le dossier local et lancer le serveur JSON :
 
    ```bash
    json-server --watch data/db.json --port 3000
+
    ```
 4. Vérifier que le serveur fonctionne en ouvrant dans le navigateur :
 
