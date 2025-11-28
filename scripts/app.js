@@ -165,7 +165,7 @@ function showThemeButtons(scenariosFiltres) {
     // Crée le titre
     const titre = document.createElement('h2');
     titre.textContent = 'Choisissez un thème';
-    titre.style.textAlign = 'center';  
+    titre.style.textAlign = 'center';
     DIV_SCENARIO.appendChild(titre);
 
     // Crée un container pour les boutons thème
@@ -207,9 +207,9 @@ function showThemeButtons(scenariosFiltres) {
     // Bouton pour revenir aux niveaux
     //! ici container
 
-    
+
     // Crée un container pour les boutons options
-    const containerBoutonsRetour= document.createElement('div');
+    const containerBoutonsRetour = document.createElement('div');
     containerBoutonsRetour.classList.add('container-btn-nav');
 
 
@@ -222,7 +222,7 @@ function showThemeButtons(scenariosFiltres) {
         showLevelButtons();
 
     });
-        containerBoutonsRetour.appendChild(btnRetour);
+    containerBoutonsRetour.appendChild(btnRetour);
     // Ajoute le container au DOM
     DIV_SCENARIO.appendChild(containerBoutonsRetour);
 
@@ -254,7 +254,7 @@ function renderScenario(scenario) {
     // --- SECTION CONTEXTE ---
 
     // Titre de la section contexte
-    const titreContexte = document.createElement('h3'); // ? ou 'div' avec une classe
+    const titreContexte = document.createElement('h2'); // ? ou 'div' avec une classe
     titreContexte.textContent = "Contexte :";
     titreContexte.classList.add('section-title');  //todo :integrer au css ** /
     DIV_SCENARIO.appendChild(titreContexte);
@@ -267,53 +267,131 @@ function renderScenario(scenario) {
 
     // --- SECTION INTERLOCUTEUR ---
 
-    // Div qui contient l'avatar + le nom + la réplique
-    const divInterlo = document.createElement('div');
-    // création div contenant avatar + question 
-    divInterlo.classList.add('interlocuteur-container');
+
+    // --- SECTION INTERLOCUTEUR ---
+
+// Génère l’URL de l’avatar
+const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
+
+// Container global avatar + texte
+const repliqueContainer = document.createElement('div');
+repliqueContainer.classList.add('replique-container');
+
+// DIV avatar
+const avatarContainer = document.createElement('div');
+avatarContainer.classList.add('avatar-container');
+
+const imgAvatar = document.createElement('img');
+imgAvatar.src = urlAvatar;
+imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+imgAvatar.classList.add('imgAvatar');
+
+avatarContainer.appendChild(imgAvatar);
+
+// DIV texte
+const texteContainer = document.createElement('div');
+texteContainer.classList.add('texte-container');
+
+const nom = document.createElement('strong');
+nom.textContent = scenario.interlocuteur.nom + " : ";
+
+const texte = document.createElement('span');
+texte.textContent = scenario.interlocuteur.replique;
+
+texteContainer.appendChild(nom);
+texteContainer.appendChild(texte);
+
+// Ajout des deux blocs dans le container principal
+repliqueContainer.appendChild(avatarContainer);
+repliqueContainer.appendChild(texteContainer);
+
+// Ajout au DOM
+DIV_SCENARIO.appendChild(repliqueContainer);
+
+    // // Div qui contient l'avatar + le nom + la réplique
+    // const divInterlo = document.createElement('div');
+    // // création div contenant avatar + question 
+    // divInterlo.classList.add('interlocuteur-container');
+
+    // Container global avatar + texte
+// const repliqueContainer = document.createElement('div');
+// repliqueContainer.classList.add('replique-container');
+
+// // DIV avatar
+// const avatarContainer = document.createElement('div');
+// avatarContainer.classList.add('avatar-container');
+
+// const imgAvatar = document.createElement('img');
+// imgAvatar.src = urlAvatar;
+// imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+// imgAvatar.classList.add('imgAvatar');
+// const imgAvatar = document.createElement('img');
+// imgAvatar.src = urlAvatar;
+// imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+// imgAvatar.classList.add('imgAvatar');
 
     // Génère l'URL de l'avatar
-    const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
+    // const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
 
     // Crée l'élément image
-    const imgAvatar = document.createElement('img');
-    imgAvatar.src = urlAvatar;
-    imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-    imgAvatar.classList.add('imgAvatar');
+    // const imgAvatar = document.createElement('img');
+    // imgAvatar.src = urlAvatar;
+    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+    // imgAvatar.classList.add('imgAvatar');
     // imgAvatar.style.verticalAlign = 'middle';
-    divInterlo.appendChild(imgAvatar);
+    // divInterlo.appendChild(imgAvatar);
 
     // Crée un élément <strong> pour le nom en gras
-    const spanNom = document.createElement('strong'); //nom de l'interlocteur
-    spanNom.textContent = " " + scenario.interlocuteur.nom;
-    divInterlo.appendChild(spanNom);
+    // const spanNom = document.createElement('strong'); //nom de l'interlocteur
+    // spanNom.textContent = " " + scenario.interlocuteur.nom + ' :';
+    // divInterlo.appendChild(spanNom);
 
-    // Crée un nœud de texte pour la réplique
-    // createTextNode() crée du texte simple (pas un élément HTML)
-    const spanReplique = document.createTextNode(': "' + scenario.interlocuteur.replique + '"');
-    divInterlo.appendChild(spanReplique);
+// // DIV texte
+// const texteContainer = document.createElement('div');
+// texteContainer.classList.add('texte-container');
 
-    DIV_SCENARIO.appendChild(divInterlo);
+// const nom = document.createElement('strong');
+// nom.textContent = scenario.interlocuteur.nom + " : ";
+
+// const texte = document.createElement('span');
+// texte.textContent = scenario.interlocuteur.replique;
+
+// texteContainer.appendChild(nom);
+// texteContainer.appendChild(texte);
+
+// // Ajout des deux blocs dans le container
+// repliqueContainer.appendChild(avatarContainer);
+// repliqueContainer.appendChild(texteContainer);
+
+// // Ajout au DOM
+// DIV_SCENARIO.appendChild(repliqueContainer);
+
+    // // Crée un nœud de texte pour la réplique
+    // // createTextNode() crée du texte simple (pas un élément HTML)
+    // const spanReplique = document.createTextNode('"' + scenario.interlocuteur.replique + '"');
+    // divInterlo.appendChild(spanReplique);
+
+    // DIV_SCENARIO.appendChild(divInterlo);
 
     // --- SECTION OPTIONS ---
 
     // Titre de la section options
     const titreOptions = document.createElement('h2'); // ou 'div' avec une classe
     titreOptions.textContent = "Choisissez une réponse :";
-    titreOptions.classList.add('section-title'); 
+    titreOptions.classList.add('section-title');
     DIV_SCENARIO.appendChild(titreOptions);
 
     // Crée un container pour les boutons options
     const containerBoutonsOption = document.createElement('div');
     containerBoutonsOption.classList.add('container-btn-option');
 
-    
-         // Crée les boutons options
+
+    // Crée les boutons options
     scenario.options.forEach(option => {
         const btnOption = document.createElement('button');
         btnOption.textContent = option.texte;
         btnOption.classList.add('btn', 'option-btn');
-        btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario,btnOption));
+        btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario, btnOption));
         containerBoutonsOption.appendChild(btnOption);
     });
 
@@ -326,7 +404,7 @@ function renderScenario(scenario) {
     divResultat.classList.add('result-container');
     DIV_SCENARIO.appendChild(divResultat);
 
-      // Container navigation
+    // Container navigation
     const containerBoutonsNav = document.createElement('div');
     containerBoutonsNav.classList.add('container-btn-nav');
 
@@ -336,106 +414,41 @@ function renderScenario(scenario) {
     btnRetourNiveau.addEventListener('click', () => showLevelButtons());
     containerBoutonsNav.appendChild(btnRetourNiveau);
 
-     DIV_SCENARIO.appendChild(containerBoutonsNav);
+    DIV_SCENARIO.appendChild(containerBoutonsNav);
 
 }
-
-    // // Crée un bouton pour chaque option de réponse
-    // for (let i = 0; i < scenario.options.length; i++) {
-    //     // Récupère l'option actuelle
-    //     const option = scenario.options[i];
-    //     // Crée le bouton
-    //     const btnOption = document.createElement('button');
-    //     btnOption.textContent = option.texte;
-    //     btnOption.classList.add('btn', 'option-btn');
-    //     // Quand on clique sur l'option
-    //     btnOption.addEventListener('click', function () {
-    //         // Affiche le résultat de ce choix
-    //         // On passe plusieurs paramètres à showResult()
-    //         showResult(option, divResultat, urlAvatar, scenario);
-    //     });
-    //     // Ajoute les btns dans le container Options
-    //     containerBoutonsOption.appendChild(btnOption);
-    // }
-
-    // // Ajoute le container dans DIV SCENARIO
-    // DIV_SCENARIO.appendChild(containerBoutonsOption);
-
-    // --- SECTION RÉSULTAT ---
-
-    // Div vide qui contiendra le résultat après avoir cliqué sur une option
-//     const divResultat = document.createElement('div');
-//     divResultat.id = 'resultDiv';
-//     divResultat.classList.add('result-container');
-//     DIV_SCENARIO.appendChild(divResultat);
-
-//     // --- BOUTONS DE NAVIGATION ---
-//    // Crée un container pour les boutons nav
-//     const containerBoutonsNav = document.createElement('div');
-//     containerBoutonsNav.classList.add('container-btn-nav');
-
-
-    // // Bouton pour rejouer le même scénario (caché au départ)
-    // const btnRestart = document.createElement('button');
-    // btnRestart.textContent = "Rejouer le scénario";
-    // btnRestart.classList.add('btn', 'restart-btn');
-    // // btnRestart.style.marginTop = '20px';
-    // btnRestart.style.display = 'none';  // Le bouton est invisible
- 
-    // btnRestart.addEventListener('click', function () {
-    //     // Recharge le même scénario (remet à zéro)
-    //     renderScenario(scenario);
-    // });
-
-//     // Bouton pour revenir à la sélection des niveaux
-//     const btnRetourNiveau = document.createElement('button');
-//     btnRetourNiveau.textContent = "Retour aux niveaux";
-//     btnRetourNiveau.classList.add('btn', 'btn-return');
-//     // btnRetourNiveau.style.marginTop = '10px';
-//     btnRetourNiveau.addEventListener('click', function () {
-//         showLevelButtons();
-//     });
-//     // DIV_SCENARIO.appendChild(btnRetourNiveau,);
-
-//     // Ajoute le btn Restart + Retour dans le container Nav
-//     containerBoutonsNav.append(btnRetourNiveau);
-
-//     // Ajoute le container dans DIV SCENARIO
-//     DIV_SCENARIO.appendChild(containerBoutonsNav);
-
-//      // Div résultat
-//     const divResultat = document.createElement('div');
-//     divResultat.id = 'resultDiv';
-//     divResultat.classList.add('result-container');
-//     DIV_SCENARIO.appendChild(divResultat);
-// }
 
 // ========================================
 // AFFICHAGE DU RÉSULTAT 
 // ========================================
 
-function showResult(option, divResultat, urlAvatar, scenario,btnOption) {
+function showResult(option, divResultat, urlAvatar, scenario, btnOption) {
     divResultat.innerHTML = `
+         <h2 class="h2_resultat">Résultat de votre choix :</h2>
         <div class="feedback-container">
-            <h3>Résultat de votre choix</h3>
             <div class="feedback-reaction">
                 <strong>Réaction de l'interlocuteur·ice :</strong>
                 <p>${option.reaction}</p>
             </div>
-            <div class="feedback-analyse">
+
+            <div class="container-analyse-reminder">
+                 <div class="feedback-analyse">
                 <strong>Analyse :</strong>
                 <p>${option.analyse}</p>
-            </div>
-            <p class="feedback-type">Type : <span>${option.type}</span></p>
-        </div>
-    `;
+                 </div>
+                <div class="feedback-reminder">
+                <strong>A retenir :</strong>
+                <p>${option.aRetenir}</p>
+                </div> 
+            </div>`;
+            
     divResultat.style.display = 'block';
 
     // Désactive tous les boutons d'options 
     const tousLesBoutons = DIV_SCENARIO.querySelectorAll('.option-btn');
     tousLesBoutons.forEach(btn => btn.disabled = true);
 
-     // Ajoute une classe spéciale au bouton choisi
+    // Ajoute une classe spéciale au bouton choisi
     btnOption.classList.add('option-choisie');
 
     // Ajoute dynamiquement le bouton Rejouer
@@ -465,7 +478,7 @@ function showResult(option, divResultat, urlAvatar, scenario,btnOption) {
 //             <p class="feedback-type">Type : <span>${option.type}</span></p>
 //         </div>
 //     `;
-//     // Rend la div visible 
+//     // Rend la div visible
 //     divResultat.style.display = 'block';
 
 //     //  // Masquer toutes les autres options non choisies //! ils sont dans divSCENARIO

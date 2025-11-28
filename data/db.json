@@ -1,51 +1,49 @@
 {
   "scenarios": [
-
     {
       "id": "scenario_01",
       "niveau": "Facile",
-      "theme": "invitation_sociale",
-      "contexte": "À la pause café, un collègue vous invite à son anniversaire.",
+      "theme": "Refuser une invitation",
+      "contexte": "À la pause café, un collègue vous invite à sa fête d’anniversaire, mais vous n’avez pas envie d’y aller",
       "interlocuteur": {
         "nom": "Collègue",
-        "replique": "Ça te dirait de venir samedi soir ?",
+        "replique": "Ça te dirait de venir chez moi samedi soir ? J’organise une fête avec toute l’équipe, y’aura Seb, Léa, Siham, Léo, … ah et JP aussi qui va passer des disques, puis mes gars-surs du foot, enfin bref ça va être super. On se voit à 20h chez moi ?",
         "avatar": "scenario_01"
       },
       "options": [
         {
           "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction option A",
-          "analyse": "Analyse option A",
-          "pourquoi": "Pourquoi option A"
+          "texte": "Oh c'est gentil ! Malheureusement je ne suis pas disponible samedi, mais j'espère que tu passeras une super soirée !",
+          "reaction": "Oh c’est dommage, mais merci quand même. On se voit lundi alors !",
+          "analyse": "Cette réponse combine plusieurs éléments efficaces d'une communication assertive. Vous reconnaissez l'invitation, ce qui valorise l'autre et montre que vous appréciez l'attention. Vous exprimez ensuite clairement votre indisponibilité sans entrer dans des justifications excessives. Enfin, vous terminez sur une note positive en souhaitant à votre collègue de passer une bonne soirée.",
+          "consequences": "Votre collègue comprend que votre refus n'est pas un rejet personnel. La clarté de votre réponse évite l'ambiguïté et les malentendus. Cette approche préserve la relation professionnelle tout en respectant vos propres limites. Vous auriez pu, si vous le souhaitiez, exprimer pourquoi vous n’aviez pas envie de vous y rendre, mais ce n’est pas du tout une obligation. En effet dans certains cadres ou avec certaines personnes, c’est plus simple de ne pas rentrer dans l’intime. ",
+           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
         },
         {
           "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction option B",
-          "tonReaction": "",
-          "analyse": "Analyse option B",
-          "consequences": "Conséquence option B",
-          "alternative": "Alternative option B"
+          "texte": "Samedi ? Euh... je ne sais pas encore, je te confirme plus tard ?",
+          "reaction": "Ah... d'accord. Bon, tiens-moi au courant alors !",
+          "tonReaction": "légèrement déçu, incertain",
+          "analyse": "Cette réponse reflète une hésitation qui peut être interprétée de plusieurs façons par votre interlocuteur. Les hésitations verbales et l'absence de position claire créent de l'ambiguïté. Votre collègue ne sait pas si vous êtes vraiment intéressé·e mais avez un empêchement, si vous cherchez une excuse polie pour refuser, ou si vous avez réellement besoin de vérifier votre agenda.",
+          "consequences": "Votre collègue risque de revenir vers vous pour obtenir une réponse. Si vous êtes déjà convaincu·e de ne pas vouloir y aller, cela risque de prolonger la situation inconfortable. Néanmoins, si vous avez besoin d’un délai de réflexion pour savoir si oui ou non vous avez envie d’aller à cette fête, gagner du temps peut-être une stratégie intéressante. ",
+           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
         },
         {
           "id": "C",
-          "texte": "Option C texte",
+          "texte": "Merci pour l'invitation, mais les grandes soirées ce n'est pas trop mon truc",
           "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction option C",
-          "analyse": "Analyse option C",
-          "pourquoi": "Pourquoi option C",
-          "attention": "Attention option C"
+          "reaction": "Ah je comprends ! Bon, on aura l'occasion de se voir au bureau de toute façon !",
+          "analyse": "Cette réponse est directe et honnête. Vous remerciez pour l'invitation, puis vous exprimez clairement votre refus en donnant une raison qui concerne vos préférences personnelles, pas la personne qui vous invite. Vous le rassurez, tout en partageant une information sur vous-même. Bonus : vous évitez probablement d’autres invitations similaires dans le futur. ",
+          "consequences": "Votre collègue comprend que ce n'est pas personnel — vous ne l’évitez pas lui, mais vous évitez les grandes soirées en général. Cette approche est très franche mais demande un certain niveau de confiance et de confort avec la vulnérabilité. Partager vos préférences personnelles peut être utile si vous souhaitez à créer une relation amicale avec la personne (elle connait maintenant vos besoins et sera plus a même de vous faire une proposition qui vous convient à l’avenir). Attention néanmoins, cela peut vous faire sentir « exposé·e », surtout dans un contexte professionnel.",
+           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
         }
       ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
+      "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
     },
     {
       "id": "scenario_02",
       "niveau": "Facile",
-      "theme": "demander_une_faveur",
+      "theme": "Demander une faveur",
       "contexte": "Vous souhaitez demander un petit service à un ami.",
       "interlocuteur": {
         "nom": "Ami·e",
@@ -86,7 +84,7 @@
     {
       "id": "scenario_03",
       "niveau": "Facile",
-      "theme": "gestion_imprevu",
+      "theme": "Blague pas comprise",
       "contexte": "La réunion prévue en visioconférence devient présentielle.",
       "interlocuteur": {
         "nom": "Manager",
@@ -169,7 +167,7 @@
     {
       "id": "scenario_05",
       "niveau": "Moyen",
-      "theme": "négociation",
+      "theme": "Gestion de l'énergie et limites familiales",
       "contexte": "Vous devez négocier un délai plus long avec votre supérieur.",
       "interlocuteur": {
         "nom": "Manager",
@@ -210,7 +208,7 @@
     {
       "id": "scenario_06",
       "niveau": "Moyen",
-      "theme": "gestion_stress",
+      "theme": "Changement de dernière minute",
       "contexte": "Vous devez faire face à une situation urgente sans préparation.",
       "interlocuteur": {
         "nom": "Collègue",
@@ -252,7 +250,7 @@
     {
       "id": "scenario_07",
       "niveau": "Moyen",
-      "theme": "conflit_direct",
+      "theme": "Réagir à une interruption",
       "contexte": "Un client est mécontent et vous critique sévèrement en public.",
       "interlocuteur": {
         "nom": "Client",
@@ -293,7 +291,7 @@
     {
       "id": "scenario_08",
       "niveau": "Difficile",
-      "theme": "négociation_sensible",
+      "theme": "Exprimer l'absence de consentement",
       "contexte": "Vous devez discuter d'une augmentation avec votre supérieur exigeant.",
       "interlocuteur": {
         "nom": "Manager",
@@ -334,7 +332,7 @@
     {
       "id": "scenario_09",
       "niveau": "Difficile",
-      "theme": "crise_urgence",
+      "theme": "Comportement inadéquat chez un·e ami·e",
       "contexte": "Un problème critique survient en plein projet et toute l'équipe est sous pression.",
       "interlocuteur": {
         "nom": "Chef de projet",

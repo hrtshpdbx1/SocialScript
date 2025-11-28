@@ -13,9 +13,10 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   justify-content: center;
    gap: var(--space-8);
    margin: var(--space-6) var(--space-4);
-   /* border: 6px solid rgb(139, 0, 93); */
+   border: 1px solid rgb(139, 0, 93);
    width: 100%;
    height: fit-content;
    margin: 0 auto;
@@ -25,12 +26,13 @@
       /*! doit être en 90/80%*/
       padding: var(--space-4) var(--space-2);
       /* padding : top+bottom right+left*/
-      /* border: green 12px solid; */
+      border: green 1px solid;
       min-width: 70%;
-      max-width: 90%;
+      max-width: 60%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       gap: var(--space-4);
    }
 
@@ -74,36 +76,39 @@
    }
 
 }
+
 /* Container des boutons level  */
 .container-btn-level {
-display: flex;
-align-items: center;
-justify-content: space-evenly;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
 }
 
 /* Container des boutons thème  */
 .container-btn-theme {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
-gap: var(--space-2)
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   gap: var(--space-2)
 }
 
-.container-btn-option{
+.container-btn-option {
    display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-gap: var(--space-2)
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   gap: var(--space-2);
+   width: 60%;
+   margin: 0 auto;
 }
 
 .container-btn-nav {
-display: flex;
-flex-direction: row;
-align-items:center;
-justify-content: space-evenly;
-padding: var(--space-4);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: var(--space-4);
 }
 
 /* ========================================
@@ -120,12 +125,14 @@ INITIALISATION
 SCENARIO
 ======================================== */
 
-.scenario { /* = DIV_SCENARIO */
+.scenario {
+   /* = DIV_SCENARIO */
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
    gap: var(--space-4);
+   border: 1px yellow solid;
 }
 
 .scenario-contexte {
@@ -137,7 +144,10 @@ SCENARIO
    padding: var(--space-2);
    border-radius: var(--radius-sm);
    box-shadow: var(--shadow-md);
-   background-color: var(--gray-100)
+   background-color: var(--gray-100);
+   /* width: 60%; */
+   margin: 0 auto;
+   margin-bottom: 2%;
 }
 
 .interlocuteur-container {
@@ -145,29 +155,58 @@ SCENARIO
    align-items: center;
    gap: var(--space-1);
    border: 1px;
-   padding: var(--space-2);
-   border-radius: var(--radius-sm);
-   box-shadow: var(--shadow-md);
-   background-color: var(--secondary);
+
+   /* border: 1px pink solid; */
+   /* width: 60%; */
+   margin: 0 auto;
+   font-style: italic;
 }
 
-strong { /* Nom de l'avatar */
+.replique-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--space-1);
+   /* margin: 20px 0; */
+
+   .avatar-container {
+      width: 30%;
+   }
+
+   .texte-container {
+      /* display: flex;
+      align-items: center;
+      flex-direction: column; */
+      /* justify-content: center; */
+      display: inline-block;
+      padding: var(--space-4);
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-md);
+      background-color: var(--secondary);
+      font-size: var(--font-size-small);
+      text-align: center;
+      
+      p {text-align: center;
+      word-wrap: break-word;  }
+
+   }
+}
+
+strong {
+   /* Nom de l'avatar */
 }
 
 .section-title {
    display: flex;
-   align-items: center ;
+   align-items: center;
    justify-content: center;
 }
 
 .imgAvatar {
-   width: 50px;
+   width: 80px;
 }
 
-.result-container {
-   padding: var(--space-2);
-   border-radius: var(--radius-sm);
-}
+
 
 /* Pour plus tard : exemple de speech bubble 
 .speech-bubble {
@@ -217,45 +256,87 @@ strong { /* Nom de l'avatar */
 .restart-btn:hover {}
 
 .option-btn {
-  background: var(--secondary-700);
-  color: var(--white);
+   background: var(--secondary-700);
+   color: var(--white);
 }
 
 .option-btn:hover {
-    background: var(--secondary-800);
-  color: var(--white);
+   background: var(--secondary-800);
+   color: var(--white);
 }
 
 .option-btn:disabled {
-    background: var(--gray-200);
-    color: var(--white);
-    pointer-events: none; 
+   background: var(--gray-200);
+   color: var(--white);
+   pointer-events: none;
 }
 
 .option-btn:disabled.option-choisie {
-    background: var(--secondary-800);
-  color: var(--white)
+   background: var(--secondary-800);
+   color: var(--white)
 }
 
 
 /* ========================================
    FEEDBACK / RÉSULTAT
 ======================================== */
-.feedback-container {
+
+.result-container {
+   border: 1px red solid;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);
+   align-items: center;
+   /* width: 60%; */
+   margin: 0 auto;
+
+   .h2_resultat {
+      text-align: center;
+   }
+
+
+   .feedback-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+
+      .feedback-reaction {
+         /* Réaction de l'interlocuteur·ice */
+         border-radius: var(--radius-full);
+         background-color: var(--secondary);
+         padding: var(--space-1);
+         text-align: center;
+         padding: var(--space-4);
+
+         p:first-of-type {
+            /* reponse de l'interlocuteur·ice*/
+            font-style: italic;
+         }
+      }
+   }
+
+}
+
+.container-analyse-reminder {
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: var(--space-1);
-   margin-top: 5%;
+   justify-content: space-evenly;
+   gap: var(--space-2);
+   background: var(--gray-100);
    border-radius: var(--radius-md);
-   background-color: var(--primary-200);
+   padding: var(--space-2);
+
+   .feedback-analyse,
+   .feedback-reminder {
+      text-align: center;
+
+   }
 }
 
-.feedback-reaction {
-/* Réaction de l'interlocuteur·ice */
-text-align: center;
-/* todo: mettre réponse en italic */
-}
+
+
 
 /* .feedback-reaction img {
    width: 40px;
