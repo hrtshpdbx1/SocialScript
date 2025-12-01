@@ -119,6 +119,10 @@ body {
     line-height: var(--line-normal);
     color: var(--gray-800);
     background: white;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Focus visible */
@@ -319,6 +323,8 @@ blockquote {
     box-shadow: var(--shadow-sm);
     transition: all .2s ease;
     display: inline-block;
+
+    width: fit-content;
 }
 
 .btn:hover {
@@ -435,11 +441,13 @@ header nav .containerNav {
 header nav .containerNav .navLeft {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--space-6);
 }
 
 header nav img {
-    max-width: 150px;
+    max-width: 400px;
+box-shadow: none;
 }
 
 header nav ul {
@@ -583,7 +591,7 @@ img {
 a.btn,
 .btn {
     display: inline-block !important;
-    width: auto !important;
+    /* width: auto !important; */
 }
 
 

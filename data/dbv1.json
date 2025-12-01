@@ -1,5 +1,5 @@
 
-v1
+{
   "scenarios": [
     {
       "id": "scenario_01",
@@ -120,5 +120,7 @@ v1
       ],
       "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
     }
+
+    
   ]
 }

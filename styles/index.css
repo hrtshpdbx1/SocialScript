@@ -54,13 +54,13 @@
     }
 }
 
-/* .sticky-img { /* todo Aude: demander ce qui n'a pas marché avec le sticky */
-/* position: sticky;
+.sticky-img { /* todo Aude: demander ce qui n'a pas marché avec le sticky */
+ position: fixed;
     top: 0;
     width: 15%;
     height: auto;
     box-shadow: none;
-} */
+} 
 
 .hero-heading {
     width: 60%;
@@ -494,15 +494,18 @@
     .section-content.card-grid {
         flex-direction: column;
         gap: var(--space-4);
+        
+        .card {
+            flex : none;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            /* min-height: 80vh; */
+        }
+
     }
 
-    .card {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        min-height: 80vh;
-    }
-
+    
     .card img {
         width: 100%;
         height: auto;

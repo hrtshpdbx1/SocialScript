@@ -1,375 +1,333 @@
 {
-  "scenarios": [
-    {
-      "id": "scenario_01",
-      "niveau": "Facile",
-      "theme": "Refuser une invitation",
-      "contexte": "À la pause café, un collègue vous invite à sa fête d’anniversaire, mais vous n’avez pas envie d’y aller",
-      "interlocuteur": {
-        "nom": "Collègue",
-        "replique": "Ça te dirait de venir chez moi samedi soir ? J’organise une fête avec toute l’équipe, y’aura Seb, Léa, Siham, Léo, … ah et JP aussi qui va passer des disques, puis mes gars-surs du foot, enfin bref ça va être super. On se voit à 20h chez moi ?",
-        "avatar": "scenario_01"
-      },
-      "options": [
+    "scenarios": [
         {
-          "id": "A",
-          "texte": "Oh c'est gentil ! Malheureusement je ne suis pas disponible samedi, mais j'espère que tu passeras une super soirée !",
-          "reaction": "Oh c’est dommage, mais merci quand même. On se voit lundi alors !",
-          "analyse": "Cette réponse combine plusieurs éléments efficaces d'une communication assertive. Vous reconnaissez l'invitation, ce qui valorise l'autre et montre que vous appréciez l'attention. Vous exprimez ensuite clairement votre indisponibilité sans entrer dans des justifications excessives. Enfin, vous terminez sur une note positive en souhaitant à votre collègue de passer une bonne soirée.",
-          "consequences": "Votre collègue comprend que votre refus n'est pas un rejet personnel. La clarté de votre réponse évite l'ambiguïté et les malentendus. Cette approche préserve la relation professionnelle tout en respectant vos propres limites. Vous auriez pu, si vous le souhaitiez, exprimer pourquoi vous n’aviez pas envie de vous y rendre, mais ce n’est pas du tout une obligation. En effet dans certains cadres ou avec certaines personnes, c’est plus simple de ne pas rentrer dans l’intime. ",
-           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+            "id": "scenario_01",
+            "niveau": "Facile",
+            "theme": "Refuser une invitation",
+            "contexte": "À la pause café, un collègue vous invite à sa fête d’anniversaire, mais vous n’avez pas envie d’y aller",
+            "interlocuteur": {
+                "nom": "Collègue",
+                "replique": "Ça te dirait de venir chez moi samedi soir ? J’organise une fête avec toute l’équipe, y’aura Seb, Léa, Siham, Léo, … ah et JP aussi qui va passer des disques, puis mes gars-sûrs du foot, enfin bref ça va être super. On se voit à 20h chez moi ? "
+            },
+            "options": [
+                {
+                    "id": "A",
+                    "texte": "Oh c'est gentil ! Malheureusement je ne suis pas disponible samedi, mais j'espère que tu passeras une super soirée !",
+                    "reaction": "Oh c’est dommage, mais merci quand même. On se voit lundi alors !",
+                    "analyse": "Cette réponse combine plusieurs éléments efficaces d'une communication assertive. Vous reconnaissez l'invitation, ce qui valorise l'autre et montre que vous appréciez l'attention. Vous exprimez ensuite clairement votre indisponibilité sans entrer dans des justifications excessives. Enfin, vous terminez sur une note positive en souhaitant à votre collègue de passer une bonne soirée.",
+                    "consequence": "Votre collègue comprend que votre refus n'est pas un rejet personnel. La clarté de votre réponse évite l'ambiguïté et les malentendus. Cette approche préserve la relation professionnelle tout en respectant vos propres limites. Vous auriez pu, si vous le souhaitiez, exprimer pourquoi vous n’aviez pas envie de vous y rendre, mais ce n’est pas du tout une obligation. En effet, dans certains cadres ou avec certaines personnes, c’est plus simple de ne pas rentrer dans l’intime. ",
+                    "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+                },
+                {
+                    "id": "B",
+                    "texte": "Samedi ? Euh... je ne sais pas encore, je te confirme plus tard ?",
+                    "reaction": "Ah... d'accord. Bon, tiens-moi au courant alors !",
+                    "analyse": "Cette réponse reflète une hésitation qui peut être interprétée de plusieurs façons par votre interlocuteur. Les hésitations verbales et l'absence de position claire créent de l'ambiguïté. Votre collègue ne sait pas si vous êtes vraiment intéressé·e mais avez un empêchement, si vous cherchez une excuse polie pour refuser, ou si vous avez réellement besoin de vérifier votre agenda.",
+                    "consequences": "Votre collègue risque de revenir vers vous pour obtenir une réponse. Si vous êtes déjà convaincu·e de ne pas vouloir y aller, cela risque de prolonger la situation inconfortable. Néanmoins, si vous avez besoin d’un délai de réflexion pour savoir si oui ou non vous avez envie d’aller à cette fête, gagner du temps peut-être une stratégie intéressante.",
+                    "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+                },
+                {
+                    "id": "C",
+                    "texte": "Merci pour l'invitation, mais les grandes soirées ce n'est pas trop mon truc",
+                    "reaction": "Ah je comprends, merci de ton honnêteté.  Peut-être qu’une prochaine fois on pourra s’organiser quelque chose d’autre au calme alors ",
+                    "analyse": "Cette réponse est directe et honnête. Vous remerciez pour l'invitation, puis vous exprimez clairement votre refus en donnant une raison qui concerne vos préférences personnelles, pas la personne qui vous invite. Vous le rassurez, tout en partageant une information sur vous-même. Bonus : vous évitez probablement d’autres invitations similaires dans le futur.",
+                    "consequences": "Votre collègue comprend que ce n'est pas personnel — vous ne l’évitez pas lui, mais vous évitez les grandes soirées en général. Cette approche est très franche mais demande un certain niveau de confiance et de confort avec la vulnérabilité. Partager vos préférences personnelles peut être utile si vous souhaitez créer une relation amicale avec la personne (elle connaît maintenant vos besoins et sera plus à même de vous faire une proposition qui vous convient à l’avenir). Attention néanmoins, cela peut vous faire sentir « exposé·e », surtout dans un contexte professionnel.",
+                    "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+                }
+            ]
         },
         {
-          "id": "B",
-          "texte": "Samedi ? Euh... je ne sais pas encore, je te confirme plus tard ?",
-          "reaction": "Ah... d'accord. Bon, tiens-moi au courant alors !",
-          "tonReaction": "légèrement déçu, incertain",
-          "analyse": "Cette réponse reflète une hésitation qui peut être interprétée de plusieurs façons par votre interlocuteur. Les hésitations verbales et l'absence de position claire créent de l'ambiguïté. Votre collègue ne sait pas si vous êtes vraiment intéressé·e mais avez un empêchement, si vous cherchez une excuse polie pour refuser, ou si vous avez réellement besoin de vérifier votre agenda.",
-          "consequences": "Votre collègue risque de revenir vers vous pour obtenir une réponse. Si vous êtes déjà convaincu·e de ne pas vouloir y aller, cela risque de prolonger la situation inconfortable. Néanmoins, si vous avez besoin d’un délai de réflexion pour savoir si oui ou non vous avez envie d’aller à cette fête, gagner du temps peut-être une stratégie intéressante. ",
-           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+            "id": "scenario_02",
+            "niveau": "Facile",
+            "theme": "Demander une faveur",
+            "contexte": "Vous êtes dans un restaurant, vous avez commandé à dîner et aimeriez aussi un verre d'eau du robinet. Vous savez qu'en Belgique il n'est pas coutume de proposer de l'eau gratuite.",
+            "interlocuteur": {
+                "nom": "Serveur·euse",
+                "replique": "Vous désirez quelque chose à boire ?"
+            },
+            "options": [
+                {
+                    "id": "A",
+                    "texte": "Est-ce que je pourrais avoir un verre d'eau du robinet s'il vous plaît ?",
+                    "reaction": "Bien sûr, je vous apporte ça tout de suite.",
+                    "analyse": "Vous formulez une demande claire et polie, en utilisant le conditionnel et une formule de politesse. Vous nommez précisément ce que vous voulez (eau du robinet) sans tourner autour du pot. Cette approche directe évite les malentendus et montre que vous savez ce que vous voulez.",
+                    "conséquences ": "Dans la majorité des cas, le serveur acceptera sans problème. Votre demande claire facilite son travail. Si jamais le restaurant ne propose pas d'eau gratuite, il vous le dira simplement et vous pourrez alors choisir une autre option. Oser demander ce qu'on veut, même quand ce n'est pas la norme, est une compétence qui peut sembler insurmontable pour certain·es alors que beaucoup de personnes le font par habitude sans même réfléchir.",
+                    "aRetenir": "Demander quelque chose à quelqu'un·e, ce n'est pas le/la déranger. Les serveur·euses sont là pour répondre aux besoins de la clientèle. Une demande claire et polie est toujours préférable à des formulations trop compliquées. Le pire qui puisse arriver est un 'non' - et ce n'est pas grave. Oser exprimer ses besoins simples est une première étape importante vers l'affirmation de soi."
+                },
+                {
+                    "id": "B",
+                    "texte": "Euh... non merci, ça ira.",
+                    "reaction": "Très bien, je vous laisse.",
+                    "analyse": "Vous refusez alors que vous avez soif, probablement par peur de déranger ou parce que vous ne savez pas si c'est 'autorisé' de demander de l'eau gratuite. Cette réaction vient souvent d'une difficulté à exprimer ses besoins, surtout quand on n'est pas sûr·e des 'règles' sociales implicites.",
+                    "consequences": "Vous restez avec votre besoin non satisfait et passerez peut-être tout le repas à avoir soif. À force de ne pas oser demander, on peut développer de la frustration ou de l'anxiété dans les interactions sociales. Le pire qui puisse arriver est qu'on vous dise non - et dans ce cas, vous aurez au moins essayé.",
+                    "aRetenir": "Demander quelque chose à quelqu'un·e, ce n'est pas le/la déranger. Les serveur·euses sont là pour répondre aux besoins de la clientèle. Une demande claire et polie est toujours préférable à des formulations trop compliquées. Le pire qui puisse arriver est un 'non' - et ce n'est pas grave. Oser exprimer ses besoins simples est une première étape importante vers l'affirmation de soi."
+                },
+                {
+                    "id": "C",
+                    "texte": "Je ne sais pas si c'est possible, mais... enfin, si ça ne dérange pas... est-ce que vous auriez peut-être de l'eau ?",
+                    "reaction": "Oui, bien-sûr. Plate ou pétillante ?",
+                    "analyse": "Vous formulez votre demande de manière très hésitante, avec beaucoup de précautions verbales. Cela traduit un manque de confiance dans votre légitimité à demander. Les hésitations et formulations alambiquées peuvent créer de la confusion chez votre interlocuteur.",
+                    "consequences": "Votre interlocteur.ice n’a probablement pas compris ce que vous demandiez et vous suggère une bouteille d’eau payante, ce qui vous obligera à reformuler une demande. Même si vous obtenez ce que vous voulez à la fin, cette approche vous demande beaucoup d'énergie. Heureusement, à force d’entrainement, apprendre à formuler des demandes claires et directes deviendra plus facile et moins énergivore.",
+                    "aRetenir": "Demander quelque chose à quelqu'un·e, ce n'est pas le/la déranger. Les serveur·euses sont là pour répondre aux besoins de la clientèle. Une demande claire et polie est toujours préférable à des formulations trop compliquées. Le pire qui puisse arriver est un 'non' - et ce n'est pas grave. Oser exprimer ses besoins simples est une première étape importante vers l'affirmation de soi."
+                }
+            ]
         },
         {
-          "id": "C",
-          "texte": "Merci pour l'invitation, mais les grandes soirées ce n'est pas trop mon truc",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Ah je comprends ! Bon, on aura l'occasion de se voir au bureau de toute façon !",
-          "analyse": "Cette réponse est directe et honnête. Vous remerciez pour l'invitation, puis vous exprimez clairement votre refus en donnant une raison qui concerne vos préférences personnelles, pas la personne qui vous invite. Vous le rassurez, tout en partageant une information sur vous-même. Bonus : vous évitez probablement d’autres invitations similaires dans le futur. ",
-          "consequences": "Votre collègue comprend que ce n'est pas personnel — vous ne l’évitez pas lui, mais vous évitez les grandes soirées en général. Cette approche est très franche mais demande un certain niveau de confiance et de confort avec la vulnérabilité. Partager vos préférences personnelles peut être utile si vous souhaitez à créer une relation amicale avec la personne (elle connait maintenant vos besoins et sera plus a même de vous faire une proposition qui vous convient à l’avenir). Attention néanmoins, cela peut vous faire sentir « exposé·e », surtout dans un contexte professionnel.",
-           "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
-        }
-      ],
-      "aRetenir":"Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le/la collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
-    },
-    {
-      "id": "scenario_02",
-      "niveau": "Facile",
-      "theme": "Demander une faveur",
-      "contexte": "Vous souhaitez demander un petit service à un ami.",
-      "interlocuteur": {
-        "nom": "Ami·e",
-        "replique": "Tu pourrais m'aider avec ça ?",
-        "avatar": "scenario_02"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
+            "id": "scenario_03",
+            "niveau": "Facile",
+            "theme": "Blague pas comprise",
+            "contexte": "Vous êtes à une pause déjeuner avec des collègues. L'un d'eux fait une blague et tout le monde rit. Vous n'avez pas compris pourquoi c'était drôle.",
+            "interlocuteur": {
+                "nom": "Collègue",
+                "replique": "Alors, elle était bonne celle-là, non ?"
+            },
+            "options": [
+                {
+                    "id": "A",
+                    "reaction": "Haha, je savais qu'elle te plairait !",
+                    "analyse": "Vous faites semblant d'avoir compris pour vous fondre dans le groupe. C'est une stratégie de camouflage social (masking) très courante chez les personnes autistes. Cette réaction automatique vise à éviter de se sentir exclu·e ou 'différent·e'.",
+                    "consequences": "À court terme, vous évitez l'inconfort d'avouer que vous n'avez pas compris. À long terme, cette stratégie peut s’avérer épuisante, voire renforcer le sentiment de ne pas être authentique. Vous ratez aussi l'opportunité d'apprendre et de mieux comprendre ce type d'humour pour la prochaine fois.",
+                    "aRetenir": "Ne pas comprendre l'humour implicite ou le second degré est très fréquent dans l'autisme. Il n'y a aucune honte à demander une explication. Le 'masking' (faire semblant de comprendre) est épuisant et contribue au burn-out. Vous avez le droit de fonctionner différemment et de le montrer."
+                },
+                {
+                    "id": "B",
+                    "texte": "Désolé·e, je n'ai pas compris la blague. Tu peux m'expliquer ?",
+                    "reaction": "Ah, c'est parce que... *explique la blague*. Ah oui, c'est vrai que c'est moins drôle quand on explique !",
+                    "analyse": "Vous osez demander une explication. Cette approche honnête et directe demande du courage car elle vous rend 'visible' et peut créer un moment de gêne. Cependant, beaucoup de gens apprécient cette honnêteté.",
+                    "consequences": "Vous obtenez une explication qui peut vous aider à comprendre ce type d'humour à l'avenir. Vous montrez aussi aux autres que vous fonctionnez différemment, ce qui peut favoriser l'authenticité dans la relation. Certaines personnes pourraient réagir avec surprise, mais d'autres apprécieront votre franchise. Puis rien ne vous empêche de rebondir ensuite avec humour !",
+                    "aRetenir": "Ne pas comprendre l'humour implicite ou le second degré est très fréquent dans l'autisme. Il n'y a aucune honte à demander une explication. Le 'masking' (faire semblant de comprendre) est épuisant et contribue au burn-out. Vous avez le droit de fonctionner différemment et de le montrer."
+                },
+                {
+                    "id": "C",
+                    "texte": "*Vous souriez simplement sans commentaire*",
+                    "style": "Assertive / Directe avec explication personnelle",
+                    "reaction": "Tu n'as pas l'air convaincu·e !",
+                    "analyse": "Vous adoptez une position neutre qui ne confirme ni n'infirme votre compréhension. C'est un compromis entre le camouflage complet et l'aveu direct d'incompréhension.",
+                    "consequences": "Cette réaction peut passer inaperçue ou inviter à la clarification. C'est moins épuisant que de feindre activement, mais vous ne résolvez pas non plus votre incompréhension. Votre collègue a remarqué votre hésitation et vous donne une ouverture pour en parler si vous le souhaitez.",
+                    "aRetenir": "Ne pas comprendre l'humour implicite ou le second degré est très fréquent dans l'autisme. Il n'y a aucune honte à demander une explication. Le 'masking' (faire semblant de comprendre) est épuisant et contribue au burn-out. Vous avez le droit de fonctionner différemment et de le montrer."
+                }
+            ],
+            "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
         },
         {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
+            "id": "scenario_04",
+            "niveau": "Moyen",
+            "theme": "Gestion de l'énergie et limites familiales",
+            "contexte": " C'est bientôt les fêtes de fin d'années, vous vous sentez très fatigué·e par votre rythme, les jours qui raccourcissent et les tâches de la vie quotidienne. Vous n'avez qu'une envie : prendre quelques jours de vacances pour vous reposer et prendre soin de vous. Votre téléphone sonne :",
+            "interlocuteur": {
+                "nom": "Votre mère",
+                "replique": "Bonjour mon lapin, comment ça va ? Tu as déjà pris des billets pour nous rejoindre à la réunion familiale ? On sera au grand complet cette année, ça va être génial de voir tout le monde !"
+            },
+            "options": [
+                {
+                    "id": "A",
+                    "texte": "Oui bien-sûr que je vais venir, je sais que je ne peux pas louper ça » (mais intérieurement vous appréhendez déjà).",
+                    "reaction": "Super, on a vraiment hâte que tu sois là ! Tu verras, on a prévu plein d'activités : le grand repas le 24, un escape-game tous ensemble le 25, et après on enchaîne avec le réveillon du Nouvel An !",
+                    "analyse": "Vous vous forcez à accepter même si cela vous demande un effort considérable, et vous cachez que cela représente un coût énergétique important pour vous. En disant 'oui' automatiquement vous risquez d'épuiser toute votre réserve d'énergie avant même d'arriver aux fêtes.",
+                    "consequence": "Le membre de votre famille est content à l'idée de vous voir sur le moment, mais il n'a aucune idée du fait que vous êtes en train de vous faire violence pour venir à la réunion de famille. Vous risquez d'arriver aux fêtes déjà épuisé·e, de devoir faire semblant d'aller bien pendant plusieurs jours, et de finir la période des fêtes en burn-out. À terme, cela pourrait créer des incompréhensions entre vous : votre famille pourrait trouver que vous semblez 'absent·e' ou 'de mauvaise humeur' pendant les fêtes, sans comprendre pourquoi.",
+                    "aRetenir": "La théorie des cuillères est une métaphore pour expliquer la gestion de l'énergie : imaginez que vous commencez chaque journée avec un nombre limité de cuillères représentant votre énergie disponible. Chaque activité (se préparer, socialiser, gérer le bruit) coûte des cuillères. Les personnes autistes, TDAH ou neurodivergentes ont souvent moins de cuillères que la moyenne. Les fêtes de fin d'année (foule, changements de routine, sollicitations sociales intenses) en consomment énormément. Refuser ou adapter votre participation n'est pas de l'égoïsme, c'est de la prévention : le burn-out autistique survient quand on dépense plus de cuillères qu'on en a, et peut prendre des mois à surmonter. Apprendre à compter vos cuillères et à dire non avant d'être à découvert est essentiel.  En savoir plus sur le burn out autistique : https://comprendrelautisme.com/le-burnout-autistique-definition-caracteristiques-et-impact/?print=print et la théorie des cuillères https://www.youtube.com/watch?v=joucXLKXbO8"
+                },
+                {
+                    "id": "B",
+                    "texte": "Cette année je pense que je vais plutôt rester au calme chez moi.",
+                    "reaction": "Ah bon ? Mais quelle tristesse de faire ça… Enfin bon, comme tu veux. Tu nous manqueras.",
+                    "analyse": "Vous reconnaissez vos limites et choisissez de préserver votre énergie plutôt que de répondre aux attentes des autres. Cette décision montre une conscience de vos besoins personnels et une capacité à prioriser votre bien-être face à la pression sociale.",
+                    "consequences": "Vous vous êtes écouté·e et avez osé faire quelque chose qui n'a peut-être pas de sens pour les autres, mais qui est bon pour vous. Cette invitation à une réunion de famille n'était pas compatible avec vos besoins de calme et de repos. En préservant votre énergie, vous évitez un potentiel burn-out. Il est possible que certain·e·s réagissent avec du chantage émotionnel — par exemple en insistant, en vous faisant culpabiliser ou en laissant entendre que votre absence est une preuve de désintérêt. Cela peut être difficile, mais ces réactions ne signifient pas que votre choix est mauvais : elles reflètent surtout leurs attentes et leurs émotions à eux. Vous pourriez proposer aux membres de votre famille de les voir à une autre période ou dans d'autres circonstances si vous le souhaitez (par exemple, une visite plus courte en janvier, un appel vidéo le jour J, etc.).",
+                    "aRetenir": "La théorie des cuillères est une métaphore pour expliquer la gestion de l'énergie : imaginez que vous commencez chaque journée avec un nombre limité de cuillères représentant votre énergie disponible. Chaque activité (se préparer, socialiser, gérer le bruit) coûte des cuillères. Les personnes autistes, TDAH ou neurodivergentes ont souvent moins de cuillères que la moyenne. Les fêtes de fin d'année (foule, changements de routine, sollicitations sociales intenses) en consomment énormément. Refuser ou adapter votre participation n'est pas de l'égoïsme, c'est de la prévention : le burn-out autistique survient quand on dépense plus de cuillères qu'on en a, et peut prendre des mois à surmonter. Apprendre à compter vos cuillères et à dire non avant d'être à découvert est essentiel.  En savoir plus sur le burn out autistique : https://comprendrelautisme.com/le-burnout-autistique-definition-caracteristiques-et-impact/?print=print et la théorie des cuillères https://www.youtube.com/watch?v=joucXLKXbO8"
+                },
+                {
+                    "id": "C",
+                    "texte": "Je ne me sens pas d'attaque pour tout le programme des fêtes. Par contre, je pourrais venir juste pour le déjeuner du 25, et rentrer chez moi dans l'après-midi ?",
+                    "reaction": "Ah... C'est sûr que c'est mieux que rien ! Bon d'accord, on sera contents de t'avoir au moins pour le déjeuner. Tu es sûr·e que tu ne peux pas rester pour le goûter et la soirée jeux ?",
+                    "analyse": "Vous cherchez un compromis en proposant une participation partielle qui respecte mieux vos limites énergétiques. Vous êtes transparent·e sur le fait que le 'programme complet' est trop lourd pour vous, tout en montrant votre envie de maintenir le lien. C'est une façon de gérer vos 'cuillères' : vous en dépensez quelques-unes pour voir votre famille, mais vous en gardez suffisamment pour récupérer ensuite.",
+                    "consequences": "Vous avez trouvé un compromis qui vous permet de voir votre famille sans vous épuiser complètement. Cela demande de la communication et de l'affirmation de soi, car votre proche pourrait essayer de négocier ('juste le goûter en plus ?'). Vous devrez peut-être rappeler vos limites si l'insistance continue. Cette option vous permet de concilier vos besoins de repos et le désir de maintenir le lien familial.",
+                    "aRetenir": "La théorie des cuillères est une métaphore pour expliquer la gestion de l'énergie : imaginez que vous commencez chaque journée avec un nombre limité de cuillères représentant votre énergie disponible. Chaque activité (se préparer, socialiser, gérer le bruit) coûte des cuillères. Les personnes autistes, TDAH ou neurodivergentes ont souvent moins de cuillères que la moyenne. Les fêtes de fin d'année (foule, changements de routine, sollicitations sociales intenses) en consomment énormément. Refuser ou adapter votre participation n'est pas de l'égoïsme, c'est de la prévention : le burn-out autistique survient quand on dépense plus de cuillères qu'on en a, et peut prendre des mois à surmonter. Apprendre à compter vos cuillères et à dire non avant d'être à découvert est essentiel.  En savoir plus sur le burn out autistique : https://comprendrelautisme.com/le-burnout-autistique-definition-caracteristiques-et-impact/?print=print et la théorie des cuillères https://www.youtube.com/watch?v=joucXLKXbO8"
+                }
+            ]
         },
         {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-    {
-      "id": "scenario_03",
-      "niveau": "Facile",
-      "theme": "Blague pas comprise",
-      "contexte": "La réunion prévue en visioconférence devient présentielle.",
-      "interlocuteur": {
-        "nom": "Manager",
-        "replique": "Ça ne te pose pas de problème de venir au bureau finalement ?",
-        "avatar": "scenario_03"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
+            "id": "scenario_05",
+            "niveau": "Moyen",
+            "theme": "Gestion d’un imprévu",
+            "contexte": "Vous avez prévu depuis plusieurs semaines de faire une présentation dans le cadre d'une réunion professionnelle importante. Il était convenu que la réunion se tienne en visioconférence. Une heure avant le début, votre manager vous appelle :",
+            "interlocuteur": {
+                "nom": "Manager",
+                "replique": "Ça ne te pose pas de problème qu'on fasse la réunion en face à face finalement ? C'est tellement plus sympa de se voir, tu ne trouves pas ?"
+            },
+            "options": [
+                {
+                    "id": "A",
+                    "texte": "Euh... oui, d'accord, pas de problème.",
+                    "reaction": "Super ! On se retrouve dans la salle de réunion A dans une heure alors.",
+                    "analyse": "Vous acceptez alors que ce changement vous pose problème. Cette réaction automatique vient souvent d'une difficulté à dire non à une figure d'autorité ou de la peur d'être perçu·e comme difficile ou pas flexible.",
+                    "consequences": "Vous allez devoir gérer ce changement de dernière minute sans préparation mentale. Pour beaucoup de personnes neurodivergentes, les imprévus consomment énormément d'énergie et peuvent impacter la qualité de la présentation. Vous risquez d'être stressé·e, moins performant·e, et frustré·e de ne pas avoir osé exprimer votre besoin.",
+                    "aRetenir": "Les changements de dernière minute sont particulièrement difficiles pour beaucoup de personnes neurodivergentes. Demander à maintenir ce qui était prévu est légitime."
+                },
+                {
+                    "id": "B",
+                    "texte": "Je préfère qu'on maintienne ce qui était prévu initialement car je me suis organisé·e en fonction. Par contre, on peut prévoir un moment en présentiel si on l'anticipe à l'avance.",
+                    "reaction": "Ah d'accord, je comprends. On garde la visio alors, et on se voit en vrai la semaine prochaine !",
+                    "analyse": "Vous posez une limite claire en expliquant pourquoi le changement ne vous convient pas, sans vous justifier excessivement. Vous proposez aussi une alternative qui montre votre bonne volonté tout en respectant votre besoin d'anticipation.",
+                    "consequences": "Vous gardez le format qui vous permet d'être performant·e tout en montrant que vous êtes ouvert·e aux interactions en présentiel dans d'autres circonstances. La plupart des managers raisonnables comprendront et respecteront cette demande.",
+                    "aRetenir": "Les changements de dernière minute sont particulièrement difficiles pour beaucoup de personnes neurodivergentes. Demander à maintenir ce qui était prévu est légitime, surtout dans un contexte professionnel où vous devez performer. Vous n'avez pas à accepter tous les changements au nom de la 'flexibilité'. Un·e bon·ne manager comprendra et respectera votre besoin d'anticipation."
+                },
+                {
+                    "id": "C",
+                    "texte": "Ça me met vraiment en difficulté ce changement de dernière minute. J'ai besoin de temps pour me préparer mentalement aux réunions en présentiel.",
+                    "reaction": "Oh, je ne savais pas. Pas de problème, on maintient la visio. Merci de me l'avoir dit.",
+                    "analyse": "Vous exprimez directement votre difficulté et la raison derrière votre refus. Cette approche très honnête partage une information sur votre fonctionnement et demande un certain niveau de vulnérabilité et de confiance dans la relation avec votre manager.",
+                    "consequences": "Votre manager comprend mieux votre fonctionnement et sera probablement plus attentif aux changements de dernière minute à l'avenir. Cette transparence peut améliorer votre relation professionnelle. Attention cependant : ce niveau d'ouverture n'est approprié que si vous vous sentez en sécurité dans votre environnement de travail.",
+                    "aRetenir": "Les personnes autistes ou TDAH ont souvent besoin de périodes de concentration ininterrompue (hyperfocus). Les interruptions coûtent très cher en énergie et en temps de récupération. Poser des limites sur votre disponibilité n'est pas impoli, c'est nécessaire pour votre productivité et votre bien-être. Le casque est un signal universel de 'ne pas déranger' qu'il est légitime de faire respecter."
+                }
+            ]
         },
         {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-  
-    {
-      "id": "scenario_04",
-      "niveau": "Moyen",
-      "theme": "conflit_travail",
-      "contexte": "Un collègue critique votre travail devant l'équipe.",
-      "interlocuteur": {
-        "nom": "Collègue",
-        "replique": "Je pense que ton travail sur ce projet n'était pas top.",
-        "avatar": "scenario_04"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-    {
-      "id": "scenario_05",
-      "niveau": "Moyen",
-      "theme": "Gestion de l'énergie et limites familiales",
-      "contexte": "Vous devez négocier un délai plus long avec votre supérieur.",
-      "interlocuteur": {
-        "nom": "Manager",
-        "replique": "Tu penses pouvoir finir ça d'ici demain ?",
-        "avatar": "scenario_05"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-    {
-      "id": "scenario_06",
-      "niveau": "Moyen",
-      "theme": "Changement de dernière minute",
-      "contexte": "Vous devez faire face à une situation urgente sans préparation.",
-      "interlocuteur": {
-        "nom": "Collègue",
-        "replique": "On doit gérer ça maintenant ! Tu es prêt·e ?",
-        "avatar": "scenario_06"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
+                    "id": "scenario_06",
+                    "niveau": "Moyen",
+                    "theme": "Gérer une interruption",
+                    "contexte": "Vous êtes en pleine concentration sur une tâche complexe. Vous avez votre casque sur les oreilles. Votre colocataire s'approche et vous tape sur l'épaule :",
+                    "interlocuteur": {
+                        "nom": "Le colocataire",
+                        "replique": "Hey ! Tu as deux minutes ? J'ai une question rapide."
+                    },
+                    "options": [
+                        {
+                            "id": "A",
+                            "texte": "Vous enlevez votre casque immédiatement. Oui, qu'est-ce qu'il y a ?",
+                            "reaction": "Super ! Alors voilà, je voulais te demander...",
+                            "analyse": "Vous interrompez immédiatement votre concentration pour répondre à la demande. Cette réaction vient souvent d'une difficulté à dire non ou à prioriser vos propres besoins. Le contact physique peut aussi avoir créé une surcharge sensorielle.",
+                            "consequences": "Vous perdez votre fil de concentration, ce qui peut prendre 15 à 30 minutes à récupérer pour une personne neurodivergente. Vous accumulez de la frustration et du retard dans votre travail.",
+                            "aRetenir": "Les personnes autistes ou TDAH ont souvent besoin de périodes de concentration ininterrompue (hyperfocus). Les interruptions coûtent très cher en énergie et en temps de récupération. Poser des limites sur votre disponibilité n'est pas impoli, c'est nécessaire pour votre productivité et votre bien-être. Le casque est un signal universel de 'ne pas déranger' qu'il est légitime de faire respecter."
+                        },
+                        {
+                            "id": "B",
+                            "texte": "Je suis en pleine concentration là. Je peux revenir vers toi dans 30 minutes ?",
+                            "reaction": "Ah oui, pas de souci ! Je repasserai plus tard.",
+                            "analyse": "Vous posez une limite claire tout en proposant une alternative. Vous nommez votre besoin (rester concentré·e) et offrez un moment où vous serez disponible. Cette réponse assertive protège votre concentration tout en montrant que vous n'ignorez pas la personne.",
+                            "consequences": "Vous gardez votre concentration et pouvez finir votre tâche dans de bonnes conditions. Votre colocataire comprend que vous avez besoin de temps de concentration ininterrompu. À force de poser ces limites, les gens apprendront à respecter vos moments de concentration.",
+                            "aRetenir": "Les personnes autistes ou TDAH ont souvent besoin de périodes de concentration ininterrompue (hyperfocus). Les interruptions coûtent très cher en énergie et en temps de récupération. Poser des limites sur votre disponibilité n'est pas impoli, c'est nécessaire pour votre productivité et votre bien-être."
+                        },
+                        {
+                            "id": "C",
+                            "texte": "C'est urgent ? Parce que je suis vraiment concentré·e et j'aimerais finir ce que je fais.",
+                            "reaction": "Non, pas urgent du tout ! On en reparle plus tard alors.",
+                            "analyse": "Vous posez une question pour évaluer le degré d'urgence tout en exprimant votre préférence. Cette approche permet de gérer les vraies urgences tout en protégeant votre temps pour les demandes non-urgentes.",
+                            "consequences": "Vous gardez le contrôle de votre temps tout en restant accessible pour les urgences. Cette approche équilibrée montre que vous êtes quelqu'un de coopératif mais qui a aussi des limites.",
+                            "aRetenir": "Les personnes autistes ou TDAH ont souvent besoin de périodes de concentration ininterrompue (hyperfocus). Les interruptions coûtent très cher en énergie et en temps de récupération. Poser des limites sur votre disponibilité n'est pas impoli, c'est nécessaire pour votre productivité et votre bien-être. Le casque est un signal universel de 'ne pas déranger' qu'il est légitime de faire respecter."
+                        }
+                    ]
+                },
+                {
+                    "id": "scenario_07",
+                    "niveau": "Difficile",
+                    "theme": "Validisme / refus d'aménagement raisonnable",
+                    "contexte": "Vous avez un handicap invisible (troubles neurodéveloppementaux, maladie chronique, douleur persistante, handicap psychique…). Lors d'une réunion d'équipe particulièrement fatigante pour vous, vous demandez un aménagement raisonnable : par exemple, pouvoir éteindre la caméra, vous asseoir, adapter la luminosité, faire une pause supplémentaire ou recevoir les informations à l’écrit. Votre collègue réagit ainsi :",
+                    "interlocuteur": {
+                        "nom": "Votre collègue / responsable",
+                        "replique": "Honnêtement, je ne vois pas pourquoi tu aurais besoin de ça. Tu n’es pas non plus handicapé·e quoi… On ne peut pas commencer à faire des exceptions pour gérer les sensibilités de tout le monde."
+                    },
+                    "options": [
+                        {
+                            "id": "A",
+                            "texte": "Mon handicap n'est pas visible, mais il est réel. Les aménagements que je demande sont raisonnables et nécessaires pour que je puisse travailler dans de bonnes conditions.",
+                            "reaction": "Je veux bien te croire, mais tu comprends, si je te fais une exception, tout le monde va en demander. C’est compliqué à gérer.",
+                            "analyse": "Vous répondez calmement en réaffirmant un fait essentiel : un handicap peut être invisible. Les aménagements raisonnables sont définis par la loi comme des mesures pratiques et proportionnées permettant à une personne handicapée de travailler dans de bonnes conditions. Vous légitimez votre besoin sans vous justifier au-delà du nécessaire et refusez implicitement le validisme.",
+                            "consequences": "Vous posez une limite claire et informée légalement, ce qui peut inciter votre interlocuteur à revoir sa position. En cas de refus persistant, il est possible de signaler la discrimination à Unia et de bénéficier de conseils ou d'une médiation.",
+                            "aRetenir": "Un handicap invisible n'a pas besoin d'être 'vu' pour être réel. Le validisme se manifeste par des doutes, des minimisations ou des remarques comme 'tu n’as pas l’air handicapé·e'. Les aménagements raisonnables sont des mesures pratiques et proportionnées pour permettre à une personne handicapée de travailler dans de bonnes conditions (https://www.unia.be/fr/amenagement-raisonnable). Vous avez le droit de les demander sans justifier votre handicap en détail. En cas de refus ou de traitement discriminatoire, vous pouvez signaler la situation à Unia et recevoir conseils, médiation ou assistance juridique (https://www.unia.be/fr/signaler-discrimination)."
+                        },
+                        {
+                            "id": "B",
+                            "texte": "Dire que je 'n'ai pas l'air handicapé·e' est discriminatoire. Mes besoins ne sont pas des caprices, ce sont des droits. Je te demande de respecter ma demande.",
+                            "reaction": "Oula, tu vas un peu loin. Je ne voulais pas être discriminant, hein… je dis juste ce que je vois.",
+                            "analyse": "Vous identifiez explicitement le comportement validiste et posez une limite ferme. Cette réponse est assertive et rappelle que les aménagements raisonnables ne sont pas une faveur mais un droit légal. Vous déstabilisez potentiellement votre interlocuteur en nommant directement la discrimination.",
+                            "consequences": "Si votre collègue persiste, vous pouvez formaliser la demande par écrit et solliciter l'aide d'Unia pour défendre vos droits. Même si cela crée une tension temporaire, vous établissez une base solide pour protéger votre santé et vos droits au travail.",
+                            "aRetenir": "Un handicap invisible n'a pas besoin d'être 'vu' pour être réel. Le validisme se manifeste par des doutes, des minimisations ou des remarques comme 'tu n’as pas l’air handicapé·e'. Les aménagements raisonnables sont des mesures pratiques et proportionnées pour permettre à une personne handicapée de travailler dans de bonnes conditions (https://www.unia.be/fr/amenagement-raisonnable). Vous avez le droit de les demander sans justifier votre handicap en détail. En cas de refus ou de traitement discriminatoire, vous pouvez signaler la situation à Unia et recevoir conseils, médiation ou assistance juridique (https://www.unia.be/fr/signaler-discrimination)."
+                        },
+                        {
+                            "id": "C",
+                            "texte": "Désolé·e, je ne voulais pas compliquer les choses. Ce n'est pas grave, je vais faire sans.",
+                            "reaction": "Merci, c’est plus simple pour tout le monde. Tu vois, on peut s’adapter.",
+                            "analyse": "Par peur du conflit, vous retirez votre demande. Vous protégez l’harmonie immédiate mais au prix de votre confort et de votre santé. Cette stratégie est fréquente chez les personnes habituées à minimiser leurs besoins face à des invalidations répétées. Elle envoie le message que vos besoins ne sont pas prioritaires et peut renforcer le validisme autour de vous.",
+                            "consequences": "À court terme, la situation est apaisée. Mais à long terme, elle risque de renforcer l'épuisement et d'encourager l'idée que les handicaps invisibles ne nécessitent pas d’aménagement. Si cela se répète, il peut être utile de demander un soutien externe pour défendre vos droits.",
+                            "aRetenir": "Un handicap invisible n'a pas besoin d'être 'vu' pour être réel. Le validisme se manifeste par des doutes, des minimisations ou des remarques comme 'tu n’as pas l’air handicapé·e'. Les aménagements raisonnables sont des mesures pratiques et proportionnées pour permettre à une personne handicapée de travailler dans de bonnes conditions (https://www.unia.be/fr/amenagement-raisonnable). Vous avez le droit de les demander sans justifier votre handicap en détail. En cas de refus ou de traitement discriminatoire, vous pouvez signaler la situation à Unia et recevoir conseils, médiation ou assistance juridique (https://www.unia.be/fr/signaler-discrimination)."
+                        }
+                    ]
+                },
+                {
+                    "id": "scenario_08",
+                    "niveau": "Difficile",
+                    "theme": "Gestion d'un comportement inadéquat chez un·e ami·e",
+                    "contexte": "Vous êtes allé·e à un concert avec votre cousine, sans avoir proposé à l'une de vos amies de venir avec vous. Quelques jours plus tard, elle l'apprend et vous contacte :",
+                    "interlocuteur": {
+                        "nom": "Votre ami·e vexé·e",
+                        "replique": "Je trouve ça vraiment abusé que tu ne m'aies même pas proposé de venir alors que tu sais que j'adore ce groupe. C'est toujours comme ça avec toi, tu ne penses qu'à toi. En plus tu sais que dans le passé j'ai souffert d'être abandonnée par mes amies et tu me fais revivre ça !"
+                    },
+                    "options": [
+                        {
+                            "id": "A",
+                            "texte": "J'entends que tu aies été déçue, mais c'était une sortie avec ma cousine. Ça n'a rien à voir avec toi ou notre amitié.",
+                            "style": "Assertive avec reconnaissance émotionnelle",
+                            "reaction": "Oui… je comprends, mais ça me fait toujours quelque chose. J'aurais vraiment aimé que tu penses à moi.",
+                            "tonReaction": "toujours déçu mais moins défensif",
+                            "analyse": "Vous reconnaissez l'émotion de votre amie sans pour autant accepter sa culpabilisation. Vous expliquez factuellement la situation et posez une limite claire : vous n'êtes pas responsable de sa déception. Cette réponse utilise la technique de 'ne pas mordre à l'appât' : votre amie essaie de vous culpabiliser avec son passé et des généralisations ('c'est toujours comme ça'), mais vous ne répondez pas à ces accusations.",
+                            "consequences": "Vous assumez que votre choix ait pu la décevoir, mais sans en prendre la responsabilité émotionnelle. Cela peut être très difficile à faire quand on est hypersensible aux signaux émotionnels des autres ou qu'on a tendance à se sentir responsable du bien-être d'autrui. Pourtant, c'est essentiel d'arriver à se sentir en sécurité même quand quelqu'un désapprouve nos choix. Vous avez le droit de prendre de la place, en particulier face à des personnes qui essaient de vous culpabiliser. Cette approche préserve votre bien-être tout en maintenant la relation si celle-ci est saine."
+                        },
+                        {
+                            "id": "B",
+                            "texte": "Tu me reproches de ne pas t'avoir invitée et tu utilises ton passé pour me culpabiliser. Je ne me sens pas bien avec ça. Je ne suis pas responsable de tes blessures passées.",
+                            "style": "Assertive / Confrontation directe",
+                            "reaction": "Wow, c'est vraiment dur ce que tu me dis... Je pensais que tu comprendrais.",
+                            "tonReaction": "défensif, possiblement blessé",
+                            "analyse": "Cette réponse utilise la technique des trois phrases (liens) adaptée à une situation de manipulation : (1) vous nommez le comportement problématique (reproches + culpabilisation), (2) vous exprimez votre ressenti ('je ne me sens pas bien'), (3) vous posez une limite très claire. C'est une réponse directe et assertive qui confronte la manipulation. Elle demande beaucoup de confiance en soi et peut être difficile à formuler, surtout si vous avez l'habitude de vous adapter aux attentes des autres.",
+                            "consequences": "Vous refusez explicitement de porter la responsabilité des émotions et du passé de votre amie. Cette approche très directe peut créer une tension importante dans la relation, mais elle est nécessaire face à des comportements manipulatoires. Si votre amie réagit mal ou persiste à vous culpabiliser, c'est un signal d'alerte sur la toxicité de la relation. En revanche, si elle entend votre limite et ajuste son comportement, cela peut assainir durablement votre amitié."
+                        },
+                        {
+                            "id": "C",
+                            "texte": "Oh non, je suis vraiment désolé·e, je ne pensais pas que ça te blesserait autant. Tu as raison, j'aurais dû y penser.",
+                            "style": "Passive / Apaisement immédiat",
+                            "reaction": "Oui quand même ! Bon, j'espère que la prochaine fois tu feras attention.",
+                            "tonReaction": "satisfait d'avoir obtenu gain de cause",
+                            "analyse": "Vous vous excusez immédiatement et acceptez le reproche pour apaiser rapidement la situation. Cette réaction vient souvent d'un désir d'éviter le conflit, de calmer les tensions rapidement, ou d'une sensibilité importante à la désapprobation."
+                        }
+                    ]
+                },
+                {
+                    "id": "scenario_09",
+                    "niveau": "Difficile",
+                    "theme": "Consentement",
+                    "contexte": "Une personne de votre entourage initie régulièrement des contacts physiques avec vous (vous touche les mains, vous frôle en passant derrière vous, vous fait des bises appuyées). Aujourd'hui encore :",
+                    "interlocuteur": {
+                        "nom": "Une personne de votre entourage",
+                        "replique": "J'ai pas le moral aujourd'hui, tu me ferais pas un bon gros câlin ? Ça me ferait du bien."
+                    },
+                    "options": [
+                        {
+                            "id": "A",
+                            "texte": "Tu me demandes souvent des câlins. Je ne suis pas à l'aise avec ça. Je préfère qu'on garde nos distances physiques.",
+                            "reaction": "Oh... d'accord, je ne savais pas que ça te dérangeait. Désolé·e.",
+                            "analyse": "Technique des trois phrases : (1) décrire le comportement, (2) exprimer le ressenti, (3) formuler une demande claire. Vous posez une limite ferme tout en restant respectueux·se.",
+                            "consequences": "Votre interlocuteur·rice comprend clairement votre limite. Même si la conversation peut être inconfortable, vous établissez une règle claire pour vos interactions futures et reprenez le contrôle de votre espace personnel.",
+                            "aRetenir": "Poser des limites sur le contact physique n'est jamais égoïste. Vous pouvez soutenir quelqu'un émotionnellement sans contact physique. 'Je ne suis pas à l'aise' est une raison suffisante."
+                        },
+                        {
+                            "id": "B",
+                            "texte": "Désolé·e, je ne suis pas trop câlins aujourd'hui, je suis un peu fatigué·e...",
+                            "reaction": "Ah bon ? Allez, juste un petit... ça va te remonter le moral aussi !",
+                            "analyse": "Cette réponse reste floue et laisse la porte ouverte à l'insistance. En vous justifiant par la fatigue, vous laissez entendre que le problème est ponctuel.",
+                            "consequences": "La personne risque d'insister maintenant ou de retenter sa chance un autre jour. Votre limite n'est pas claire, ce qui peut être épuisant à gérer.",
+                            "aRetenir": "Poser des limites sur le contact physique n'est jamais égoïste. Personne n'a le droit de disposer de votre corps. Vous pouvez soutenir quelqu'un émotionnellement sans contact physique. Plus vous serez clair·e sur vos limites tôt, plus ce sera facile de les maintenir. Rappelez-vous : vos limites n'ont pas besoin d'être justifiées - 'je ne suis pas à l'aise' est une raison suffisante."
+                        },
+                        {
+                            "id": "C",
+                            "texte": "Je comprends que tu n'aies pas le moral. Par contre, les contacts physiques, ce n'est pas mon truc. Je peux t'écouter si tu veux en parler ?",
+                            "reaction": "Ah... oui, je comprends. Merci, ça me fait du bien d'en parler en fait.",
+                            "analyse": "Cette réponse combine empathie et affirmation de vos limites. Vous reconnaissez le besoin émotionnel de l'autre sans sacrifier votre confort et proposez une alternative adaptée.",
+                            "consequences": "Vous établissez votre limite tout en maintenant le lien. Votre interlocuteur·rice comprend que votre refus n'est pas un rejet, mais une préférence personnelle concernant le contact physique. Cela éduque l'autre sur vos besoins tout en restant disponible émotionnellement.",
+                            "aRetenir": "Poser des limites sur le contact physique n'est jamais égoïste. Personne n'a le droit de disposer de votre corps. Vous pouvez soutenir quelqu'un émotionnellement sans contact physique. Plus vous serez clair·e sur vos limites tôt, plus ce sera facile de les maintenir. Rappelez-vous : vos limites n'ont pas besoin d'être justifiées - 'je ne suis pas à l'aise' est une raison suffisante."
+                        }
+                    ]
+                }
+            
+        ]
 
-    {
-      "id": "scenario_07",
-      "niveau": "Moyen",
-      "theme": "Réagir à une interruption",
-      "contexte": "Un client est mécontent et vous critique sévèrement en public.",
-      "interlocuteur": {
-        "nom": "Client",
-        "replique": "Je ne suis pas du tout satisfait de votre travail !",
-        "avatar": "scenario_07"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-    {
-      "id": "scenario_08",
-      "niveau": "Difficile",
-      "theme": "Exprimer l'absence de consentement",
-      "contexte": "Vous devez discuter d'une augmentation avec votre supérieur exigeant.",
-      "interlocuteur": {
-        "nom": "Manager",
-        "replique": "Pourquoi penses-tu mériter cette augmentation ?",
-        "avatar": "scenario_08"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
-    },
-    {
-      "id": "scenario_09",
-      "niveau": "Difficile",
-      "theme": "Comportement inadéquat chez un·e ami·e",
-      "contexte": "Un problème critique survient en plein projet et toute l'équipe est sous pression.",
-      "interlocuteur": {
-        "nom": "Chef de projet",
-        "replique": "On doit résoudre ça immédiatement, es-tu prêt·e ?",
-        "avatar": "scenario_09"
-      },
-      "options": [
-        {
-          "id": "A",
-          "texte": "Option A texte",
-          "style": "Assertive",
-          "reaction": "Réaction A",
-          "analyse": "Analyse A",
-          "pourquoi": "Pourquoi A"
-        },
-        {
-          "id": "B",
-          "texte": "Option B texte",
-          "style": "Passive / Évitante",
-          "reaction": "Réaction B",
-          "tonReaction": "",
-          "analyse": "Analyse B",
-          "consequences": "Conséquence B",
-          "alternative": "Alternative B"
-        },
-        {
-          "id": "C",
-          "texte": "Option C texte",
-          "style": "Assertive / Directe avec explication personnelle",
-          "reaction": "Réaction C",
-          "analyse": "Analyse C",
-          "pourquoi": "Pourquoi C",
-          "attention": "Attention C"
-        }
-      ],
-      "aRetenir": "Résumé à retenir pour ce scénario"
     }
-  ]
-}
-

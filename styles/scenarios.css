@@ -21,6 +21,11 @@
    height: fit-content;
    margin: 0 auto;
 
+   /* Pour qu'elle grandisse et prenne la hauteur qu'il reste pour faire min 100vh */
+   flex : 1;
+   /* flex est le raccourcis pour flex : flex-grow flex-shrink flex-basis */
+   
+
    /* * --- le sous conteneur --- **/
    .section-content {
       /*! doit être en 90/80%*/
