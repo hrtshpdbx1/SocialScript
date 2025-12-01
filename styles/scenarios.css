@@ -22,9 +22,9 @@
    margin: 0 auto;
 
    /* Pour qu'elle grandisse et prenne la hauteur qu'il reste pour faire min 100vh */
-   flex : 1;
+   flex: 1;
    /* flex est le raccourcis pour flex : flex-grow flex-shrink flex-basis */
-   
+
 
    /* * --- le sous conteneur --- **/
    .section-content {
@@ -143,21 +143,25 @@ SCENARIO
 .scenario-contexte {
    flex-direction: row;
    align-items: center;
-   justify-content: flex-end;
+   justify-content: center;
+   text-align: center;
    border: 1px;
    background-color: var(--gray-100);
-   padding: var(--space-2);
+   padding: var(--space-4);
    border-radius: var(--radius-sm);
    box-shadow: var(--shadow-md);
    background-color: var(--gray-100);
    /* width: 60%; */
    margin: 0 auto;
    margin-bottom: 2%;
+   font-size: var(--font-size-small);
+   width: fit-content;
 }
 
 .interlocuteur-container {
    display: flex;
    align-items: center;
+   justify-content: center;
    gap: var(--space-1);
    border: 1px;
 
@@ -190,9 +194,11 @@ SCENARIO
       background-color: var(--secondary);
       font-size: var(--font-size-small);
       text-align: center;
-      
-      p {text-align: center;
-      word-wrap: break-word;  }
+
+      p {
+         text-align: center;
+         word-wrap: break-word;
+      }
 
    }
 }
@@ -294,6 +300,7 @@ strong {
    align-items: center;
    /* width: 60%; */
    margin: 0 auto;
+   margin-top: var(--space-6);
 
    .h2_resultat {
       text-align: center;
@@ -304,31 +311,65 @@ strong {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: var(--space-4);
+      justify-content: center;
+      gap: var(--space-1);
+        border: 4px cornflowerblue solid;
+
+      /* border: 1px pink solid; */
+      /* width: 60%; */
+      margin: 0 auto;
+      font-style: italic;
+   }
+
+
+
+
+   .container-avatar-reaction {
+      /* todo :ici  */
+  border: 2px lightseagreen solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+ 
+   gap: var(--space-1);
 
       .feedback-reaction {
          /* Réaction de l'interlocuteur·ice */
+         display: inline-block;
+         flex-direction: column;
+         align-items: center;
          border-radius: var(--radius-full);
          background-color: var(--secondary);
          padding: var(--space-1);
          text-align: center;
-         padding: var(--space-4);
+         font-size: var(--font-size-small);
+       
+
+         p {
+            font-size: var(--font-size-small);
+
+         }
 
          p:first-of-type {
             /* reponse de l'interlocuteur·ice*/
             font-style: italic;
          }
       }
+
    }
 
 }
+
+
+
 
 .container-analyse-reminder {
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: space-evenly;
-   gap: var(--space-2);
+   gap: var(--space-1);
    background: var(--gray-100);
    border-radius: var(--radius-md);
    padding: var(--space-2);
@@ -336,6 +377,8 @@ strong {
    .feedback-analyse,
    .feedback-reminder {
       text-align: center;
+      font-size: var(--font-size-small);
+      padding: var(--space-4);
 
    }
 }

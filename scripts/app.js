@@ -270,43 +270,43 @@ function renderScenario(scenario) {
 
     // --- SECTION INTERLOCUTEUR ---
 
-// Génère l’URL de l’avatar
-const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
+    // Génère l’URL de l’avatar
+    const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
 
-// Container global avatar + texte
-const repliqueContainer = document.createElement('div');
-repliqueContainer.classList.add('replique-container');
+    // Container global avatar + texte
+    const repliqueContainer = document.createElement('div');
+    repliqueContainer.classList.add('replique-container');
 
-// DIV avatar
-const avatarContainer = document.createElement('div');
-avatarContainer.classList.add('avatar-container');
+    // DIV avatar
+    const avatarContainer = document.createElement('div');
+    avatarContainer.classList.add('avatar-container');
 
-const imgAvatar = document.createElement('img');
-imgAvatar.src = urlAvatar;
-imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-imgAvatar.classList.add('imgAvatar');
+    const imgAvatar = document.createElement('img');
+    imgAvatar.src = urlAvatar;
+    imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+    imgAvatar.classList.add('imgAvatar');
 
-avatarContainer.appendChild(imgAvatar);
+    avatarContainer.appendChild(imgAvatar);
 
-// DIV texte
-const texteContainer = document.createElement('div');
-texteContainer.classList.add('texte-container');
+    // DIV texte
+    const texteContainer = document.createElement('div');
+    texteContainer.classList.add('texte-container');
 
-const nom = document.createElement('strong');
-nom.textContent = scenario.interlocuteur.nom + " : ";
+    const nom = document.createElement('strong');
+    nom.textContent = scenario.interlocuteur.nom + " : ";
 
-const texte = document.createElement('span');
-texte.textContent = scenario.interlocuteur.replique;
+    const texte = document.createElement('span');
+    texte.textContent = scenario.interlocuteur.replique;
 
-texteContainer.appendChild(nom);
-texteContainer.appendChild(texte);
+    texteContainer.appendChild(nom);
+    texteContainer.appendChild(texte);
 
-// Ajout des deux blocs dans le container principal
-repliqueContainer.appendChild(avatarContainer);
-repliqueContainer.appendChild(texteContainer);
+    // Ajout des deux blocs dans le container principal
+    repliqueContainer.appendChild(avatarContainer);
+    repliqueContainer.appendChild(texteContainer);
 
-// Ajout au DOM
-DIV_SCENARIO.appendChild(repliqueContainer);
+    // Ajout au DOM
+    DIV_SCENARIO.appendChild(repliqueContainer);
 
     // // Div qui contient l'avatar + le nom + la réplique
     // const divInterlo = document.createElement('div');
@@ -314,21 +314,21 @@ DIV_SCENARIO.appendChild(repliqueContainer);
     // divInterlo.classList.add('interlocuteur-container');
 
     // Container global avatar + texte
-// const repliqueContainer = document.createElement('div');
-// repliqueContainer.classList.add('replique-container');
+    // const repliqueContainer = document.createElement('div');
+    // repliqueContainer.classList.add('replique-container');
 
-// // DIV avatar
-// const avatarContainer = document.createElement('div');
-// avatarContainer.classList.add('avatar-container');
+    // // DIV avatar
+    // const avatarContainer = document.createElement('div');
+    // avatarContainer.classList.add('avatar-container');
 
-// const imgAvatar = document.createElement('img');
-// imgAvatar.src = urlAvatar;
-// imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-// imgAvatar.classList.add('imgAvatar');
-// const imgAvatar = document.createElement('img');
-// imgAvatar.src = urlAvatar;
-// imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-// imgAvatar.classList.add('imgAvatar');
+    // const imgAvatar = document.createElement('img');
+    // imgAvatar.src = urlAvatar;
+    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+    // imgAvatar.classList.add('imgAvatar');
+    // const imgAvatar = document.createElement('img');
+    // imgAvatar.src = urlAvatar;
+    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
+    // imgAvatar.classList.add('imgAvatar');
 
     // Génère l'URL de l'avatar
     // const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
@@ -346,25 +346,25 @@ DIV_SCENARIO.appendChild(repliqueContainer);
     // spanNom.textContent = " " + scenario.interlocuteur.nom + ' :';
     // divInterlo.appendChild(spanNom);
 
-// // DIV texte
-// const texteContainer = document.createElement('div');
-// texteContainer.classList.add('texte-container');
+    // // DIV texte
+    // const texteContainer = document.createElement('div');
+    // texteContainer.classList.add('texte-container');
 
-// const nom = document.createElement('strong');
-// nom.textContent = scenario.interlocuteur.nom + " : ";
+    // const nom = document.createElement('strong');
+    // nom.textContent = scenario.interlocuteur.nom + " : ";
 
-// const texte = document.createElement('span');
-// texte.textContent = scenario.interlocuteur.replique;
+    // const texte = document.createElement('span');
+    // texte.textContent = scenario.interlocuteur.replique;
 
-// texteContainer.appendChild(nom);
-// texteContainer.appendChild(texte);
+    // texteContainer.appendChild(nom);
+    // texteContainer.appendChild(texte);
 
-// // Ajout des deux blocs dans le container
-// repliqueContainer.appendChild(avatarContainer);
-// repliqueContainer.appendChild(texteContainer);
+    // // Ajout des deux blocs dans le container
+    // repliqueContainer.appendChild(avatarContainer);
+    // repliqueContainer.appendChild(texteContainer);
 
-// // Ajout au DOM
-// DIV_SCENARIO.appendChild(repliqueContainer);
+    // // Ajout au DOM
+    // DIV_SCENARIO.appendChild(repliqueContainer);
 
     // // Crée un nœud de texte pour la réplique
     // // createTextNode() crée du texte simple (pas un élément HTML)
@@ -421,27 +421,33 @@ DIV_SCENARIO.appendChild(repliqueContainer);
 // ========================================
 // AFFICHAGE DU RÉSULTAT 
 // ========================================
-
+// todo: ici
 function showResult(option, divResultat, urlAvatar, scenario, btnOption) {
     divResultat.innerHTML = `
-         <h2 class="h2_resultat">Résultat de votre choix :</h2>
+
         <div class="feedback-container">
-            <div class="feedback-reaction">
-                <strong>Réaction de l'interlocuteur·ice :</strong>
-                <p>${option.reaction}</p>
-            </div>
+                <div class="container-avatar-reaction">
+                        <div class="avatar-container" > 
+                        <img src="${urlAvatar}" alt="Avatar de ${scenario.interlocuteur.nom}" class="imgAvatar"> 
+                         </div> 
+                  <div class="feedback-reaction ">
+                  <strong><p>${scenario.interlocuteur.nom} :</strong> ${option.reaction}
+                    </p>
+                 </div> 
+                   </div>
+        </div>
 
             <div class="container-analyse-reminder">
                  <div class="feedback-analyse">
-                <strong>Analyse :</strong>
-                <p>${option.analyse}</p>
+                
+                <p> <strong>Analyse :</strong> ${option.analyse}</p>
                  </div>
                 <div class="feedback-reminder">
-                <strong>A retenir :</strong>
-                <p>${option.aRetenir}</p>
+               
+                <p> <strong>A retenir :</strong> ${option.aRetenir}</p>
                 </div> 
             </div>`;
-            
+
     divResultat.style.display = 'block';
 
     // Désactive tous les boutons d'options 

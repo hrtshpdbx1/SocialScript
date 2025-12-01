@@ -84,6 +84,7 @@
             "options": [
                 {
                     "id": "A",
+                    "texte": "* Vous riez aussi sans rien dire *",
                     "reaction": "Haha, je savais qu'elle te plairait !",
                     "analyse": "Vous faites semblant d'avoir compris pour vous fondre dans le groupe. C'est une stratégie de camouflage social (masking) très courante chez les personnes autistes. Cette réaction automatique vise à éviter de se sentir exclu·e ou 'différent·e'.",
                     "consequences": "À court terme, vous évitez l'inconfort d'avouer que vous n'avez pas compris. À long terme, cette stratégie peut s’avérer épuisante, voire renforcer le sentiment de ne pas être authentique. Vous ratez aussi l'opportunité d'apprendre et de mieux comprendre ce type d'humour pour la prochaine fois.",
@@ -106,13 +107,12 @@
                     "consequences": "Cette réaction peut passer inaperçue ou inviter à la clarification. C'est moins épuisant que de feindre activement, mais vous ne résolvez pas non plus votre incompréhension. Votre collègue a remarqué votre hésitation et vous donne une ouverture pour en parler si vous le souhaitez.",
                     "aRetenir": "Ne pas comprendre l'humour implicite ou le second degré est très fréquent dans l'autisme. Il n'y a aucune honte à demander une explication. Le 'masking' (faire semblant de comprendre) est épuisant et contribue au burn-out. Vous avez le droit de fonctionner différemment et de le montrer."
                 }
-            ],
-            "aRetenir": "Aucune de ces réponses n'est mauvaise en soi. Le choix dépend de votre niveau de confort avec le collègue, votre énergie du moment, ce que vous voulez communiquer sur vos limites, et le type de relation professionnelle que vous souhaitez maintenir."
+            ]
         },
         {
             "id": "scenario_04",
             "niveau": "Moyen",
-            "theme": "Gestion de l'énergie et limites familiales",
+            "theme": "Réunion familliale",
             "contexte": " C'est bientôt les fêtes de fin d'années, vous vous sentez très fatigué·e par votre rythme, les jours qui raccourcissent et les tâches de la vie quotidienne. Vous n'avez qu'une envie : prendre quelques jours de vacances pour vous reposer et prendre soin de vous. Votre téléphone sonne :",
             "interlocuteur": {
                 "nom": "Votre mère",
@@ -148,7 +148,7 @@
         {
             "id": "scenario_05",
             "niveau": "Moyen",
-            "theme": "Gestion d’un imprévu",
+            "theme": "S'adapter à un imprévu",
             "contexte": "Vous avez prévu depuis plusieurs semaines de faire une présentation dans le cadre d'une réunion professionnelle importante. Il était convenu que la réunion se tienne en visioconférence. Une heure avant le début, votre manager vous appelle :",
             "interlocuteur": {
                 "nom": "Manager",
@@ -177,7 +177,7 @@
                     "reaction": "Oh, je ne savais pas. Pas de problème, on maintient la visio. Merci de me l'avoir dit.",
                     "analyse": "Vous exprimez directement votre difficulté et la raison derrière votre refus. Cette approche très honnête partage une information sur votre fonctionnement et demande un certain niveau de vulnérabilité et de confiance dans la relation avec votre manager.",
                     "consequences": "Votre manager comprend mieux votre fonctionnement et sera probablement plus attentif aux changements de dernière minute à l'avenir. Cette transparence peut améliorer votre relation professionnelle. Attention cependant : ce niveau d'ouverture n'est approprié que si vous vous sentez en sécurité dans votre environnement de travail.",
-                    "aRetenir": "Les personnes autistes ou TDAH ont souvent besoin de périodes de concentration ininterrompue (hyperfocus). Les interruptions coûtent très cher en énergie et en temps de récupération. Poser des limites sur votre disponibilité n'est pas impoli, c'est nécessaire pour votre productivité et votre bien-être. Le casque est un signal universel de 'ne pas déranger' qu'il est légitime de faire respecter."
+                    "aRetenir": "Les changements de dernière minute sont particulièrement difficiles pour beaucoup de personnes neurodivergentes. Demander à maintenir ce qui était prévu est légitime, surtout dans un contexte professionnel où vous devez performer. Vous n'avez pas à accepter tous les changements au nom de la 'flexibilité'. Un·e bon·ne manager comprendra et respectera votre besoin d'anticipation."
                 }
             ]
         },
@@ -220,7 +220,7 @@
                 {
                     "id": "scenario_07",
                     "niveau": "Difficile",
-                    "theme": "Validisme / refus d'aménagement raisonnable",
+                    "theme": "Demande d'aménagement raisonnable",
                     "contexte": "Vous avez un handicap invisible (troubles neurodéveloppementaux, maladie chronique, douleur persistante, handicap psychique…). Lors d'une réunion d'équipe particulièrement fatigante pour vous, vous demandez un aménagement raisonnable : par exemple, pouvoir éteindre la caméra, vous asseoir, adapter la luminosité, faire une pause supplémentaire ou recevoir les informations à l’écrit. Votre collègue réagit ainsi :",
                     "interlocuteur": {
                         "nom": "Votre collègue / responsable",
@@ -256,7 +256,7 @@
                 {
                     "id": "scenario_08",
                     "niveau": "Difficile",
-                    "theme": "Gestion d'un comportement inadéquat chez un·e ami·e",
+                    "theme": "Personnalité contrôlante",
                     "contexte": "Vous êtes allé·e à un concert avec votre cousine, sans avoir proposé à l'une de vos amies de venir avec vous. Quelques jours plus tard, elle l'apprend et vous contacte :",
                     "interlocuteur": {
                         "nom": "Votre ami·e vexé·e",
@@ -270,8 +270,10 @@
                             "reaction": "Oui… je comprends, mais ça me fait toujours quelque chose. J'aurais vraiment aimé que tu penses à moi.",
                             "tonReaction": "toujours déçu mais moins défensif",
                             "analyse": "Vous reconnaissez l'émotion de votre amie sans pour autant accepter sa culpabilisation. Vous expliquez factuellement la situation et posez une limite claire : vous n'êtes pas responsable de sa déception. Cette réponse utilise la technique de 'ne pas mordre à l'appât' : votre amie essaie de vous culpabiliser avec son passé et des généralisations ('c'est toujours comme ça'), mais vous ne répondez pas à ces accusations.",
-                            "consequences": "Vous assumez que votre choix ait pu la décevoir, mais sans en prendre la responsabilité émotionnelle. Cela peut être très difficile à faire quand on est hypersensible aux signaux émotionnels des autres ou qu'on a tendance à se sentir responsable du bien-être d'autrui. Pourtant, c'est essentiel d'arriver à se sentir en sécurité même quand quelqu'un désapprouve nos choix. Vous avez le droit de prendre de la place, en particulier face à des personnes qui essaient de vous culpabiliser. Cette approche préserve votre bien-être tout en maintenant la relation si celle-ci est saine."
-                        },
+                            "consequences": "Vous assumez que votre choix ait pu la décevoir, mais sans en prendre la responsabilité émotionnelle. Cela peut être très difficile à faire quand on est hypersensible aux signaux émotionnels des autres ou qu'on a tendance à se sentir responsable du bien-être d'autrui. Pourtant, c'est essentiel d'arriver à se sentir en sécurité même quand quelqu'un désapprouve nos choix. Vous avez le droit de prendre de la place, en particulier face à des personnes qui essaient de vous culpabiliser. Cette approche préserve votre bien-être tout en maintenant la relation si celle-ci est saine.",
+                             "aRetenir": "Quand on se sent excessivement responsable des émotions des autres, on risque de s'adapter plus que nécessaire à leurs besoins au détriment des nôtres. Cela augmente le risque de s'enfermer dans des relations toxiques ou d'être victime de manipulation. La culpabilisation ('tu me fais revivre mes traumatismes') et la généralisation ('c'est toujours comme ça avec toi') sont des signaux d'alerte. Si vous vous retrouvez régulièrement dans des schémas relationnels similaires dont vous n'arrivez pas à sortir, n'hésitez pas à demander de l'aide professionnelle ou à en parler à des personnes de confiance. Vous n'êtes pas obligé·e de faire ce chemin seul·e."
+                        }
+                        ,
                         {
                             "id": "B",
                             "texte": "Tu me reproches de ne pas t'avoir invitée et tu utilises ton passé pour me culpabiliser. Je ne me sens pas bien avec ça. Je ne suis pas responsable de tes blessures passées.",
@@ -279,7 +281,8 @@
                             "reaction": "Wow, c'est vraiment dur ce que tu me dis... Je pensais que tu comprendrais.",
                             "tonReaction": "défensif, possiblement blessé",
                             "analyse": "Cette réponse utilise la technique des trois phrases (liens) adaptée à une situation de manipulation : (1) vous nommez le comportement problématique (reproches + culpabilisation), (2) vous exprimez votre ressenti ('je ne me sens pas bien'), (3) vous posez une limite très claire. C'est une réponse directe et assertive qui confronte la manipulation. Elle demande beaucoup de confiance en soi et peut être difficile à formuler, surtout si vous avez l'habitude de vous adapter aux attentes des autres.",
-                            "consequences": "Vous refusez explicitement de porter la responsabilité des émotions et du passé de votre amie. Cette approche très directe peut créer une tension importante dans la relation, mais elle est nécessaire face à des comportements manipulatoires. Si votre amie réagit mal ou persiste à vous culpabiliser, c'est un signal d'alerte sur la toxicité de la relation. En revanche, si elle entend votre limite et ajuste son comportement, cela peut assainir durablement votre amitié."
+                            "consequences": "Vous refusez explicitement de porter la responsabilité des émotions et du passé de votre amie. Cette approche très directe peut créer une tension importante dans la relation, mais elle est nécessaire face à des comportements manipulatoires. Si votre amie réagit mal ou persiste à vous culpabiliser, c'est un signal d'alerte sur la toxicité de la relation. En revanche, si elle entend votre limite et ajuste son comportement, cela peut assainir durablement votre amitié.",   
+                              "aRetenir": "Quand on se sent excessivement responsable des émotions des autres, on risque de s'adapter plus que nécessaire à leurs besoins au détriment des nôtres. Cela augmente le risque de s'enfermer dans des relations toxiques ou d'être victime de manipulation. La culpabilisation ('tu me fais revivre mes traumatismes') et la généralisation ('c'est toujours comme ça avec toi') sont des signaux d'alerte. Si vous vous retrouvez régulièrement dans des schémas relationnels similaires dont vous n'arrivez pas à sortir, n'hésitez pas à demander de l'aide professionnelle ou à en parler à des personnes de confiance. Vous n'êtes pas obligé·e de faire ce chemin seul·e."
                         },
                         {
                             "id": "C",
@@ -287,14 +290,15 @@
                             "style": "Passive / Apaisement immédiat",
                             "reaction": "Oui quand même ! Bon, j'espère que la prochaine fois tu feras attention.",
                             "tonReaction": "satisfait d'avoir obtenu gain de cause",
-                            "analyse": "Vous vous excusez immédiatement et acceptez le reproche pour apaiser rapidement la situation. Cette réaction vient souvent d'un désir d'éviter le conflit, de calmer les tensions rapidement, ou d'une sensibilité importante à la désapprobation."
+                            "analyse": "Vous vous excusez immédiatement et acceptez le reproche pour apaiser rapidement la situation. Cette réaction vient souvent d'un désir d'éviter le conflit, de calmer les tensions rapidement, ou d'une sensibilité importante à la désapprobation.",     
+                            "aRetenir": "Quand on se sent excessivement responsable des émotions des autres, on risque de s'adapter plus que nécessaire à leurs besoins au détriment des nôtres. Cela augmente le risque de s'enfermer dans des relations toxiques ou d'être victime de manipulation. La culpabilisation ('tu me fais revivre mes traumatismes') et la généralisation ('c'est toujours comme ça avec toi') sont des signaux d'alerte. Si vous vous retrouvez régulièrement dans des schémas relationnels similaires dont vous n'arrivez pas à sortir, n'hésitez pas à demander de l'aide professionnelle ou à en parler à des personnes de confiance. Vous n'êtes pas obligé·e de faire ce chemin seul·e."
                         }
                     ]
                 },
                 {
                     "id": "scenario_09",
                     "niveau": "Difficile",
-                    "theme": "Consentement",
+                    "theme": "Contact physique non consenti",
                     "contexte": "Une personne de votre entourage initie régulièrement des contacts physiques avec vous (vous touche les mains, vous frôle en passant derrière vous, vous fait des bises appuyées). Aujourd'hui encore :",
                     "interlocuteur": {
                         "nom": "Une personne de votre entourage",
