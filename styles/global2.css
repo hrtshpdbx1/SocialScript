@@ -324,8 +324,21 @@ blockquote {
     box-shadow: var(--shadow-sm);
     transition: all .2s ease;
     display: inline-block;
-
     width: fit-content;
+}
+
+.btn i { 
+    margin-right: var(--space-2);
+} 
+
+.btn:focus-visible {
+    outline: 3px solid var(--primary-600);
+    outline-offset: 2px;
+}
+
+.option-btn:focus-visible {
+    outline: 3px solid var(--secondary-900);
+    outline-offset: 2px;
 }
 
 .btn:hover {
@@ -334,8 +347,8 @@ blockquote {
 }
 
 .btn-primary {
-    background: var(--primary);
-    color: var(--gray-800);
+    background: var(--primary-blue);
+    color: var(--white);
 }
 
 .btn-primary:hover {

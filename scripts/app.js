@@ -14,9 +14,51 @@
  * Fonction pour générer l'URL d'un avatar via l'API DiceBear qui permet de générer des avatars aléatoires
  * seed = tjrs le même avatar pour une personne
  */
-function getAvatarUrl(nom) {
-    const urlAvatar = `https://api.dicebear.com/9.x/adventurer/svg?seed=${nom}`;
-    return urlAvatar;
+// function getAvatarUrl(nom) {
+//     // const urlAvatar = `https://api.dicebear.com/9.x/adventurer/svg?seed=${nom}`;
+//     // return urlAvatar;
+// }
+
+function getAvatarUrl(seed) {
+
+    // ---- Ton propre ensemble de features autorisés ----
+    const hairList = [
+        "long01","long02","long03","short01","short02","short03"
+        // → tu mets ici EXACTEMENT ceux que tu veux
+    ];
+
+    const eyesList = [
+        "variant01","variant02","variant03","variant04","variant05"
+        // → pareil ici
+    ];
+
+    const mouthList = [
+        "variant01","variant02","variant03","variant04"
+    ];
+
+    const hairColorList = [
+        "0e0e0e","6a4e35","85c2c6","dba3be"
+    ];
+
+    const bgList = [
+        "b6e3f4","ffd5dc","ffdfbf"
+    ];
+
+    // ---- Fonction utilitaire ----
+    const rand = (array) => array[Math.floor(Math.random() * array.length)];
+
+    // ---- Construction de l'URL ----
+    let url = `https://api.dicebear.com/9.x/adventurer/svg`
+        + `?seed=${seed}`                              // avatar fixe pour la personne
+        + `&hair=${rand(hairList)}`
+        + `&hairColor=${rand(hairColorList)}`
+        + `&eyes=${rand(eyesList)}`
+        + `&mouth=${rand(mouthList)}`
+        + `&hairProbability=100`
+        + `&eyesProbability=100`
+        + `&mouthProbability=100`;
+
+    return url;
 }
 
 // ========================================
@@ -214,8 +256,8 @@ function showThemeButtons(scenariosFiltres) {
 
 
     const btnRetour = document.createElement('button');
-    btnRetour.textContent = "Retour aux niveaux";
-    btnRetour.classList.add('btn', 'btn-return');
+  btnRetourNiveau.innerHTML = '<i class="fa fa-arrow-left"></i> Retour aux niveaux';
+    btnRetour.classList.add('btn', 'btn-primary');
     // btnRetour.style.marginTop = '20px';
     btnRetour.addEventListener('click', function () {
         // Retourne à l'écran de choix de niveau
@@ -265,7 +307,6 @@ function renderScenario(scenario) {
     pContexte.classList.add('scenario-contexte');
     DIV_SCENARIO.appendChild(pContexte);
 
-    // --- SECTION INTERLOCUTEUR ---
 
 
     // --- SECTION INTERLOCUTEUR ---
@@ -393,6 +434,9 @@ function renderScenario(scenario) {
         btnOption.classList.add('btn', 'option-btn');
         btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario, btnOption));
         containerBoutonsOption.appendChild(btnOption);
+
+
+
     });
 
 
@@ -409,13 +453,17 @@ function renderScenario(scenario) {
     containerBoutonsNav.classList.add('container-btn-nav');
 
     const btnRetourNiveau = document.createElement('button');
-    btnRetourNiveau.textContent = "Retour aux niveaux";
-    btnRetourNiveau.classList.add('btn', 'btn-return');
+    btnRetourNiveau.innerHTML = '<i class="fa fa-arrow-left"></i> Retour aux niveaux';
+    btnRetourNiveau.classList.add('btn', 'btn-primary');
     btnRetourNiveau.addEventListener('click', () => showLevelButtons());
     containerBoutonsNav.appendChild(btnRetourNiveau);
 
     DIV_SCENARIO.appendChild(containerBoutonsNav);
-
+            // Scroll smooth vers le résultat
+divResultat.scrollIntoView({ 
+    behavior: 'smooth', 
+    block: 'start' 
+});
 }
 
 // ========================================
@@ -436,19 +484,25 @@ function showResult(option, divResultat, urlAvatar, scenario, btnOption) {
                  </div> 
                    </div>
         </div>
-
+<h2 class="section-title">Analyse :</h2>
             <div class="container-analyse-reminder">
                  <div class="feedback-analyse">
                 
-                <p> <strong>Analyse :</strong> ${option.analyse}</p>
+                <p> ${option.analyse}</p>
                  </div>
                 <div class="feedback-reminder">
                
-                <p> <strong>A retenir :</strong> ${option.aRetenir}</p>
+                <p> <strong> 📌 A retenir :</strong> ${option.aRetenir}</p>
                 </div> 
             </div>`;
 
     divResultat.style.display = 'block';
+
+        // Scroll smooth vers le résultat
+divResultat.scrollIntoView({ 
+    behavior: 'smooth', 
+    block: 'start' 
+});
 
     // Désactive tous les boutons d'options 
     const tousLesBoutons = DIV_SCENARIO.querySelectorAll('.option-btn');
@@ -459,12 +513,14 @@ function showResult(option, divResultat, urlAvatar, scenario, btnOption) {
 
     // Ajoute dynamiquement le bouton Rejouer
     const btnRestart = document.createElement('button');
-    btnRestart.textContent = "Rejouer le scénario";
-    btnRestart.classList.add('btn', 'restart-btn');
+    btnRestart.innerHTML = '<i class="fa fa-refresh"></i> Rejouer le scénario';
+    btnRestart.classList.add('btn', 'btn-primary');
     btnRestart.addEventListener('click', () => renderScenario(scenario));
 
     const containerNav = DIV_SCENARIO.querySelector('.container-btn-nav');
     containerNav.appendChild(btnRestart);
+
+
 }
 
 // function showResult(option, divResultat, urlAvatar, scenario) {

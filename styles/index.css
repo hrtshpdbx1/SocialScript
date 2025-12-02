@@ -21,7 +21,7 @@
     .deco_intro_img {
         position: absolute;
         width: 15%;
-      
+
         height: auto;
         z-index: 1;
         box-shadow: none;
@@ -34,17 +34,17 @@
             width: 10%;
         }
 
-       /* light purple line  */
+        /* light purple line  */
         &:nth-child(2) {
             right: 70%;
             top: 2710px;
         }
 
-        
-        &:nth-child(3) {
-           
-        }
-²        /* blue shape */
+
+        &:nth-child(3) {}
+
+        ²
+        /* blue shape */
         /* &:nth-child(4) {
             right: -100px;
             top: 510px;
@@ -52,31 +52,32 @@
     }
 }
 
-.sticky-img { 
- position: fixed;
+.sticky-img {
+    position: fixed;
     top: 160px;
-    right:50px;
+    right: 50px;
     width: 10%;
     height: auto;
     box-shadow: none;
-} 
+}
 
 .hero-heading {
     width: 60%;
 
     span {
         font-family: "Kalam", cursive;
-        text-decoration: underline;
+        /* text-decoration: underline; */
         text-decoration-thickness: 0.4rem;
     }
 }
 
 .heading--learn {
-    color: var(--accent);
+    /* color: var(--success); */
+    color: #5bd488;
 }
 
 .heading--play {
-    color: var(--secondary-700);
+    color: var(--primary-blue);
 }
 
 @media (max-width: 768px) {
@@ -438,6 +439,22 @@
         position: relative;
         overflow: hidden;
 
+        /* Effets lien */
+        cursor: pointer;
+        transition: transform 0.2s,
+            box-shadow 0.2s;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        &:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+            box-shadow: 0px 0px 0px 4px rgba(74, 168, 255, 0.3);
+        }
+
 
         /* selectionne les em dans les cards */
         h5 {
@@ -497,9 +514,9 @@
     .section-content.card-grid {
         flex-direction: column;
         gap: var(--space-4);
-        
+
         .card {
-            flex : none;
+            flex: none;
             width: 100%;
             min-width: 100%;
             max-width: 100%;
@@ -508,7 +525,7 @@
 
     }
 
-    
+
     .card img {
         width: 100%;
         height: auto;
@@ -516,13 +533,14 @@
 }
 
 
-.img_transition { /* wave */
+.img_transition {
+    /* wave */
     width: 20%;
     box-shadow: none;
 
-    
-@media (max-width: 768px) {
-       width: 40%;
+
+    @media (max-width: 768px) {
+        width: 40%;
     }
 }
 
