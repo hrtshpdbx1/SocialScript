@@ -112,12 +112,6 @@
       width: 100%;
       text-align: center;
       padding: var(--space-4) var(--space-6);
-
-      &:focus {
-         /* todo: focus ne marche pas :( */
-         outline: 3px solid var(--secondary-900);
-         outline-offset: 2px;
-      }
    }
 
 

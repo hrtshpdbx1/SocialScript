@@ -1,0 +1,147 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+
+}
+
+
+.content-section {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    align-items: stretch;
+    border: 2px solid palevioletred;
+    padding: var(--space-6);
+    gap: var(--space-8);
+
+    .bigCard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 1;/* permet à toutes les cartes de s'étirer de façon égale */
+        border: 2px solid green;
+        padding: var(--space-4);
+        max-width:  30%;
+        height: auto;
+      
+p {  font-size: var(--font-size-small);}
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+/* ----------------------------------- */
+
+.section-content.two-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: top;
+    gap: var(--space-6);
+    padding: var(--space-§);
+    box-sizing: border-box;
+}
+
+.col-right {
+
+    /* Avec toutes les cartes et ressources */
+    .containerCards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        border: 2px gold solid;
+
+        .card {
+            background: white; 
+            border-radius: var(--radius-sm);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+            /* Taille fixe */
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+
+            img {
+                max-width: 100%;
+                /* pour garder l'image dans le carré */
+                max-height: 100px;
+                object-fit: contain;
+                filter: grayscale(100%) contrast(1.1);
+                /* filter: hue-rotate(90deg);  */
+            }
+
+            p {
+                font-size: 0.9rem;
+                overflow: hidden;
+                /* coupe le texte trop long */
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                /* limite à 3 lignes */
+                -webkit-box-orient: vertical;
+            }
+
+            &:hover,
+            &:focus {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-sm);
+                outline: 2px solid var(--primary-500);
+            }
+        }
+    }
+
+    .col-left {
+
+        /* Avec champs de recherches */
+        .heading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2%;
+
+            i {
+                /* icone Font Awsome */
+                color: var(--gray);
+                font-size: var(--font-size-large);
+            }
+        }
+
+        .text-container {
+            /*padding-left: 6%;  décalage gauche */
+        }
+    }
+
+    /* @media (max-width: 768px) {
+            .section-content.two-col {
+                /* flex-direction: column;
+        gap: var(--space-2);
+        width: 100%; */
+
+}
+
+/* .col-left,
+            .col-right { */
+/* flex: 1 1 100%; */
+/* width: 100%; */
+
+/* }
+
+            .col-right img { */
+/* width: 100%;
+        /* image responsive */
+/* height: auto; */
+/* }
+        } */

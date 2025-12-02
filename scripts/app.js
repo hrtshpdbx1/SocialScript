@@ -23,25 +23,25 @@ function getAvatarUrl(seed) {
 
     // ---- Ton propre ensemble de features autorisés ----
     const hairList = [
-        "long01","long02","long03","short01","short02","short03"
+        "long01", "long02", "long03", "short01", "short02", "short03"
         // → tu mets ici EXACTEMENT ceux que tu veux
     ];
 
     const eyesList = [
-        "variant01","variant02","variant03","variant04","variant05"
+        "variant01", "variant02", "variant03", "variant04", "variant05"
         // → pareil ici
     ];
 
     const mouthList = [
-        "variant01","variant02","variant03","variant04"
+        "variant01", "variant02", "variant03", "variant04"
     ];
 
     const hairColorList = [
-        "0e0e0e","6a4e35","85c2c6","dba3be"
+        "0e0e0e", "6a4e35", "85c2c6", "dba3be"
     ];
 
     const bgList = [
-        "b6e3f4","ffd5dc","ffdfbf"
+        "b6e3f4", "ffd5dc", "ffdfbf"
     ];
 
     // ---- Fonction utilitaire ----
@@ -166,8 +166,14 @@ function showLevelButtons() {
         containerBoutons.appendChild(btn);
 
     });
+
+
+
     //   Ajoute le containerbtn dans DIV_SCENARIO
     DIV_SCENARIO.appendChild(containerBoutons);
+
+    //  Focus visible par défaut sur le premier élément du container
+    containerBoutons.children[0].focus({ focusVisible: true });
 }
 
 // ========================================
@@ -245,10 +251,9 @@ function showThemeButtons(scenariosFiltres) {
             chooseScenarioByTheme(scenariosFiltres, themes[i]);
         });
         DIV_SCENARIO.appendChild(containerBoutonsTheme);
+           //  Focus visible par défaut sur le premier élément du container
+    containerBoutonsTheme.children[0].focus({ focusVisible: true });
     }
-    // Bouton pour revenir aux niveaux
-    //! ici container
-
 
     // Crée un container pour les boutons options
     const containerBoutonsRetour = document.createElement('div');
@@ -256,7 +261,7 @@ function showThemeButtons(scenariosFiltres) {
 
 
     const btnRetour = document.createElement('button');
-  btnRetourNiveau.innerHTML = '<i class="fa fa-arrow-left"></i> Retour aux niveaux';
+    btnRetour.innerHTML = '<i class="fa fa-arrow-left"></i> Retour aux niveaux';
     btnRetour.classList.add('btn', 'btn-primary');
     // btnRetour.style.marginTop = '20px';
     btnRetour.addEventListener('click', function () {
@@ -267,6 +272,7 @@ function showThemeButtons(scenariosFiltres) {
     containerBoutonsRetour.appendChild(btnRetour);
     // Ajoute le container au DOM
     DIV_SCENARIO.appendChild(containerBoutonsRetour);
+ 
 
 }
 
@@ -296,9 +302,9 @@ function renderScenario(scenario) {
     // --- SECTION CONTEXTE ---
 
     // Titre de la section contexte
-    const titreContexte = document.createElement('h2'); // ? ou 'div' avec une classe
+    const titreContexte = document.createElement('h2');
     titreContexte.textContent = "Contexte :";
-    titreContexte.classList.add('section-title');  //todo :integrer au css ** /
+    titreContexte.classList.add('section-title');
     DIV_SCENARIO.appendChild(titreContexte);
 
     // Paragraphe contenant le texte du contexte
@@ -349,70 +355,6 @@ function renderScenario(scenario) {
     // Ajout au DOM
     DIV_SCENARIO.appendChild(repliqueContainer);
 
-    // // Div qui contient l'avatar + le nom + la réplique
-    // const divInterlo = document.createElement('div');
-    // // création div contenant avatar + question 
-    // divInterlo.classList.add('interlocuteur-container');
-
-    // Container global avatar + texte
-    // const repliqueContainer = document.createElement('div');
-    // repliqueContainer.classList.add('replique-container');
-
-    // // DIV avatar
-    // const avatarContainer = document.createElement('div');
-    // avatarContainer.classList.add('avatar-container');
-
-    // const imgAvatar = document.createElement('img');
-    // imgAvatar.src = urlAvatar;
-    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-    // imgAvatar.classList.add('imgAvatar');
-    // const imgAvatar = document.createElement('img');
-    // imgAvatar.src = urlAvatar;
-    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-    // imgAvatar.classList.add('imgAvatar');
-
-    // Génère l'URL de l'avatar
-    // const urlAvatar = getAvatarUrl(scenario.interlocuteur.avatar);
-
-    // Crée l'élément image
-    // const imgAvatar = document.createElement('img');
-    // imgAvatar.src = urlAvatar;
-    // imgAvatar.alt = "Avatar de " + scenario.interlocuteur.nom;
-    // imgAvatar.classList.add('imgAvatar');
-    // imgAvatar.style.verticalAlign = 'middle';
-    // divInterlo.appendChild(imgAvatar);
-
-    // Crée un élément <strong> pour le nom en gras
-    // const spanNom = document.createElement('strong'); //nom de l'interlocteur
-    // spanNom.textContent = " " + scenario.interlocuteur.nom + ' :';
-    // divInterlo.appendChild(spanNom);
-
-    // // DIV texte
-    // const texteContainer = document.createElement('div');
-    // texteContainer.classList.add('texte-container');
-
-    // const nom = document.createElement('strong');
-    // nom.textContent = scenario.interlocuteur.nom + " : ";
-
-    // const texte = document.createElement('span');
-    // texte.textContent = scenario.interlocuteur.replique;
-
-    // texteContainer.appendChild(nom);
-    // texteContainer.appendChild(texte);
-
-    // // Ajout des deux blocs dans le container
-    // repliqueContainer.appendChild(avatarContainer);
-    // repliqueContainer.appendChild(texteContainer);
-
-    // // Ajout au DOM
-    // DIV_SCENARIO.appendChild(repliqueContainer);
-
-    // // Crée un nœud de texte pour la réplique
-    // // createTextNode() crée du texte simple (pas un élément HTML)
-    // const spanReplique = document.createTextNode('"' + scenario.interlocuteur.replique + '"');
-    // divInterlo.appendChild(spanReplique);
-
-    // DIV_SCENARIO.appendChild(divInterlo);
 
     // --- SECTION OPTIONS ---
 
@@ -434,13 +376,12 @@ function renderScenario(scenario) {
         btnOption.classList.add('btn', 'option-btn');
         btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario, btnOption));
         containerBoutonsOption.appendChild(btnOption);
-
-
-
     });
 
-
     DIV_SCENARIO.appendChild(containerBoutonsOption);
+
+    //  Focus visible par défaut sur le premier élément du container
+    containerBoutonsOption.children[0].focus({ focusVisible: true });
 
     // Div résultat unique
     const divResultat = document.createElement('div');
@@ -459,11 +400,11 @@ function renderScenario(scenario) {
     containerBoutonsNav.appendChild(btnRetourNiveau);
 
     DIV_SCENARIO.appendChild(containerBoutonsNav);
-            // Scroll smooth vers le résultat
-divResultat.scrollIntoView({ 
-    behavior: 'smooth', 
-    block: 'start' 
-});
+    // Scroll smooth vers le résultat
+    divResultat.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 }
 
 // ========================================
@@ -498,11 +439,11 @@ function showResult(option, divResultat, urlAvatar, scenario, btnOption) {
 
     divResultat.style.display = 'block';
 
-        // Scroll smooth vers le résultat
-divResultat.scrollIntoView({ 
-    behavior: 'smooth', 
-    block: 'start' 
-});
+    // Scroll smooth vers le résultat
+    divResultat.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
 
     // Désactive tous les boutons d'options 
     const tousLesBoutons = DIV_SCENARIO.querySelectorAll('.option-btn');

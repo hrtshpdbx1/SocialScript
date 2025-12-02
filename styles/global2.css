@@ -306,7 +306,15 @@ blockquote {
   font-style: normal;
 } */
 
-
+/* DECO  */
+.sticky-img {
+    position: fixed;
+    top: 160px;
+    right: 50px;
+    width: 10%;
+    height: auto;
+    box-shadow: none;
+}
 
 
 
@@ -337,7 +345,7 @@ blockquote {
 }
 
 .option-btn:focus-visible {
-    outline: 3px solid var(--secondary-900);
+    outline: 3px solid var(--secondary-800);
     outline-offset: 2px;
 }
 
@@ -378,6 +386,36 @@ blockquote {
     background: var(--gray-200);
 }
 
+.btn-secondary:focus-visible {
+    background: var(--secondary-700);
+    color: var(--white);
+    outline: 2px solid var(--secondary-700);
+}
+
+.btn-secondary-light {
+    background: transparent;
+    color: var(--secondary-700);
+    border: 2px solid var(--secondary);
+    padding: 0.6em 1.2em;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary-light:hover {
+    background: var(--secondary); /* todo: ajouter la variabla très léger fond */
+    color: var(--secondary-800);
+}
+
+.btn-secondary-lighty:disabled {
+    background: transparent;
+    color: var(--gray-300);
+    border-color: var(--gray-300);
+}
+
+.btn-secondary-light:focus-visible {
+    outline: 2px solid var(--secondary-800);
+    outline-offset: 2px;
+}
+
 .btn-cta {
     background: var(--accent);
     color: var(--gray-800);
@@ -386,6 +424,12 @@ blockquote {
 .btn-cta:hover {
     background: var(--accent-700);
     color: var(--white);
+}
+
+.btn-cta:focus-visible {
+    background: var(--accent-700);
+    color: var(--white);
+    outline: 2px solid var(--accent-700);
 }
 
 .btn-success {

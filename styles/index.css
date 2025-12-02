@@ -52,14 +52,6 @@
     }
 }
 
-.sticky-img {
-    position: fixed;
-    top: 160px;
-    right: 50px;
-    width: 10%;
-    height: auto;
-    box-shadow: none;
-}
 
 .hero-heading {
     width: 60%;
