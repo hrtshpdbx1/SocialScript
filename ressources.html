@@ -86,6 +86,8 @@
     <main>
         <div class="main-container">
             <h1>Ressources</h1>
+            <p>Associations, livres, podcasts et vidéos pour comprendre les neurodivergences, lutter contre le validisme
+                et trouver du soutien.</p>
 
             <!----------------------- PRATICIEN·NES  ------------------>
 
@@ -94,23 +96,21 @@
 
                 <div class="bigCard">
                     <img src="img/ressources/help.jpg" alt="">
-                    <h2>Etre accompagné·e</h2>
-                    <h3>Liste de praticien·nes et de pair-aidante</h3>
+                    <h3>Etre accompagné·e</h3>
+                    <h4>Praticien·nes et pair-aidant·es</h4>
 
 
 
-                    <p>Vous pouvez retrouver dans cette liste des ressources sur les praticien·nes spécialistes de
-                        l'autisme,
-                        des centres pluridisciplinaires, les services d'accompagnement et d'aide à l'intégration
-                        spécialisés
-                        en
-                        autisme et des groupes de rencontre entre adultes autistes.</p>
+                    <p>Liste collaborative élaborée par le <a href="https://collectifautiste.be/">Collectif
+                            Autisme de Belgique</a> regroupant les praticien·nes spécialisé·es,
+                        les centres pluridisciplinaires, les services d'accompagnement et d'aide à l'intégration et des
+                        groupes d'adultes autistes.</p>
 
-                    <p>Cette liste collaborative a été élaborée par le <a href="https://collectifautiste.be/">Collectif
-                            Autisme de Belgique</a></p>
+
 
                     <a href="https://docs.google.com/spreadsheets/d/1isN4nbu5W6_UckRKyDF2Pm7B4lyfk_hVZ2w0WHcuWAU/edit?gid=0#gid=0"
-                        target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i></i>Consulter la liste complète</a>
+                        target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i
+                            class="fa-solid fa-arrow-up-right-from-square"></i></i>Consulter la liste complète</a>
 
                     <!-- <p>Vous pouvez également consulter la page <a
                     href="https://collectifautiste.be/le-parcours-diagnostic-dautisme-chez-ladulte-en-belgique/" 
@@ -123,13 +123,11 @@
 
                 <div class="bigCard">
                     <img src="img/ressources/understand.jpg" alt="">
-                    <h2>S'informer</h2>
-                    <h3>Comprendre l'autisme</h3>
+                    <h3>S'informer</h3>
+                    <h4>Comprendre l'autisme</h4>
                     <p>Plateforme en ligne qui propose des articles de vulgarisation scientifique et des synthèses de
                         recherches récentes sur l'autisme. Le site démystifie de nombreuses idées reçues et offre des
-                        informations fiables, accessibles et régulièrement mises à jour. Parfait pour s'informer de
-                        manière
-                        rigoureuse.</p>
+                        informations fiables, accessibles et régulièrement mises à jour.</p>
                     <a href="https://comprendrelautisme.com/" target="_blank" rel="noopener noreferrer"
                         class="btn btn-primary"><i class="fa-solid fa-arrow-up-right-from-square"></i>
                         Vers le site</a>
@@ -153,16 +151,35 @@
                         <h2>Parcourir les ressources</h2>
 
                         <div class="text-container">
-                           <i class="fa-solid fa-magnifying-glass"></i>
-                            <!-- Champ de recherche -->
-                            <input type="text" id="searchInput" placeholder="Rechercher une ressource..." />
-
+                            <div class="search-container">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <!-- Champ de recherche -->
+                                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." />
+                            </div>
                             <div id="filterLabels" class="filter-labels">
+                                <!-- Types de ressources -->
                                 <button class="label-btn" data-label="association">Associations</button>
+                                <button class="label-btn" data-label="groupe-de-parole">Groupes de parole</button>
                                 <button class="label-btn" data-label="livre">Livres</button>
-                                <button class="label-btn" data-label="blog">Blogs</button>
-                                <button class="label-btn" data-label="groupe de parole">Groupe de parole</button>
-                                <button class="label-btn" data-label="all">Tout</button>
+                                <button class="label-btn" data-label="podcast">Podcasts</button>
+                                <button class="label-btn" data-label="video">Vidéos</button>
+                                <button class="label-btn" data-label="site-web">Sites web</button>
+
+                                <!-- Thématiques -->
+                                <button class="label-btn" data-label="validisme">Validisme</button>
+                                <button class="label-btn" data-label="féminisme">Féminisme</button>
+                                <button class="label-btn" data-label="communauté-autiste">Communauté autiste</button>
+                                <button class="label-btn" data-label="neurodivergence">Neurodivergence</button>
+
+                                <!-- Niveaux -->
+                                <button class="label-btn" data-label="débutant">Pour débuter</button>
+                                <button class="label-btn" data-label="sensibilisation">Sensibilisation</button>
+
+                                <!-- Langues -->
+                                <button class="label-btn" data-label="anglais">En anglais</button>
+
+                                <!-- Tout afficher -->
+                                <button class="label-btn active" data-label="all">Tout afficher</button>
                             </div>
                         </div>
                     </div>
@@ -184,41 +201,46 @@
     <!-- ! -------------- FOOTER----------------------->
     <footer>
         <div class="footerContainer">
-            <div class="footerContainerLeft">
-                <img src="./assets/images/logo-socialscript.svg" alt="Logo SocialScript">
-            </div> <!-- fin footerContainerLeft -->
+            <div class="container-three-col">
+                <div class="footerContainerLeft">
+                    <img src="img/logo_primaryblue_dark.png" alt="logo">
+                    <p>Simulateur d’interactions sociales </p>
+                    <!-- todo: add a logo -->
 
-            <div class="footerContainerRight">
-                <nav class="navListFooter">
-                    <h4>Navigation</h4>
+                </div> <!-- fin footerContainerLeft -->
+
+                <div class="navListFooter_middle">
                     <ul>
+                        <li class="list-title">Navigation</li>
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="scenarios.html">Scénarios interactifs</a></li>
                         <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
                         <li><a href="ressources.html">Ressources</a></li>
-                        <li><a href="#aboutAnchor">À propos</a></li>
                     </ul>
-                </nav>
-
-                <nav class="navListFooter">
-                    <h4>Légal</h4>
+                </div>
+                <div class="navListFooter_right">
                     <ul>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                        <li><a href="accessibilite.html">Accessibilité</a></li>
-                        <li><a href="mailto:info@socialscript.be">Contact</a></li>
+                        <li class="list-title">Legal</li>
+                        <li><a href="">Mentions légales</a></li>
+                        <li><a href="">Politique de confidentialité</a></li>
+                        <li><a href="">Accessibilité</a></li>
+                        <li><a href="">Contact</a></li>
                     </ul>
-                </nav>
-            </div> <!-- fin footerContainerRight -->
+                </div>
 
-            <hr>
+            </div>
+
+            <div class="ligne">
+
+            </div>
 
             <div class="bottomFooterContainer">
                 <div class="elemBottomFooter">
-                    <p>© 2025 SocialScript — Tous droits réservés</p>
+                    <p>© 2025 SocialScript — Tous droits réservés </p>
                 </div>
                 <div class="elemBottomFooter">
-                    <a href="mailto:info@socialscript.be">Contact : info@socialscript.be</a>
+                    <p> <a href="">Contact : info@socialscript.be</a> <!-- todo: insert mailto-->
+                    </p>
                 </div>
             </div>
         </div>

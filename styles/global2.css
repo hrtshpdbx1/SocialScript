@@ -27,6 +27,8 @@ html {
     --secondary-800: #4769B8;
     --error: #FF5E73;
     --success: #71e89d;
+    --success-200:#C6F6D8;
+    --success-600: #5CC282;
     --white: #f5f1fd;
     --accent: #FFD35E;
     --accent-700: #AE8E38;
@@ -37,8 +39,10 @@ html {
     --gray-700: #232323;
     --gray-800: #181818;
     --black: #000000;
+    --background :#f2f2f2;
 
     /* SPACING */
+      --space-0-5: 0.15rem;
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 0.75rem;
@@ -141,7 +145,7 @@ h5,
 h6 {
     font-family: var(--font-main);
     font-weight: var(--weight-bold);
-    line-height: var(--line-loose);
+    line-height: var(--line-normal);
 }
 
 h1 {
@@ -395,13 +399,14 @@ blockquote {
 .btn-secondary-light {
     background: transparent;
     color: var(--secondary-700);
-    border: 2px solid var(--secondary);
-    padding: 0.6em 1.2em;
-    transition: all 0.2s ease;
+    border: 0.5px solid var(--secondary);
+    padding: 0.3em 0.8em;
+    transition: all 0.1s ease;
+    font-size: var(--font-size-extra-small);
 }
 
 .btn-secondary-light:hover {
-    background: var(--secondary); /* todo: ajouter la variabla très léger fond */
+    background: var(--secondary);
     color: var(--secondary-800);
 }
 
@@ -452,6 +457,8 @@ blockquote {
     font-size: var(--font-size-small);
 }
 
+/* page scenario */
+
 .btn-nav {
     padding: var(--space-2) var(--space-4);
     border-radius: var(--radius-full);
@@ -480,6 +487,27 @@ blockquote {
     color: var(--gray-800);
     outline: 2px solid var(--secondary);
 }
+
+/* page ressource  */
+
+.label-btn{
+border-radius: var(--radius-xs);
+background-color: var(--success-200);
+color: var(--gray-700);
+font-weight: var(--weight-light);
+font-size: var(--font-size-extra-small);
+
+&:hover {
+background-color: var(--success);
+}
+
+&active{
+    background-color: var(--success);
+}
+
+}
+
+
 
 /* -------------------------------------- */
 /*                 HEADER NAV             */
