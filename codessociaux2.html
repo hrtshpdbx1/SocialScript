@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SocialScript</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/global2.css">
-    <link rel="stylesheet" href="styles/codessociaux.css">
+    <link rel="stylesheet" href="styles/codessociaux2.css">
+
+    <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
@@ -22,52 +26,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <!-- Load an icon library hamburger menu -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- autre font handwritten -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Playwrite+HR:wght@100..400&family=Solitreo&display=swap"
         rel="stylesheet">
 
-    <!-- <script defer src="./scripts/index.js"></script> -->
-
+    <!-- * JS * -->
+    <script defer src="./scripts/index.js"></script>
     <script defer src="./scripts/app.js"></script>
+    <script defer src="./scripts/ressources.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 </head>
 
-
 <body>
+    <img class="sticky-img" src="img/4.png" alt="">
 
-    <!-- -------------------- Nav Bar --------------------  -->
-    <nav>
-        <div class="containerNav">
-            <div class="navLeft">
-                <a href="index.html"><img src="img/logo.png" alt="logo-socialscript"></a>
+
+
+    <!-- ** -------------------- Header -------------------- -->
+
+    <header>
+        <!-- -------------------- Nav Bar --------------------  -->
+        <nav class="topnav">
+            <div class="containerNav">
+                <div class="navLeft"> <!-- Logo toujours visible -->
+                    <a href="index.html"><img src="img/logo_primaryblue_light (2).png" alt="logo-socialscript">
+                    </a>
+                </div>
+                <!-- Menu caché sur mobile -->
+                <div id="myLinks" class="navMiddle">
+                    <ul>
+                        <li><a class="btn-nav" href="index.html">Accueil</a></li>
+                        <li><a class="btn-nav" href="codessociaux.html">Les code sociaux</a>
+                        </li>
+                        <li><a class="btn-nav" href="ressources.html">Ressources</a></li>
+                        <li><a class="btn-nav" href="#aboutAnchor">A propos</a></li>
+                    </ul>
+                </div>
+                <div class="navRight">
+                    <a href="scenarios.html" class="btn-primary desktop-cta btn">Les scenarios</a>
+                    <!-- todo : le cacher sur mobile ?  -->
+
+                    <!-- Icône hamburger (visible uniquement sur mobile) -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
             </div>
+        </nav>
 
-            <div class="navMiddle">
-                <ul>
-                    <li><a class="btn-nav" href="index.html">Accueil</a></li>
-                    <li><a class="btn-nav" href="codessociaux.html">Les code sociaux</a>
-                    </li>
-                    <li><a class="btn-nav" href="ressources.html">Ressources</a></li>
-                    <li><a class="btn-nav" href="#aboutAnchorl">A propos</a></li>
-                    <!-- todo : anchor  -->
-                </ul>
-            </div>
-            <div class="navRight">
-
-                <a href="scenarios.html" class="btn btn-cta">Les scenarios</a>
-            </div>
-        </div>
-    </nav>
-
-
-
+    </header>
 
     <!-- ============================================================ -->
     <!--                         INTRODUCTION                        -->
@@ -266,15 +279,6 @@
             </div>
         </section>
 
-        <!-- ===================== CTA ===================== -->
-        <section class="section">
-            <div class="section-header ">
-                <a href="scenarios.html" class="btn_violet">Pratiquer avec les scénarios</a>
-            </div>
-        </section>
-
-    </main>
-
 
 
     <!-- CTA final -->
@@ -285,38 +289,49 @@
     </main>
 
 
-    <!-- -------------------- FOOTER (same as index) -------------------- -->
+    <!-- ! -------------- FOOTER----------------------->
     <footer>
         <div class="footerContainer">
-            <div class="footerContainerLeft">
-                <img src="" alt="">
+            <div class="container-three-col">
+                <div class="footerContainerLeft">
+                    <img src="img/logo_primaryblue_dark.png" alt="logo">
+                    <p>Simulateur d’interactions sociales </p>
+                    <!-- todo: add a logo -->
+
+                </div> <!-- fin footerContainerLeft -->
+
+                <div class="navListFooter_middle">
+                    <ul>
+                        <li class="list-title">Navigation</li>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="scenarios.html">Scénarios interactifs</a></li>
+                        <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                    </ul>
+                </div>
+                <div class="navListFooter_right">
+                    <ul>
+                        <li class="list-title">Legal</li>
+                        <li><a href="">Mentions légales</a></li>
+                        <li><a href="">Politique de confidentialité</a></li>
+                        <li><a href="">Accessibilité</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+
             </div>
 
-            <div class="footerContainerRight">
-                <div class="navListFooter">
-                    <ul>Navigation</ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="scenarios.html">Scénarios interactifs</a></li>
-                    <li><a href="codessociaux.html">Comprendre les codes sociaux</a></li>
-                    <li><a href="ressources.html">Ressources</a></li>
-                    <li><a href="">À propos</a></li>
-                </div>
+            <div class="ligne">
 
-                <div class="navListFooter">
-                    <ul>Legal</ul>
-                    <li><a href="">Mentions légales</a></li>
-                    <li><a href="">Politique de confidentialité</a></li>
-                    <li><a href="">Accessibilité</a></li>
-                    <li><a href="">Contact</a></li>
-                </div>
             </div>
 
             <div class="bottomFooterContainer">
                 <div class="elemBottomFooter">
-                    <p>© 2025 SocialScript — Tous droits réservés</p>
+                    <p>© 2025 SocialScript — Tous droits réservés </p>
                 </div>
                 <div class="elemBottomFooter">
-                    <a href="mailto:info@socialscript.be">info@socialscript.be</a>
+                    <p> <a href="">Contact : info@socialscript.be</a> <!-- todo: insert mailto-->
+                    </p>
                 </div>
             </div>
         </div>
