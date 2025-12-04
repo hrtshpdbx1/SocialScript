@@ -251,8 +251,8 @@ function showThemeButtons(scenariosFiltres) {
             chooseScenarioByTheme(scenariosFiltres, themes[i]);
         });
         DIV_SCENARIO.appendChild(containerBoutonsTheme);
-           //  Focus visible par défaut sur le premier élément du container
-    containerBoutonsTheme.children[0].focus({ focusVisible: true });
+        //  Focus visible par défaut sur le premier élément du container
+        containerBoutonsTheme.children[0].focus({ focusVisible: true });
     }
 
     // Crée un container pour les boutons options
@@ -272,7 +272,7 @@ function showThemeButtons(scenariosFiltres) {
     containerBoutonsRetour.appendChild(btnRetour);
     // Ajoute le container au DOM
     DIV_SCENARIO.appendChild(containerBoutonsRetour);
- 
+
 
 }
 
@@ -355,33 +355,50 @@ function renderScenario(scenario) {
     // Ajout au DOM
     DIV_SCENARIO.appendChild(repliqueContainer);
 
-
+    // ! DEMO - Part 1
     // --- SECTION OPTIONS ---
 
-    // Titre de la section options
+    // 1. Crée le titre de la section
     const titreOptions = document.createElement('h2'); // ou 'div' avec une classe
     titreOptions.textContent = "Choisissez une réponse :";
     titreOptions.classList.add('section-title');
     DIV_SCENARIO.appendChild(titreOptions);
 
-    // Crée un container pour les boutons options
+    // 2. Crée un container pour regrouper les boutons
     const containerBoutonsOption = document.createElement('div');
     containerBoutonsOption.classList.add('container-btn-option');
 
 
-    // Crée les boutons options
+    // 3. Pour chaque option du scénario, crée un bouton
     scenario.options.forEach(option => {
         const btnOption = document.createElement('button');
-        btnOption.textContent = option.texte;
-        btnOption.classList.add('btn', 'option-btn');
-        btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario, btnOption));
-        containerBoutonsOption.appendChild(btnOption);
-    });
+        btnOption.textContent = option.texte; // Le texte de la réponse
+        btnOption.classList.add('btn', 'option-btn'); // Styles CSS
 
+        // Quand on clique, affiche le résultat
+        btnOption.addEventListener('click', () => showResult(option, divResultat, urlAvatar, scenario, btnOption));
+        containerBoutonsOption.appendChild(btnOption); // Ajoute le bouton
+    });
     DIV_SCENARIO.appendChild(containerBoutonsOption);
 
-    //  Focus visible par défaut sur le premier élément du container
+    // ! DEMO - Part 2
+    // ** 4. 🎯 Place automatiquement le focus sur le premier bouton
+    // ** Résultat : Navigation plus rapide, moins de clics, meilleure accessibilité.
+
     containerBoutonsOption.children[0].focus({ focusVisible: true });
+
+    //? Explications : 
+    // * containerBoutonsOption: La boîte qui contient les trois boutons de réponse
+    //* children[0] : Le premier enfant de cette boîte, c'est-à-dire le premier bouton
+    // * .focus() : Place le pointeur clavier sur cet élément
+    // * { focusVisible: true } : L'utilisateur voit clairement où se trouve son curseur clavier (contour)
+
+
+    //* Quand un élément a le focus :
+    // Il est visuellement mis en évidence (contour coloré)
+    // Si on appuie sur Enter ou Espace, ça active cet élément
+    // On peut se déplacer avec Tab vers l'élément suivant
+
 
     // Div résultat unique
     const divResultat = document.createElement('div');
