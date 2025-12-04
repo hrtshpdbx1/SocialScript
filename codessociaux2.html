@@ -55,8 +55,11 @@
         <nav class="topnav">
             <div class="containerNav">
                 <div class="navLeft"> <!-- Logo toujours visible -->
-                    <a href="index.html"><img src="img/logo_primaryblue_light (2).png" alt="logo-socialscript">
-                    </a>
+                    <a href="index.html">
+                        <picture>
+  <source srcset="img/logo_desktop.png"  media="(width >= 600px)" />
+  <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile"/>
+</picture></a>
                 </div>
                 <!-- Menu caché sur mobile -->
                 <div id="myLinks" class="navMiddle">
@@ -65,7 +68,7 @@
                         <li><a class="btn-nav" href="codessociaux.html">Les code sociaux</a>
                         </li>
                         <li><a class="btn-nav" href="ressources.html">Ressources</a></li>
-                        <li><a class="btn-nav" href="#aboutAnchor">A propos</a></li>
+                        <!-- <li><a class="btn-nav" href="#aboutAnchor">A propos</a></li> -->
                     </ul>
                 </div>
                 <div class="navRight">

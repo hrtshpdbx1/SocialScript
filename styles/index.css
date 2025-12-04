@@ -59,13 +59,13 @@
     span {
         font-family: "Kalam", cursive;
         /* text-decoration: underline; */
-        text-decoration-thickness: 0.4rem;
+        /* text-decoration-thickness: 0.4rem; */
     }
 }
 
 .heading--learn {
-    /* color: var(--success); */
-    color: #5bd488;
+    color: var(--primary-blue); 
+    /* color: #5bd488;  */
 }
 
 .heading--play {

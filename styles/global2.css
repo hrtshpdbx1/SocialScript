@@ -505,7 +505,9 @@ background-color: var(--success);
     background-color: var(--success);
 }
 
+
 }
+
 
 
 
@@ -560,7 +562,14 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-    /* todo : hammburger menu */
+   .logo_mobile {
+    max-width: 20%;
+
+
+    .deco_intro_img {
+        display:none
+    }
+}
 }
 
 /* -------------------------------------- */
