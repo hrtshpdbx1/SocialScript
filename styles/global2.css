@@ -2,7 +2,7 @@
 /*          GLOBAL RESET & BASE           */
 /* -------------------------------------- */
 * {
-    
+
     border: 0;
     box-sizing: border-box;
     transition: background-color .2s ease, color .2s ease, border-color .2s ease;
@@ -27,22 +27,22 @@ html {
     --secondary-800: #4769B8;
     --error: #FF5E73;
     --success: #71e89d;
-    --success-200:#C6F6D8;
+    --success-200: #C6F6D8;
     --success-600: #5CC282;
     --white: #f5f1fd;
     --accent: #FFD35E;
     --accent-700: #AE8E38;
     --gray: #3b3b3b;
-    --gray-100: #C4C4C4 ;
+    --gray-100: #C4C4C4;
     --gray-200: #949494;
     --gray-300: #767676;
     --gray-700: #232323;
     --gray-800: #181818;
     --black: #000000;
-    --background :#f2f2f2;
+    --background: #f2f2f2;
 
     /* SPACING */
-      --space-0-5: 0.15rem;
+    --space-0-5: 0.15rem;
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 0.75rem;
@@ -123,7 +123,7 @@ body {
     font-weight: var(--weight-regular);
     line-height: var(--line-normal);
     color: var(--gray-800);
-    background-color:#f2f2f2;
+    background-color: #f2f2f2;
 
     display: flex;
     flex-direction: column;
@@ -339,9 +339,9 @@ blockquote {
     width: fit-content;
 }
 
-.btn i { 
+.btn i {
     margin-right: var(--space-2);
-} 
+}
 
 .btn:focus-visible {
     outline: 3px solid var(--primary-600);
@@ -490,20 +490,20 @@ blockquote {
 
 /* page ressource  */
 
-.label-btn{
-border-radius: var(--radius-xs);
-background-color: var(--success-200);
-color: var(--gray-700);
-font-weight: var(--weight-light);
-font-size: var(--font-size-extra-small);
+.label-btn {
+    border-radius: var(--radius-xs);
+    background-color: var(--success-200);
+    color: var(--gray-700);
+    font-weight: var(--weight-light);
+    font-size: var(--font-size-extra-small);
 
-&:hover {
-background-color: var(--success);
-}
+    &:hover {
+        background-color: var(--success);
+    }
 
-&active{
-    background-color: var(--success);
-}
+    &active {
+        background-color: var(--success);
+    }
 
 
 }
@@ -535,7 +535,7 @@ header nav .containerNav .navLeft {
 
 header nav img {
     max-width: 300px;
-box-shadow: none;
+    box-shadow: none;
 }
 
 header nav ul {
@@ -562,15 +562,14 @@ header nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-   .logo_mobile {
-    max-width: 20%;
-
-
-    .deco_intro_img {
-        display:none
+    .logo_mobile {
+        max-width: 20%;
     }
 }
-}
+/* -------------------------------------- */
+/*        HERO        */
+/* -------------------------------------- */
+
 
 /* -------------------------------------- */
 /*         HAMBURGER MENU MOBILE          */
@@ -589,7 +588,7 @@ header nav ul li a:hover {
 
 /* ====== RESPONSIVE MOBILE ====== */
 @media (max-width: 768px) {
-    
+
     /* Affiche l'icône hamburger */
     .topnav .icon {
         display: block;
@@ -609,10 +608,12 @@ header nav ul li a:hover {
 
     /* Cache le menu par défaut sur mobile */
     .topnav #myLinks {
-        display: none; /* ← Clé : caché par défaut */
+        display: none;
+        /* ← Clé : caché par défaut */
         position: fixed;
         left: 0;
-        top: 70px; /* Ajuste selon la hauteur de ton header */
+        top: 70px;
+        /* Ajuste selon la hauteur de ton header */
         width: 100%;
         background-color: var(--white);
         box-shadow: var(--shadow-lg);
@@ -659,7 +660,10 @@ header nav ul li a:hover {
     .containerNav {
         position: relative;
     }
+
+   
 }
+
 
 
 /* ------------------------------------------- */
@@ -695,7 +699,7 @@ a.btn,
 /*                FOOTER                  */
 /* -------------------------------------- */
 
- .footerContainer {
+.footerContainer {
     display: flex;
     flex-direction: column;
     gap: var(--space-1);
