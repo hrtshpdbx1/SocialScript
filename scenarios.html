@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -51,9 +51,10 @@
                 <div class="navLeft"> <!-- Logo toujours visible -->
                     <a href="index.html">
                         <picture>
-  <source srcset="img/logo_desktop.png"  media="(width >= 600px)" />
-  <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile"/>
-</picture></a>
+                            <source srcset="img/logo_desktop.png" media="(width >= 600px)" />
+                            <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile" />
+                        </picture>
+                    </a>
                 </div>
                 <!-- Menu caché sur mobile -->
                 <div id="myLinks" class="navMiddle">
@@ -68,8 +69,8 @@
                 <div class="navRight">
                     <a href="scenarios.html" class="btn-cta desktop-cta btn">Les scenarios</a>
                     <!-- Icône hamburger (visible uniquement sur mobile) -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+                        aria-label="Ouvrir le menu de navigation"> <i class="fa fa-bars"></i>
                     </a>
                 </div>
             </div>
@@ -82,18 +83,24 @@
 
     <div class="content-section"> <!-- BIG CONTENEUR -->
         <div class="section-header">
-            <h1> Explorer les scenarios </h1>
-            <p> Pratiquez des situations du quotidien dans un environnement prévisible. Il n'y a pas de "mauvais" choix — seulement des approches différentes avec des conséquences différentes. Expérimentez et lisez les feedbacks pour comprendre ce qui se passe vraiment.
-            </p>
+            <h1>Explorer les scénarios</h1>
+            <p>Entraînez-vous à gérer des situations sociales courantes et observez comment différentes manières de
+                répondre peuvent être perçues.</p>
         </div>
 
         <div class="section-content">
-
+            <p><strong>Comment ça fonctionne :</strong> Choisissez un niveau de difficulté et un thème. Un personnage
+                s’adresse à vous : sélectionnez l’une des trois réponses proposées, puis découvrez comment cette réponse
+                est interprétée et quels effets elle peut produire. Vous pouvez rejouer un scénario autant de fois que
+                vous le souhaitez.</p>
+            </p>
+            <p>Il n’y a ni piège, ni bonne ou mauvaise réponse, ni jugement — simplement un espace pour expérimenter,
+                prendre du recul et mieux comprendre les dynamiques sociales.</p>
             <div id="scenario">
                 <!--  Container où s'affichent tous les éléments dynamiques -->
             </div>
-              <!-- <a href="codessociaux2.html" class="btn btn-primary">En savoir plus des codes sociaux</a> -->
-              
+            <!-- <a href="codessociaux2.html" class="btn btn-primary">En savoir plus des codes sociaux</a> -->
+
         </div>
 
     </div>
@@ -101,7 +108,7 @@
 
 
 
-  
+
     </main>
 
     <!-- ! -------------- FOOTER----------------------->
@@ -109,9 +116,9 @@
         <div class="footerContainer">
             <div class="container-three-col">
                 <div class="footerContainerLeft">
-                    <img src="img/logo_footer.png" alt="logo">
+                    <img src="img/logo_footer.png" alt="logo de SocialScript">
                     <p>Simulateur d’interactions sociales </p>
-                    <!-- todo: add a logo -->
+
 
                 </div> <!-- fin footerContainerLeft -->
 

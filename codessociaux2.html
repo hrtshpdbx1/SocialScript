@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -57,9 +57,10 @@
                 <div class="navLeft"> <!-- Logo toujours visible -->
                     <a href="index.html">
                         <picture>
-  <source srcset="img/logo_desktop.png"  media="(width >= 600px)" />
-  <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile"/>
-</picture></a>
+                            <source srcset="img/logo_desktop.png" media="(width >= 600px)" />
+                            <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile" />
+                        </picture>
+                    </a>
                 </div>
                 <!-- Menu caché sur mobile -->
                 <div id="myLinks" class="navMiddle">
@@ -76,8 +77,8 @@
                     <!-- todo : le cacher sur mobile ?  -->
 
                     <!-- Icône hamburger (visible uniquement sur mobile) -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+                        aria-label="Ouvrir le menu de navigation"> <i class="fa fa-bars"></i>
                     </a>
                 </div>
             </div>
@@ -284,10 +285,10 @@
 
 
 
-    <!-- CTA final -->
-    <div class="container-center">
-        <a href="scenarios.html" class="btn_violet">Pratiquer avec les scénarios</a>
-    </div>
+        <!-- CTA final -->
+        <div class="container-center">
+            <a href="scenarios.html" class="btn_violet">Pratiquer avec les scénarios</a>
+        </div>
 
     </main>
 
@@ -297,9 +298,9 @@
         <div class="footerContainer">
             <div class="container-three-col">
                 <div class="footerContainerLeft">
-                    <img src="img/logo_primaryblue_dark.png" alt="logo">
+                    <img src="img/logo_primaryblue_dark.png" alt="logo de SocialScript">
                     <p>Simulateur d’interactions sociales </p>
-                    <!-- todo: add a logo -->
+
 
                 </div> <!-- fin footerContainerLeft -->
 

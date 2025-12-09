@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -57,9 +57,10 @@
                 <div class="navLeft"> <!-- Logo toujours visible -->
                     <a href="index.html">
                         <picture>
-  <source srcset="img/logo_desktop.png"  media="(width >= 600px)" />
-  <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile"/>
-</picture></a>
+                            <source srcset="img/logo_desktop.png" media="(width >= 600px)" />
+                            <img src="img/logo_mobile.png" alt="logo-socialscript" class="logo_mobile" />
+                        </picture>
+                    </a>
                 </div>
                 <!-- Menu caché sur mobile -->
                 <div id="myLinks" class="navMiddle">
@@ -76,8 +77,8 @@
                     <!-- todo : le cacher sur mobile ?  -->
 
                     <!-- Icône hamburger (visible uniquement sur mobile) -->
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                        <i class="fa fa-bars"></i>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+                        aria-label="Ouvrir le menu de navigation"> <i class="fa fa-bars"></i>
                     </a>
                 </div>
             </div>
@@ -88,9 +89,12 @@
     <!-- ! -------------- MAIN ----------------------->
     <main>
         <div class="main-container">
-            <h1>Ressources</h1>
-            <p>Associations, livres, podcasts et vidéos pour comprendre les neurodivergences, lutter contre le validisme
-                et trouver du soutien.</p>
+            <div class="header">
+                <h1>Ressources</h1>
+                <!-- <p>Une sélection de ressources pour mieux comprendre l'autisme, le TDAH
+                    et les autres formes de neurodivergence. Associations, livres, podcasts
+                    et vidéos pour s'informer, trouver du soutien et lutter contre le validisme.</p> -->
+            </div>
 
             <!----------------------- PRATICIEN·NES  ------------------>
 
@@ -99,8 +103,8 @@
 
                 <div class="bigCard">
                     <img src="img/ressources/help.jpg" alt="">
-                    <h3>Etre accompagné·e</h3>
-                    <h4>Praticien·nes et pair-aidant·es</h4>
+                    <h2>Etre accompagné·e</h2>
+                    <h3>Praticien·nes et pair-aidant·es</h3>
 
 
 
@@ -126,8 +130,8 @@
 
                 <div class="bigCard">
                     <img src="img/ressources/understand.jpg" alt="">
-                    <h3>S'informer</h3>
-                    <h4>Comprendre l'autisme</h4>
+                    <h2>S'informer</h2>
+                    <h3>Comprendre l'autisme</h3>
                     <p>Plateforme en ligne qui propose des articles de vulgarisation scientifique et des synthèses de
                         recherches récentes sur l'autisme. Le site démystifie de nombreuses idées reçues et offre des
                         informations fiables, accessibles et régulièrement mises à jour.</p>
@@ -143,21 +147,30 @@
 
             <!----------------------- ** SECTION TWO COL ------------------>
 
-            <div class="content-section section-content.two-col">
+            <div class="content-section">
+                <div class="section-content-two-col">
+                    <!-------- ------------------ ------>
+                    <!-------- ** Colonne gauche ** ------->
+                    <!-------- ------------------ ------>
 
-                <!-------- ------------------ ------>
-                <!-------- ** Colonne gauche ** ------->
-                <!-------- ------------------ ------>
-
-                <div class="col-left">
-                    <div class="heading-container">
-                        <h2>Parcourir les ressources</h2>
-
+                    <div class="col-left">
+                        <div class="heading-container">
+                            <h4>Parcourir les ressources</h4>
+                        </div>
                         <div class="text-container">
+                            <!-- <div class="search-container">
+                                <label for="rechercher"> <i class="fa-solid fa-magnifying-glass" alt="rechercher"></i>
+                                    Rechercher
+                                </label>
+                                <input type="text" id="searchInput" placeholder="..." />
+                            </div> -->
+
                             <div class="search-container">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <!-- Champ de recherche -->
-                                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." />
+                                <label for="searchInput">
+                                    <i class="fa-solid fa-magnifying-glass" alt="icône de loupe pour la recherche"></i>
+                                    <span class="sr-only">Rechercher</span>
+                                </label>
+                                <input type="text" id="searchInput" placeholder="Rechercher..." />
                             </div>
                             <div id="filterLabels" class="filter-labels">
                                 <!-- Types de ressources -->
@@ -167,11 +180,11 @@
                                 <button class="label-btn" data-label="podcast">Podcasts</button>
                                 <button class="label-btn" data-label="video">Vidéos</button>
                                 <button class="label-btn" data-label="site-web">Sites web</button>
-
                                 <!-- Thématiques -->
                                 <button class="label-btn" data-label="validisme">Validisme</button>
                                 <button class="label-btn" data-label="féminisme">Féminisme</button>
-                                <button class="label-btn" data-label="communauté-autiste">Communauté autiste</button>
+                                <button class="label-btn" data-label="communauté-autiste">Communauté
+                                    autiste</button>
                                 <button class="label-btn" data-label="neurodivergence">Neurodivergence</button>
 
                                 <!-- Niveaux -->
@@ -185,16 +198,16 @@
                                 <button class="label-btn active" data-label="all">Tout afficher</button>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-
-                <!-------- ------------------ ------>
-                <!-------- ** Colonne droite ** ------->
-                <!-------- ------------------ ------>
-                <div class="col-right">
-                    <div id="containerCards" class="containerCards">
                     </div>
+                    <!-------- ------------------ ------>
+                    <!-------- ** Colonne droite ** ------->
+                    <!-------- ------------------ ------>
+                    <div class="col-right">
+                        <div id="containerCards" class="containerCards">
+                        </div>
+                    </div>
+
                 </div>
 
             </div> <!-- Fin MainContainer -->
@@ -206,7 +219,7 @@
         <div class="footerContainer">
             <div class="container-three-col">
                 <div class="footerContainerLeft">
-                    <img src="img/logo_primaryblue_dark.png" alt="logo">
+                    <img src="img/logo_primaryblue_dark.png" alt="logo de SocialScript">
                     <p>Simulateur d’interactions sociales </p>
                     <!-- todo: add a logo -->
 

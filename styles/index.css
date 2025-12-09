@@ -460,9 +460,12 @@
 
 
             /* selectionne les em dans les cards */
-            h5 {
+            h4 {
                 font-weight: var(--weight-bold);
                 font-size: var(--font-size-large);
+                color: var(--gray-800)
+    
+                ;
 
                 em {
                     font-family: "Kalam", cursive;
@@ -661,7 +664,7 @@
         /* border: green 2px solid; */
 
         h2,
-        h4 {
+        h3 {
             /* force à être blanc (sinon gris)*/
             color: var(--white);
             font-weight: var(--weight-medium);

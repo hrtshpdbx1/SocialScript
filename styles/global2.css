@@ -165,21 +165,9 @@ h1 {
 }
 
 h2 {
-    font-size: var(--font-size-large);
-    color: var(--gray);
-    /* ok pour index mais vérifier autres pages */
-
-    @media (max-width: 768px) {
-        font-size: var(--font-size-large);
-        line-height: var(--line-normal);
-    }
-}
-
-
-h3 {
-    /* TAGLINE */
+/* TAGLINE */
     text-transform: uppercase;
-    color: var(--gray-300);
+    color: var(--gray-400);
     font-weight: var(--weight-light);
     letter-spacing: var(--letter-wide);
     font-size: var(--font-size-small);
@@ -190,6 +178,24 @@ h3 {
         line-height: var(--line-tight);
         letter-spacing: var(--letter-wide);
     }
+
+    
+    
+}
+
+
+h3 {
+
+    font-size: var(--font-size-large);
+    color: var(--gray);
+
+
+    @media (max-width: 768px) {
+        font-size: var(--font-size-large);
+        line-height: var(--line-normal);
+    }
+
+    
 
 }
 
@@ -398,8 +404,8 @@ blockquote {
 
 .btn-secondary-light {
     background: transparent;
-    color: var(--secondary-700);
-    border: 0.5px solid var(--secondary);
+    color: var(--secondary-800);
+    border: 0.5px solid var(--secondary-800);
     padding: 0.3em 0.8em;
     transition: all 0.1s ease;
     font-size: var(--font-size-extra-small);
