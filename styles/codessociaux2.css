@@ -26,18 +26,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: var(--space-4);
-    padding: var(--space-8) var(--space-4);
+    /* padding: var(--space-8) var(--space-4); */
+    /* padding retiré pour test carroussel */
+    /* AJOUTER UN PADDING LATÉRAL au SECTION pour que le TITRE soit aligné */
+    padding-left: var(--space-4); 
+    padding-right: var(--space-4);
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin-inline: auto;
     box-sizing: border-box;
+    border: 2px solid peru;
 }
 
 .section-content {
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
+
 }
 
 .section-header {
@@ -45,77 +52,171 @@
     flex-direction: column;
     gap: var(--space-2);
     width: 100%;
-    max-width: 900px;
+    /* max-width: 900px; */
     box-sizing: border-box;
     text-align: center;
 }
 
 /* ---------- CARDS DE COMMUNICATION ---------- */
 .sec_communicationStyles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    /* justify-content: space-evenly; */
+    overflow-x: auto;
+    /* Active la barre de défilement horizontale si besoin */
+    -webkit-overflow-scrolling: touch;
+    /* Améliore le défilement sur iOS */
     gap: var(--space-6);
     width: 100%;
-    padding: var(--space-4);
+    /* padding: var(--space-4); */
+    border: 2px solid pink;
+
+    /* 💡 AJOUT : Amélioration de l'expérience de défilement Pour les utilisateurs qui n'ont pas de barre de défilement visible (comme sur macOS) */
+    scroll-snap-type: x mandatory;
+
+
+    /* Annuler le padding du .section en le faisant déborder par marge négative */
+    margin-left: calc(-1 * var(--space-4)); 
+    margin-right: calc(-1 * var(--space-4));
+    width: calc(100% + 2 * var(--space-4)); /* S'assurer qu'il prend toute la largeur */
+    
+    /* 💡 AJOUTER LE PADDING DE GAUCHE/DROITE À L'INTÉRIEUR DU CARROUSEL 
+       pour que la PREMIÈRE et la DERNIÈRE carte s'alignent avec le titre */
+    padding-left: var(--space-4); 
+    padding-right: var(--space-4);
+
 }
 
-.com_cards {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    padding: var(--space-6);
+
+.com_cards_accordion {
+    padding: 0;
     text-align: left;
-    border: 2px solid var(--accent-700);
+    /* border: 2px solid var(--accent-700); */
     border-radius: var(--radius-lg);
-    background-color: var(--white);
+    background-color: var(--primary-200);
     box-shadow: var(--shadow-md);
 
-    /* Hauteur uniforme sur desktop */
-    min-height: 500px;
-    height: 100%;
+    max-width: 350px;
+    min-height: 150px;
+
+    display: flex;
+    flex: 0 0 350px;
+    flex-direction: column;
+    position: relative;
+    /* pour que le z-index fonctionne */
+    z-index: 1;
+    scroll-snap-align: start;
+    /* Fait s'arrêter le défilement au début de chaque carte */
 }
 
-.com_cards h3 {
-    margin-bottom: var(--space-2);
+
+
+/* -------------new cards -------- */
+/* ** ---- Sommaire (Titre + Icône) ---- */
+.com_cards_summary {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-6);
+    cursor: pointer;
+    list-style: none;
+    /* Cache le triangle par défaut */
+    position: relative;
+}
+
+/* Cache le marqueur par défaut du details */
+.com_cards_accordion::-webkit-details-marker,
+.com_cards_accordion::marker {
+    display: none;
+}
+
+.com_cards_summary h3 {
+    margin-bottom: var(--space-1);
     font-size: var(--font-size-medium);
     color: var(--gray-700);
+    /* S'assure que le titre ne dépasse pas la zone du summary */
+    padding-right: var(--space-8);
 }
 
-.com_cards h4 {
-    margin-bottom: var(--space-3);
+.com_cards_summary h4 {
+    margin-bottom: 0;
     font-size: var(--font-size-normal);
     font-weight: var(--weight-medium);
     color: var(--gray-800);
+    /* S'assure que le sous-titre ne dépasse pas la zone du summary */
+    padding-right: var(--space-8);
 }
 
-.com_cards h5 {
-    margin-top: var(--space-3);
-    margin-bottom: var(--space-2);
-    font-size: var(--font-size-small);
-    font-weight: var(--weight-bold);
+/* Icône Plus/Moins */
+.com_cards_summary::after {
+    content: '\002B';
+    position: absolute;
+    right: var(--space-4);
+    top: var(--space-6);
+    font-size: var(--font-size-large);
     color: var(--primary-blue);
+    /* Couleur du site */
+    font-weight: var(--weight-bold);
+    transition: transform 0.3s ease;
 }
 
-.com_cards ul {
-    list-style: none;
+.com_cards_summary:focus-visible {
+    /* Utilise une couleur d'accent forte pour la visibilité */
+    outline: 3px solid var(--accent);
+    outline-offset: -2px;
+    /* Rentre l'outline à l'intérieur */
+    border-radius: var(--radius-lg);
+    /* Pour correspondre aux coins de la carte */
+}
+
+.com_cards_summary:hover {
+    background-color: var(--secondary);
+    border-radius: var(--radius-lg);
+}
+
+
+.com_cards_accordion[open] .com_cards_summary::after {
+    content: "\2212";
+    /* icône moins */
+}
+
+/* chevauchement */
+.com_cards_accordion[open] {
+    z-index: 10;
+    /* 💡 Un z-index élevé pour passer au-dessus des autres cartes */
+    transform: translateY(-2px);
+    /* Léger effet 3D */
+    box-shadow: var(--shadow-xl);
+}
+
+/* ** -----  Contenu Déroulant (Le Panel) ------  */
+
+.com_cards_panel {
+    padding: var(--space-4) var(--space-6) var(--space-6) var(--space-6);
+    border-top: 1px solid var(--accent-400);
+    /* Séparateur visuel après l'ouverture */
+   
+
+    p,
+    li,
+    ul {
+        font-size: var(--font-size-small);
+    }
+
+
+}
+
+/* Assurer que les styles de liste restent corrects */
+.com_cards_panel ul {
     padding-left: 0;
     margin: var(--space-3) 0;
 }
 
-.com_cards li {
-    padding-left: var(--space-4);
-    margin-bottom: var(--space-2);
-    position: relative;
-    font-size: var(--font-size-small);
-}
 
-.com_cards li::before {
-    content: "💬";
-    position: absolute;
-    left: 0;
-}
-
+/* --------------------------------------------- */
 /* ---------- TIMELINE / ASSERTIVITÉ ---------- */
+/* --------------------------------------------- */
 .sec_assertivite {
     display: flex;
     flex-direction: column;
@@ -167,8 +268,89 @@
     box-shadow: var(--shadow-lg);
 }
 
+/* --------------------------------------------- */
+/* ---------- ASSERTIVITÉ (STYLE ARTICLE) ---------- */
+/* --------------------------------------------- */
+.article-content {
+    border: 2px purple solid;
+
+    .article-point {
+       border: 2px green solid; 
+
+}
+
+/* ---------- STYLES SPÉCIFIQUES À L'ARTICLE DU MASKING ---------- */
+
+.masking-forms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-4);
+    margin-top: var(--space-6);
+       border: 2px goldenrod solid; 
+
+}
+
+.masking-category {
+    padding: var(--space-4);
+    background-color: var(--success-200); /* Couleur douce pour différencier les listes */
+    border-radius: var(--radius-sm);
+    height: 100%; /* S'assure que les catégories s'étirent */
+      
+
+}
+
+.masking-category h6 {
+    font-weight: var(--weight-semi-bold);
+    color: var(--gray-700);
+    margin-bottom: var(--space-2);
+    font-size: var(--font-size-small);
+}
+
+.masking-category ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--font-size-extra-small);
+}
+
+.masking-category li {
+    margin-bottom: var(--space-1);
+    line-height: var(--line-tight);
+}
+
+/* 💡 Styles pour les étapes d'Unmasking (liste ordonnée) */
+.unmasking-steps {
+    list-style-type: none; /* Supprime les chiffres par défaut */
+    padding-left: 0;
+    margin-top: var(--space-4);
+}
+
+.unmasking-steps li {
+    font-size: var(--font-size-medium);
+    margin-bottom: var(--space-4);
+    padding-left: var(--space-8);
+    position: relative;
+}
+
+/* Compteur de style pour les étapes */
+.unmasking-steps li::before {
+    counter-increment: step-counter; /* Incrémente le compteur défini dans le parent (non nécessaire ici car list-style: none est au-dessus) */
+    content: "Étape " counter(step-counter) " – ";
+    position: absolute;
+    left: 0;
+    color: var(--accent-700); /* Couleur d'accent pour les chiffres */
+    font-weight: var(--weight-bold);
+    font-size: var(--font-size-small);
+}
+
+/* Règle pour l'initialisation du compteur dans l'ol */
+.unmasking-steps {
+    counter-reset: step-counter;
+}
+
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
+
     /* Cards : 1 colonne */
     .sec_communicationStyles {
         grid-template-columns: 1fr;
@@ -193,6 +375,7 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
     /* Cards : 2 colonnes tablette */
     .sec_communicationStyles {
         grid-template-columns: repeat(2, 1fr);

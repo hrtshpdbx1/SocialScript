@@ -36,6 +36,8 @@ html {
     --gray-100: #C4C4C4;
     --gray-200: #949494;
     --gray-300: #767676;
+     --gray-400: #595959;
+     --gray-600: #2F2F2F;
     --gray-700: #232323;
     --gray-800: #181818;
     --black: #000000;
@@ -90,9 +92,10 @@ html {
     --weight-extra-bold: 800;
     --weight-black: 900;
 
-    --line-tight: 1.2;
+    --line-tight: 1;
     --line-normal: 1.5;
     --line-loose: 1.8;
+     --line-big: 2.2;
 
     --letter-tight: -0.02em;
     --letter-normal: 0;
@@ -151,8 +154,8 @@ h6 {
 h1 {
     /* Hero */
     font-size: var(--font-size-hero);
-    font-weight: var(--weight-bold);
-    letter-spacing: var(--letter-tight);
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--letter-normal);
     line-height: var(--line-tight);
 
 
@@ -234,11 +237,13 @@ b {
 
 /* BLOCKQUOTE */
 blockquote {
-    font-family: "Merriweather", serif;
+    font-family: "Merriweather", cursive;
     font-style: italic;
     font-size: var(--font-size-medium);
-    letter-spacing: var(--letter-tight);
-
+    letter-spacing: var(--letter-normal);
+    line-height: var(--line-loose);
+    font-weight: var(--weight-regular);
+   
     @media (max-width: 768px) {
         font-size: var(--font-size-small);
     }
@@ -290,25 +295,27 @@ blockquote {
 
 /* test typo curcive */
 
-.kalam-light {
+.kalam {
     font-family: "Kalam", cursive;
-    font-weight: 300;
     font-style: normal;
+}
+
+.kalam-light {
+    font-weight: 300;
 }
 
 .kalam-regular {
-    font-family: "Kalam", cursive;
-    font-weight: 300;
-    font-style: normal;
-
+    font-weight: 400;
 }
 
 .kalam-bold {
-    font-family: "Kalam", cursive;
     font-weight: 700;
-    font-style: normal;
 }
 
+/* exemple utiliation HTML */
+/* <p class="kalam kalam-light">Texte light</p>
+<p class="kalam kalam-regular">Texte regular</p>
+<p class="kalam kalam-bold">Texte bold</p> */
 /* 
 .solitreo-regular {
   font-family: "Solitreo", cursive;
