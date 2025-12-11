@@ -31,8 +31,8 @@
     /* padding: var(--space-8) var(--space-4); */
     /* padding retiré pour test carroussel */
     /* AJOUTER UN PADDING LATÉRAL au SECTION pour que le TITRE soit aligné */
-    padding-left: var(--space-4); 
-    padding-right: var(--space-4);
+    padding-left: var(--space-12);
+    padding-right: var(--space-12);
     width: 100%;
     /* max-width: 1200px; */
     margin-inline: auto;
@@ -64,29 +64,29 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     /* justify-content: space-evenly; */
-    overflow-x: auto;
-    /* Active la barre de défilement horizontale si besoin */
-    -webkit-overflow-scrolling: touch;
-    /* Améliore le défilement sur iOS */
     gap: var(--space-6);
     width: 100%;
-    /* padding: var(--space-4); */
+
     border: 2px solid pink;
 
-    /* 💡 AJOUT : Amélioration de l'expérience de défilement Pour les utilisateurs qui n'ont pas de barre de défilement visible (comme sur macOS) */
-    scroll-snap-type: x mandatory;
 
+    scroll-snap-type: x mandatory;
+    /* pr les utilisateurs qui n'ont pas de barre de défilement visible (comme sur macOS) */
+    verflow-x: auto;
+    /* Active la barre de défilement horizontale*/
+    -webkit-overflow-scrolling: touch;
+    /* Améliore le défilement sur iOS */
 
     /* Annuler le padding du .section en le faisant déborder par marge négative */
-    margin-left: calc(-1 * var(--space-4)); 
+    margin-left: calc(-1 * var(--space-4));
     margin-right: calc(-1 * var(--space-4));
-    width: calc(100% + 2 * var(--space-4)); /* S'assurer qu'il prend toute la largeur */
-    
-    /* 💡 AJOUTER LE PADDING DE GAUCHE/DROITE À L'INTÉRIEUR DU CARROUSEL 
-       pour que la PREMIÈRE et la DERNIÈRE carte s'alignent avec le titre */
-    padding-left: var(--space-4); 
-    padding-right: var(--space-4);
+    width: calc(100% + 2 * var(--space-4));
+    /* prend toute la largeur */
 
+    /* PADDING DE GAUCHE/DROITE À L'INTÉRIEUR DU CARROUSEL 
+       pour que la PREMIÈRE et la DERNIÈRE carte s'alignent avec le titre */
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
 }
 
 
@@ -110,7 +110,6 @@
     scroll-snap-align: start;
     /* Fait s'arrêter le défilement au début de chaque carte */
 }
-
 
 
 /* -------------new cards -------- */
@@ -196,7 +195,7 @@
     padding: var(--space-4) var(--space-6) var(--space-6) var(--space-6);
     border-top: 1px solid var(--accent-400);
     /* Séparateur visuel après l'ouverture */
-   
+
 
     p,
     li,
@@ -273,30 +272,64 @@
 /* --------------------------------------------- */
 .article-content {
     border: 2px purple solid;
+    padding: var(--space-12);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
 
-    .article-point {
-       border: 2px green solid; 
+.article-point {
+    border: 2px green solid;
+    padding: var(--space-8);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    justify-content: space-between;
 
+    flex-shrink: 2;
+    gap: var(--space-12);
+
+
+    .containerArticleText {
+        border: 2px blue solid;
+        padding: var(--space-4);
+        flex-shrink: 3;
+        max-width: 60%;
+    }
+
+    /* Encadré Pourquoi l'assertivité  */
+    .containerArticleText:nth-child(2) {
+        background-color: var(--secondary);
+    }
+
+    .containerArticleImg {
+        max-width: 600px;
+    }
+}
+
+.article-point:nth-child(odd) {
+    flex-direction: row;
 }
 
 /* ---------- STYLES SPÉCIFIQUES À L'ARTICLE DU MASKING ---------- */
-
-.masking-forms-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+.masking-forms {
+    display: flex;
+    flex-direction: column;
     gap: var(--space-4);
-    margin-top: var(--space-6);
-       border: 2px goldenrod solid; 
-
+    border: 2px goldenrod solid;
+    padding: var(--space-4);
+     background-color: var(--secondary);
 }
 
 .masking-category {
     padding: var(--space-4);
-    background-color: var(--success-200); /* Couleur douce pour différencier les listes */
+    background-color: var(--white);
+    /* Couleur douce pour différencier les listes */
     border-radius: var(--radius-sm);
-    height: 100%; /* S'assure que les catégories s'étirent */
-      
-
+    height: 100%;
+    /* S'assure que les catégories s'étirent */
+    padding: var(--space-2);
+   
 }
 
 .masking-category h6 {
@@ -319,9 +352,15 @@
 
 /* 💡 Styles pour les étapes d'Unmasking (liste ordonnée) */
 .unmasking-steps {
-    list-style-type: none; /* Supprime les chiffres par défaut */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
     padding-left: 0;
     margin-top: var(--space-4);
+
+    border: 2px solid salmon;
+    
 }
 
 .unmasking-steps li {
@@ -331,21 +370,12 @@
     position: relative;
 }
 
-/* Compteur de style pour les étapes */
-.unmasking-steps li::before {
-    counter-increment: step-counter; /* Incrémente le compteur défini dans le parent (non nécessaire ici car list-style: none est au-dessus) */
-    content: "Étape " counter(step-counter) " – ";
-    position: absolute;
-    left: 0;
-    color: var(--accent-700); /* Couleur d'accent pour les chiffres */
+.unmasking-steps em {
     font-weight: var(--weight-bold);
-    font-size: var(--font-size-small);
+    font-style: normal;
 }
 
-/* Règle pour l'initialisation du compteur dans l'ol */
-.unmasking-steps {
-    counter-reset: step-counter;
-}
+
 
 
 /* ---------- RESPONSIVE ---------- */

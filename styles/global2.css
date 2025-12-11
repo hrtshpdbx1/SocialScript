@@ -209,11 +209,17 @@ h4 {
     line-height: var(--line-normal);
 
     @media (max-width: 768px) {}
-
-
 }
 
-h5 {}
+h5 {
+    color: var(--secondary-800);
+    font-weight: var(--weight-medium);
+    font-size : 1.20rem;
+    line-height: var(--line-loose);
+    font-family: 'Kalam', cursive;
+
+    @media (max-width: 768px) {}
+}
 
 p {
     margin-bottom: var(--space-2);
