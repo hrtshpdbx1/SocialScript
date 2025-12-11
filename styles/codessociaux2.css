@@ -1,7 +1,9 @@
 /* ====================================================================== */
 /* ======================= PAGE : CODES SOCIAUX ========================= */
 /* ====================================================================== */
-
+body{
+     background-color: var(--white);
+}
 /* ---------- SECTION INTRO ---------- */
 .intro {
     display: flex;
@@ -26,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--space-4);
     /* padding: var(--space-8) var(--space-4); */
     /* padding retiré pour test carroussel */
@@ -37,7 +39,7 @@
     /* max-width: 1200px; */
     margin-inline: auto;
     box-sizing: border-box;
-    border: 2px solid peru;
+    /* border: 2px solid peru; */
 }
 
 .section-content {
@@ -63,16 +65,18 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
+    /* justify-content: center; */
     /* justify-content: space-evenly; */
     gap: var(--space-6);
-    width: 100%;
+width: 100%;
+margin-inline: auto;
 
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 
 
     scroll-snap-type: x mandatory;
     /* pr les utilisateurs qui n'ont pas de barre de défilement visible (comme sur macOS) */
-    verflow-x: auto;
+    overflow-x: auto;
     /* Active la barre de défilement horizontale*/
     -webkit-overflow-scrolling: touch;
     /* Améliore le défilement sur iOS */
@@ -140,11 +144,17 @@
 
 .com_cards_summary h4 {
     margin-bottom: 0;
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-medium);
     font-weight: var(--weight-medium);
-    color: var(--gray-800);
+    color: var(--primary-blue-2);
     /* S'assure que le sous-titre ne dépasse pas la zone du summary */
     padding-right: var(--space-8);
+    font-family: 'Kalam';
+}
+
+.com_cards_summary p:first-of-type {
+    margin-top: 5%;
+
 }
 
 /* Icône Plus/Moins */
@@ -154,7 +164,7 @@
     right: var(--space-4);
     top: var(--space-6);
     font-size: var(--font-size-large);
-    color: var(--primary-blue);
+    color: var(--primary-blue-2);
     /* Couleur du site */
     font-weight: var(--weight-bold);
     transition: transform 0.3s ease;
@@ -271,7 +281,7 @@
 /* ---------- ASSERTIVITÉ (STYLE ARTICLE) ---------- */
 /* --------------------------------------------- */
 .article-content {
-    border: 2px purple solid;
+    /* border: 2px purple solid; */
     padding: var(--space-12);
     display: flex;
     flex-direction: column;
@@ -279,22 +289,32 @@
 }
 
 .article-point {
-    border: 2px green solid;
-    padding: var(--space-8);
+    /* border: 2px green solid; */
+    padding: var(--space-4);
     display: flex;
     flex-direction: row-reverse;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
 
     flex-shrink: 2;
-    gap: var(--space-12);
+    gap: var(--space-8);
 
 
     .containerArticleText {
-        border: 2px blue solid;
+
+        /* border: 2px blue solid; */
         padding: var(--space-4);
         flex-shrink: 3;
-        max-width: 60%;
+        /* max-width: 60%; */
+        flex: 1;
+        
+        h4 {
+            color: var(--primary-blue);
+            text-align: center;
+            margin-bottom: 5%;
+            font-size: var(--font-size-medium);
+            text-transform: uppercase;
+        }
     }
 
     /* Encadré Pourquoi l'assertivité  */
@@ -303,7 +323,7 @@
     }
 
     .containerArticleImg {
-        max-width: 600px;
+        max-width: 40%
     }
 }
 
@@ -316,15 +336,24 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    border: 2px goldenrod solid;
+    /* border: 2px goldenrod solid; */
     padding: var(--space-4);
-     background-color: var(--secondary);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--secondary-800);
+  background-color: white;
+     max-width: 40%;
+     font-size: var(--font-size-small);
+}
+
+.container-center {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    margin-top: var(--space-4); /* Ajoute un peu d'espace au-dessus du bouton */
 }
 
 .masking-category {
     padding: var(--space-4);
-    background-color: var(--white);
-    /* Couleur douce pour différencier les listes */
+    
     border-radius: var(--radius-sm);
     height: 100%;
     /* S'assure que les catégories s'étirent */
@@ -343,9 +372,11 @@
     list-style: none;
     padding-left: 0;
     font-size: var(--font-size-extra-small);
+
 }
 
 .masking-category li {
+        margin-top: var(--space-2);
     margin-bottom: var(--space-1);
     line-height: var(--line-tight);
 }
@@ -358,16 +389,16 @@
     flex-grow: 1;
     padding-left: 0;
     margin-top: var(--space-4);
-
+list-style: none;
     border: 2px solid salmon;
     
 }
 
 .unmasking-steps li {
-    font-size: var(--font-size-medium);
+    /* font-size: var(--font-size-medium); */
     margin-bottom: var(--space-4);
-    padding-left: var(--space-8);
-    position: relative;
+    /* padding-left: var(--space-8); */
+    /* position: relative; */
 }
 
 .unmasking-steps em {

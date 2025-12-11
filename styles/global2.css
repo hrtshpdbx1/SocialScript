@@ -195,7 +195,7 @@ h3 {
 
     @media (max-width: 768px) {
         font-size: var(--font-size-large);
-        line-height: var(--line-normal);
+        
     }
 
     
@@ -206,7 +206,7 @@ h4 {
     color: var(--gray);
     font-weight: var(--weight-bold);
     font-size: var(--font-size-medium);
-    line-height: var(--line-normal);
+    line-height: var(--line-loose);
 
     @media (max-width: 768px) {}
 }
@@ -215,7 +215,7 @@ h5 {
     color: var(--secondary-800);
     font-weight: var(--weight-medium);
     font-size : 1.20rem;
-    line-height: var(--line-loose);
+    line-height: var(--line-normal);
     font-family: 'Kalam', cursive;
 
     @media (max-width: 768px) {}
@@ -224,6 +224,7 @@ h5 {
 p {
     margin-bottom: var(--space-2);
     font-size: var(--font-size-normal);
+    line-height: var(--line-normal);
 
     @media (max-width: 768px) {
         font-size: var(--font-size-small);
@@ -416,7 +417,7 @@ blockquote {
 }
 
 .btn-secondary-light {
-    background: transparent;
+    background: var(--white);
     color: var(--secondary-800);
     border: 0.5px solid var(--secondary-800);
     padding: 0.3em 0.8em;
